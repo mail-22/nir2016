@@ -1,5 +1,5 @@
 unit utility;
-
+ 
 interface
 //AnsiReplaceStr
 uses Forms, IniFiles, Classes, windows;

@@ -3,7 +3,6 @@ program Monitoring;
 {$WARN UNIT_PLATFORM OFF}
 
 uses
-  //ExceptionLog,
   ExceptionLog,
   Forms,
   DMUnit in 'dmunit.pas' {DM: TDataModule},
@@ -23,7 +22,8 @@ uses
   Logic in 'Logic.pas' {LogicForm},
   ExportXLSFormUnit in 'ExportXLSFormUnit.pas' {ExportXLSForm},
   ABOUT in 'ABOUT.PAS' {AboutForm},
-  UBusyRtl in 'BusyDetect\UBusyrtl.pas';
+  UBusyRtl in 'BusyDetect\UBusyrtl.pas',
+  WordUnit in 'WordUnit.pas' {WordForm};
 
 {$R *.res}
 
@@ -31,11 +31,8 @@ begin
   Application.Initialize;
 /////////////////////////////////////////////////////////////////////////////////
         Application.CreateForm(TCommon, Common);
-
-        Application.CreateForm(TDM, DM);
-
-
-try    
+  Application.CreateForm(TDM, DM);
+  try
 
 except
 
@@ -55,6 +52,8 @@ end;
   Application.CreateForm(TOLAPForm, OLAPForm);
   Application.CreateForm(TLogicForm, LogicForm);
   Application.CreateForm(TExportXLSForm, ExportXLSForm);
+  
+  Application.CreateForm(TWordForm, WordForm);
   //Application.CreateForm(TAboutForm, AboutForm);
   Application.Run;
 end.

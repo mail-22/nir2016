@@ -76,7 +76,7 @@ implementation
 uses
   FormListOfBildingUnit, Vypoln_Unit,
   Trebov_Unit, ExportFormUnit, FormGrUnit, FormTuningUnit, FormGrAllUnit, CommonUnit,
-  ExportXLSFormUnit, ABOUT,utility;
+  ExportXLSFormUnit, ABOUT,utility, WordUnit;
 
 {$R *.dfm}
 
@@ -152,7 +152,10 @@ var
 begin
   //FormGrAll_Show;
   //OLAPForm_Show;
-Exit;  
+
+  WordForm.show;
+
+Exit;
   sl := TStringList.Create;
 
   GetLoadedModulesList(sl);

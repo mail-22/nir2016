@@ -2,8 +2,7 @@ program Monitoring;
 {$WARNINGS OFF}
 {$WARN UNIT_PLATFORM OFF}
 
-uses
-  ExceptionLog,
+uses 
   Forms,
   DMUnit in 'dmunit.pas' {DM: TDataModule},
   CommonUnit in 'CommonUnit.pas' {Common: TDataModule},

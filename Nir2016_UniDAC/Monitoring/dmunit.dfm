@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 157
-  Top = 360
+  Left = 679
+  Top = 132
   Height = 458
   Width = 760
   object OpenDialog1: TOpenDialog
@@ -21,13 +21,13 @@ object DM: TDM
   end
   object dsTrebovan: TDataSource
     DataSet = tdlTrebovan
-    Left = 478
+    Left = 662
     Top = 80
   end
   object dsNorm: TDataSource
     DataSet = tblNorm
-    Left = 634
-    Top = 52
+    Left = 426
+    Top = 124
   end
   object dstblVypoln: TDataSource
     DataSet = tblVypoln
@@ -39,21 +39,19 @@ object DM: TDM
     Left = 598
     Top = 224
   end
-  object ADGUIxWaitCursor1: TADGUIxWaitCursor
-    Left = 56
-    Top = 168
-  end
   object UniConnection1: TUniConnection
     ProviderName = 'Access'
-    Database = 'd:\Dropbox\Share5\Work\Nir2015_FireDAC_\Monitoring\db1.mdb'
+    Database = 'D:\Dropbox\Share5\Work\Nir2016_UniDAC\Monitoring\db1.mdb'
     DefaultTransaction = UniTransaction1
-    Left = 70
-    Top = 40
+    Connected = True
+    Left = 38
+    Top = 72
   end
   object tblBilding: TUniQuery
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Bilding')
+    Active = True
     Left = 150
     Top = 40
     object tblBildingid: TIntegerField
@@ -228,7 +226,8 @@ object DM: TDM
     end
   end
   object AccessUniProvider1: TAccessUniProvider
-    Left = 21
+    Left = 37
+    Top = 8
   end
   object tblVypoln: TUniQuery
     Connection = UniConnection1
@@ -241,6 +240,7 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'fid_Bilding'
+    Active = True
     Left = 300
     Top = 20
     ParamData = <
@@ -315,8 +315,9 @@ object DM: TDM
     MasterSource = dstblVypoln
     MasterFields = 'N'
     DetailFields = 'N'
-    Left = 610
-    Top = 10
+    Active = True
+    Left = 402
+    Top = 82
     ParamData = <
       item
         DataType = ftString
@@ -336,24 +337,20 @@ object DM: TDM
       FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
       Size = 255
     end
-    object tblNormDSDesigner2: TStringField
-      FieldName = #1087#1091#1085#1082#1090
-      Size = 255
-    end
     object tblNormDSDesigner3: TStringField
       FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
       Size = 255
     end
-    object tblNormDSDesigner4: TStringField
-      FieldName = #1087#1086#1076#1087#1091#1085#1082#1090
+    object tblNormDSDesigner6: TStringField
+      FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
+      Size = 255
+    end
+    object tblNormDSDesigner7: TStringField
+      FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
       Size = 255
     end
     object tblNormDSDesigner5: TMemoField
       FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
-      BlobType = ftMemo
-    end
-    object tblNormF8: TMemoField
-      FieldName = 'F8'
       BlobType = ftMemo
     end
   end
@@ -375,8 +372,8 @@ object DM: TDM
   end
   object UniTransaction1: TUniTransaction
     DefaultConnection = UniConnection1
-    Left = 224
-    Top = 208
+    Left = 40
+    Top = 120
   end
   object tblVypolnAll: TUniQuery
     Connection = UniConnection1
@@ -386,8 +383,8 @@ object DM: TDM
     MasterFields = 'id'
     DetailFields = 'id'
     ObjectView = True
-    Left = 312
-    Top = 112
+    Left = 296
+    Top = 88
     ParamData = <
       item
         DataType = ftInteger
@@ -395,12 +392,6 @@ object DM: TDM
         ParamType = ptInput
         Value = 30
       end>
-    object tblVypolnAllid: TADAutoIncField
-      DisplayWidth = 10
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInWhere, pfInKey]
-    end
     object tblVypolnAllADDSDesigner: TStringField
       DisplayWidth = 255
       FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080
@@ -464,8 +455,8 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'id;N'
-    Left = 424
-    Top = 208
+    Left = 408
+    Top = 272
     ParamData = <
       item
         DataType = ftInteger
@@ -483,12 +474,6 @@ object DM: TDM
         Name = 'SOOTVETSTV'
         ParamType = ptInput
       end>
-    object adtncfld1: TADAutoIncField
-      DisplayWidth = 10
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInWhere, pfInKey]
-    end
     object strngfldVypoln_SOOTVETSTVN: TStringField
       DisplayWidth = 255
       FieldName = 'N'
@@ -548,15 +533,10 @@ object DM: TDM
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Trebovan')
+    Active = True
     ObjectView = True
-    Left = 472
+    Left = 656
     Top = 32
-    object tdlTrebovanid: TADAutoIncField
-      DisplayWidth = 10
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInWhere, pfInKey]
-    end
     object strngfldTrebovanN: TStringField
       DisplayWidth = 55
       FieldName = 'N'
@@ -594,6 +574,11 @@ object DM: TDM
       DisplayWidth = 10
       FieldName = 'DetailField'
       Origin = 'DetailField'
+    end
+    object tdlTrebovanid: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+      ReadOnly = True
     end
   end
   object UniSQLMonitor1: TUniSQLMonitor

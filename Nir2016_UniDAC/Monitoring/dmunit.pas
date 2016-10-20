@@ -131,6 +131,7 @@ type
     tblNormDSDesigner6: TStringField;
     tblNormDSDesigner7: TStringField;
     tdlTrebovanid: TIntegerField;
+<<<<<<< HEAD
     tblNormOfBildingid: TIntegerField;
     tblNormOfBildingN: TStringField;
     tblNormOfBildingDSDesigner: TStringField;
@@ -141,6 +142,8 @@ type
     tblNormOfBildingDSDesigner7: TStringField;
     tblNormOfBildingDSDesigner8: TStringField;
     tblNormOfBildingDSDesigner3: TStringField;
+=======
+>>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     procedure DataModuleCreate(Sender: TObject);
     procedure qryDescription0AfterPost(DataSet: TDataSet);
     procedure tblDescriptionAfterPost(DataSet: TDataSet);

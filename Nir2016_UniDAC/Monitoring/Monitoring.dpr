@@ -3,7 +3,10 @@ program Monitoring;
 {$WARN UNIT_PLATFORM OFF}
 
 uses 
+<<<<<<< HEAD
   //ExceptionLog,
+=======
+>>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
   Forms,
   DMUnit in 'dmunit.pas' {DM: TDataModule},
   CommonUnit in 'CommonUnit.pas' {Common: TDataModule},
@@ -30,7 +33,11 @@ uses
 begin
   Application.Initialize;
 /////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
   Application.CreateForm(TCommon, Common);
+=======
+        Application.CreateForm(TCommon, Common);
+>>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
   Application.CreateForm(TDM, DM);
   try
 

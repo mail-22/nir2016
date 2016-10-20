@@ -28,7 +28,6 @@ type
     dsNorm: TDataSource;
     dstblVypoln: TDataSource;
     dsNormOfBilding: TDataSource;
-    ADGUIxWaitCursor1: TADGUIxWaitCursor;
     UniConnection1: TUniConnection;
     tblBilding: TUniQuery;
     tblBildingid: TIntegerField;
@@ -94,14 +93,10 @@ type
     tblNormid: TIntegerField;
     tblNormN: TStringField;
     tblNormDSDesigner: TStringField;
-    tblNormDSDesigner2: TStringField;
     tblNormDSDesigner3: TStringField;
-    tblNormDSDesigner4: TStringField;
     tblNormDSDesigner5: TMemoField;
-    tblNormF8: TMemoField;
     UniTransaction1: TUniTransaction;
     tblVypolnAll: TUniQuery;
-    tblVypolnAllid: TADAutoIncField;
     tblVypolnAllADDSDesigner: TStringField;
     tblVypolnAllADDSDesigner2: TBooleanField;
     tblVypolnAllfid_Bilding: TIntegerField;
@@ -113,7 +108,6 @@ type
     tblVypolnAlltest: TIntegerField;
     strngfldVypolnAllN: TStringField;
     tblVypoln_SOOTVETSTV: TUniQuery;
-    adtncfld1: TADAutoIncField;
     strngfldVypoln_SOOTVETSTVN: TStringField;
     strngfldVypoln_SOOTVETSTVADDSDesigner: TStringField;
     blnfldVypoln_SOOTVETSTVADDSDesigner2: TBooleanField;
@@ -125,7 +119,6 @@ type
     intgrfldVypoln_SOOTVETSTVNTreb2: TIntegerField;
     intgrfldVypoln_SOOTVETSTVtest: TIntegerField;
     tdlTrebovan: TUniQuery;
-    tdlTrebovanid: TADAutoIncField;
     strngfldTrebovanN: TStringField;
     strngfldTrebovanADDSDesigner: TStringField;
     blnfldTrebovanADDSDesigner2: TBooleanField;
@@ -135,6 +128,19 @@ type
     intgrfldTrebovanDetailField: TIntegerField;
     UniSQLMonitor1: TUniSQLMonitor;
     UniAlerter1: TUniAlerter;
+    tblNormDSDesigner6: TStringField;
+    tblNormDSDesigner7: TStringField;
+    tdlTrebovanid: TIntegerField;
+    tblNormOfBildingid: TIntegerField;
+    tblNormOfBildingN: TStringField;
+    tblNormOfBildingDSDesigner: TStringField;
+    tblNormOfBildingDSDesigner5: TMemoField;
+    tblNormOfBildingfid_Bilding: TIntegerField;
+    tblNormOfBildingDSDesigner6: TBooleanField;
+    tblNormOfBildingfid_Vypoln: TIntegerField;
+    tblNormOfBildingDSDesigner7: TStringField;
+    tblNormOfBildingDSDesigner8: TStringField;
+    tblNormOfBildingDSDesigner3: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryDescription0AfterPost(DataSet: TDataSet);
     procedure tblDescriptionAfterPost(DataSet: TDataSet);

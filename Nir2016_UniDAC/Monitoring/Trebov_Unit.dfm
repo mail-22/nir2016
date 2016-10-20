@@ -8,20 +8,10 @@ inherited Trebov: TTrebov
   OnClick = act1CopyExecute
   PixelsPerInch = 96
   TextHeight = 13
-  object spl2: TSplitter [0]
-    Left = 0
-    Top = 512
-    Width = 1101
-    Height = 7
-    Cursor = crVSplit
-    Align = alTop
-    Color = clActiveCaption
-    ParentColor = False
-  end
-  object pnlH: TPanel [1]
+  object pnlH: TPanel [0]
     Left = 0
     Top = 23
-    Width = 1101
+    Width = 1093
     Height = 41
     Align = alTop
     Caption = 'pnlH'
@@ -29,7 +19,7 @@ inherited Trebov: TTrebov
     object mmo1: TMemo
       Left = 1
       Top = 1
-      Width = 1099
+      Width = 1091
       Height = 39
       Align = alClient
       Lines.Strings = (
@@ -37,22 +27,14 @@ inherited Trebov: TTrebov
       TabOrder = 0
     end
   end
-  object pnlT: TPanel [2]
+  object pnlT: TPanel [1]
     Left = 0
     Top = 64
-    Width = 1101
+    Width = 1093
     Height = 448
     Align = alTop
     Caption = 'pnlT'
     TabOrder = 1
-    object spl1: TSplitter
-      Left = 585
-      Top = 1
-      Width = 7
-      Height = 446
-      Color = clActiveCaption
-      ParentColor = False
-    end
     object pnlL: TPanel
       Left = 1
       Top = 1
@@ -214,7 +196,7 @@ inherited Trebov: TTrebov
     object pnlR: TPanel
       Left = 592
       Top = 1
-      Width = 508
+      Width = 500
       Height = 446
       Align = alClient
       Caption = 'pnlR'
@@ -222,7 +204,7 @@ inherited Trebov: TTrebov
       object lbl2: TLabel
         Left = 1
         Top = 1
-        Width = 506
+        Width = 498
         Height = 18
         Align = alTop
         Alignment = taCenter
@@ -237,7 +219,7 @@ inherited Trebov: TTrebov
       object cxdbvrtclgrd1: TcxDBVerticalGrid
         Left = 351
         Top = 19
-        Width = 156
+        Width = 148
         Height = 426
         Align = alClient
         DragCursor = crDrag
@@ -300,26 +282,30 @@ inherited Trebov: TTrebov
         TabOrder = 1
       end
     end
+    object spl1: TcxSplitter
+      Left = 585
+      Top = 1
+      Width = 7
+      Height = 446
+      Cursor = crHSplit
+      AutoSnap = True
+      Color = clActiveCaption
+      ParentColor = False
+    end
   end
-  object pnlB: TPanel [3]
-    Left = 0
-    Top = 519
-    Width = 1101
-    Height = 331
+  object pnlB: TPanel [2]
+    Left = 1093
+    Top = 512
+    Width = 0
+    Height = 327
     Align = alClient
     Caption = 'pnlB'
     TabOrder = 2
-    object spl3: TSplitter
-      Left = 649
-      Top = 1
-      Width = 7
-      Height = 329
-    end
     object dbrchvwdtole: TDBRichViewEdit
       Left = 41
       Top = 1
       Width = 608
-      Height = 329
+      Height = 325
       DataField = 'rtf'
       DataSource = ds1
       ReadOnly = False
@@ -337,14 +323,14 @@ inherited Trebov: TTrebov
       Properties.GraphicClassName = 'TJPEGImage'
       TabOrder = 1
       OnClick = img1Click
-      Height = 329
-      Width = 444
+      Height = 325
+      Width = 436
     end
     object pnlC: TPanel
       Left = 1
       Top = 1
       Width = 40
-      Height = 329
+      Height = 325
       Align = alLeft
       TabOrder = 2
       object actmmb1: TActionMainMenuBar
@@ -355,9 +341,9 @@ inherited Trebov: TTrebov
         UseSystemFont = False
         ActionManager = actmgr1
         Caption = 'actmmb1'
-        ColorMap.HighlightColor = 14410210
+        ColorMap.HighlightColor = clWhite
         ColorMap.BtnSelectedColor = clBtnFace
-        ColorMap.UnusedColor = 14410210
+        ColorMap.UnusedColor = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -367,18 +353,36 @@ inherited Trebov: TTrebov
         Spacing = 0
       end
     end
+    object spl3: TcxSplitter
+      Left = 649
+      Top = 1
+      Width = 7
+      Height = 325
+      Cursor = crHSplit
+      AutoSnap = True
+    end
   end
-  object acttb1: TActionToolBar [4]
+  object acttb1: TActionToolBar [3]
     Left = 0
     Top = 0
-    Width = 1101
+    Width = 1093
     Height = 23
     ActionManager = actmgr1
     Caption = 'acttb1'
-    ColorMap.HighlightColor = 14410210
+    ColorMap.HighlightColor = clWhite
     ColorMap.BtnSelectedColor = clBtnFace
-    ColorMap.UnusedColor = 14410210
+    ColorMap.UnusedColor = clWhite
     Spacing = 0
+  end
+  object spl2: TcxSplitter [4]
+    Left = 0
+    Top = 512
+    Width = 1093
+    Height = 327
+    Cursor = crVSplit
+    AutoSnap = True
+    Color = clActiveCaption
+    ParentColor = False
   end
   object ds1: TDataSource [5]
     DataSet = DM.tdlTrebovan

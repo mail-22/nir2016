@@ -79,17 +79,21 @@ begin
   maxN := 16;
   SetLength(arrX, maxN);
   SetLength(arrY, maxN);
+
+  // цикл по здани€м
   dm.tblBilding.First; dm.tblBilding.RecNo;
   for BB := 0 to dm.tblBilding.RecordCount - 1 do
     begin
       for N := 0 to maxN - 1 do
         begin
           sN := IntToStr(N + 1) + '.';
+          // цикл по категори€м
           DataSet.First; DataSet.RecordCount; DataSet.RecNo;
           if (DataSet.RecordCount = 0) then break;
           fSum := 0; kol_treb := 0;
           while not DataSet.EOF do
             begin
+              //экспорт только Ќ≈ выполненных категорий требований
               iRes := Pos(sN, DataSet.FieldByName('N').AsString);
               if (iRes = 1) then
                 begin
@@ -190,7 +194,8 @@ begin
       NNTrebovan := NNTrebovan + 1;
       //s1 :=  s1 + 'номер абзаца:' + IntToStr(NNTrebovan); s1 := s1 + #13#10;
 
-      s1 :=  s1 + 'требование N:'
+      s1 := s1 + #13#10;
+      s1 :=  s1 + 'категори€ требовани€ N:'
         + DataSetDetail.FieldByName('N').AsString; s1 := s1 + #13#10;
       s1 :=  s1 + '—оответствие требовани€м пожарной безопасности:'
         + DataSetDetail.FieldByName('—оответствие требовани€м пожарной безопасности').AsString; s1 := s1 + #13#10;
@@ -239,28 +244,32 @@ begin
      for j := 0 to DM.tblNormOfBilding.RecordCount - 1 do
      begin
         iRes := AnsiCompareStr(dm.tblVypoln.FieldByName('N').AsString, dm.tblNormOfBilding.FieldByName('N').AsString);
-        if not(0=iRes) then continue;
+        if not(0=iRes) then continue; //???
 
         bRes := dm.tblBilding.FieldByName('id').AsInteger = dm.tblNormOfBilding.FieldByName('fid_Bilding').AsInteger;
-        if not(bRes) then continue;
+        //if not(bRes) then continue;
 
-        if ( (0=iRes) and(bRes) ) then begin
+        //if ( (0=iRes) and(bRes) ) then
+        begin
           s2 :=  s2 + 'ƒокумент' + DM.tblNormOfBilding.FieldByName('ƒокумент').AsString; s2 := s2 + #13#10;
-          s2 :=  s2 + 'пункт' + DM.tblNormOfBilding.FieldByName('пункт').AsString; s2 := s2 + #13#10;
+          s2 :=  s2 + 'стать€-раздел' + DM.tblNormOfBilding.FieldByName('стать€-раздел').AsString; s2 := s2 + #13#10;
+          s2 :=  s2 + 'часть (пункт)' + DM.tblNormOfBilding.FieldByName('часть (пункт)').AsString; s2 := s2 + #13#10;
+          s2 :=  s2 + 'содержание норм' + DM.tblNormOfBilding.FieldByName('содержание норм').AsString; s2 := s2 + #13#10;
+          s2 :=  s2 + '—оответствует да/нет' + DM.tblNormOfBilding.FieldByName('—оответствует да/нет').AsString; s2 := s2 + #13#10;
+          s1 := s1 + #13#10; s1 := s1 + #13#10;
           RichEdit.Lines.Append(s2);
-        end;
-
+        end;    
 
         DM.tblNormOfBilding.Next;
      end;
 
      application.ProcessMessages;
      DataSetDetail.Next;
-   end;
+   end;   //for i := 0 to DataSetDetail.RecordCount - 1 do
 end;
 /////////////////////////////////////////////////////////////////////////////////////////
 
-procedure ExportDetailTabl(); //всех записей
+procedure ExportDetailTabl(); //  Ёкспорт всех записей
 var //DataSet:TCustomADODataSet;
   i: Integer;
   tmpRecordIndex: Integer;

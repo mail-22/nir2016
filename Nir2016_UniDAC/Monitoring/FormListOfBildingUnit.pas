@@ -18,13 +18,12 @@ uses
   JvComponentBase, JvFormPlacement, ActnColorMaps,
   cxNavigator, cxDBNavigator, cxMRUEdit,utility, StdActns, cxCheckBox,
   cxContainer, cxProgressBar, JvExComCtrls, JvProgressBar, JvDBProgressBar,
-  cxPropertiesStore, cxDBLookupComboBox;
+  cxPropertiesStore, cxDBLookupComboBox, cxSplitter;
 
 type
   TFormListOfBilding = class(TBaseForm)
     pnlAll: TPanel;
     pnlT01: TPanel;
-    spl2: TSplitter;
     pnlL: TPanel;
     lbl1: TLabel;
     cxgrd1: TcxGrid;
@@ -73,7 +72,6 @@ type
     actAct_Vypoln_Show: TAction;
     actmmb1: TActionMainMenuBar;
     act_AddNewBuilding: TAction;
-    spl1: TSplitter;
     dbrchvwdtole: TDBRichViewEdit;
     rvstyl1: TRVStyle;
     cxstylrpstry1: TcxStyleRepository;
@@ -184,6 +182,8 @@ type
     act5: TAction;
     btn1: TButton;
     btn2: TButton;
+    spl2: TcxSplitter;
+    cxSplitter1: TcxSplitter;
     procedure FormCreate(Sender: TObject);
     procedure act0Execute(Sender: TObject);
     procedure act3Execute(Sender: TObject);

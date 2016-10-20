@@ -1,8 +1,8 @@
 inherited FormListOfBilding: TFormListOfBilding
-  Left = 867
-  Top = 195
+  Left = 502
+  Top = 158
   Width = 1198
-  Height = 819
+  Height = 800
   Caption = #1089#1087#1080#1089#1086#1082' '#1079#1076#1072#1085#1080#1081' '#1087#1086#1076#1083#1077#1078#1072#1097#1080#1093' '#1084#1086#1085#1080#1090#1086#1088#1080#1085#1075#1091
   Position = poMainFormCenter
   OnClose = FormClose
@@ -13,7 +13,7 @@ inherited FormListOfBilding: TFormListOfBilding
     Left = 0
     Top = 71
     Width = 1182
-    Height = 710
+    Height = 691
     Align = alClient
     BevelInner = bvLowered
     BevelOuter = bvLowered
@@ -26,23 +26,15 @@ inherited FormListOfBilding: TFormListOfBilding
       Left = 2
       Top = 2
       Width = 1174
-      Height = 702
+      Height = 683
       Align = alClient
       Caption = 'pnlT'
       TabOrder = 0
-      object spl2: TSplitter
-        Left = 829
-        Top = 1
-        Width = 11
-        Height = 700
-        Color = clSkyBlue
-        ParentColor = False
-      end
       object pnlL: TPanel
         Left = 1
         Top = 1
         Width = 828
-        Height = 700
+        Height = 681
         Align = alLeft
         Caption = 'pnlL'
         TabOrder = 0
@@ -65,7 +57,7 @@ inherited FormListOfBilding: TFormListOfBilding
           Left = 1
           Top = 61
           Width = 826
-          Height = 598
+          Height = 579
           Align = alClient
           BevelKind = bkSoft
           Font.Charset = RUSSIAN_CHARSET
@@ -370,7 +362,7 @@ inherited FormListOfBilding: TFormListOfBilding
         end
         object pnlBB: TPanel
           Left = 1
-          Top = 675
+          Top = 656
           Width = 826
           Height = 24
           Align = alBottom
@@ -415,27 +407,27 @@ inherited FormListOfBilding: TFormListOfBilding
         end
         object JvDBProgressBar1: TJvDBProgressBar
           Left = 1
-          Top = 659
+          Top = 640
           Width = 826
           Height = 16
           Align = alBottom
-          Position = 30
+          Position = 38
           TabOrder = 4
           DataField = 'id'
           DataSource = DM.dsBilding
         end
       end
       object pnlR: TPanel
-        Left = 840
+        Left = 837
         Top = 1
-        Width = 333
-        Height = 700
+        Width = 336
+        Height = 681
         Align = alClient
         TabOrder = 1
         object lbl2: TLabel
           Left = 1
           Top = 1
-          Width = 331
+          Width = 334
           Height = 18
           Align = alTop
           Alignment = taCenter
@@ -447,21 +439,11 @@ inherited FormListOfBilding: TFormListOfBilding
           Font.Style = [fsBold]
           ParentFont = False
         end
-        object spl1: TSplitter
-          Left = 1
-          Top = 611
-          Width = 331
-          Height = 7
-          Cursor = crVSplit
-          Align = alTop
-          Color = clSkyBlue
-          ParentColor = False
-        end
         object cxdbvrtclgrd1: TcxDBVerticalGrid
           Left = 1
           Top = 19
-          Width = 331
-          Height = 592
+          Width = 334
+          Height = 550
           Align = alTop
           OptionsView.RowHeaderWidth = 155
           TabOrder = 0
@@ -831,16 +813,16 @@ inherited FormListOfBilding: TFormListOfBilding
         end
         object pnlB: TPanel
           Left = 1
-          Top = 618
-          Width = 331
-          Height = 81
+          Top = 577
+          Width = 334
+          Height = 103
           Align = alClient
           Caption = 'pnlB'
           TabOrder = 1
           object lbl3: TLabel
             Left = 1
             Top = 1
-            Width = 329
+            Width = 332
             Height = 18
             Align = alTop
             Alignment = taCenter
@@ -855,16 +837,16 @@ inherited FormListOfBilding: TFormListOfBilding
           object scrlbx1: TScrollBox
             Left = 1
             Top = 19
-            Width = 329
-            Height = 61
+            Width = 332
+            Height = 83
             Align = alClient
             AutoSize = True
             TabOrder = 0
             object dbrchvwdtole: TDBRichViewEdit
               Left = 0
               Top = 0
-              Width = 325
-              Height = 57
+              Width = 328
+              Height = 79
               DataField = 'rtf'
               DataSource = ds1
               ReadOnly = False
@@ -876,6 +858,25 @@ inherited FormListOfBilding: TFormListOfBilding
             end
           end
         end
+        object cxSplitter1: TcxSplitter
+          Left = 1
+          Top = 569
+          Width = 334
+          Height = 8
+          HotZoneClassName = 'TcxMediaPlayer8Style'
+          AlignSplitter = salTop
+        end
+      end
+      object spl2: TcxSplitter
+        Left = 829
+        Top = 1
+        Width = 8
+        Height = 681
+        Cursor = crHSplit
+        HotZoneClassName = 'TcxMediaPlayer8Style'
+        AutoSnap = True
+        Color = clSkyBlue
+        ParentColor = False
       end
     end
   end

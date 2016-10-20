@@ -71,6 +71,7 @@ var
   iRes : integer;
 begin
   try
+  try
     Screen.Cursor := crHourGlass;
 
 //TUniTransaction
@@ -147,8 +148,11 @@ begin
       DM.tblVypoln.UpdateCursorPos;
       //DM.tblVypoln.Recordset.Resync(adAffectCurrent, adResyncAllValues);
       DM.tblVypoln.Resync([]);
-//Application.ProcessMessages;
+
+ //     Application.ProcessMessages;
       FormListOfBilding.cxProgressBarTrebovan.Position := DM.tdlTrebovan.RecNo;
+  //    Application.ProcessMessages;
+
       DM.tdlTrebovan.Next;
     end;  // while not DM.tdlTrebovan.EOF do
    //dm.tblBilding.Post;
@@ -173,7 +177,7 @@ begin
           s1 := dm.tblVypoln.FieldByName('N').AsString;
           s2 := dm.tblNorm.FieldByName('N').AsString;
           iRes := AnsiCompareStr(s1, s2);
-          bResN := iRes = 0;   
+          bResN := iRes = 0;
           if bResN then    //if not bResN then Continue;
           begin
               DM.tblNormOfBilding.RecNo; i := DM.tblNorm.FieldCount; i := DM.tblNormOfBilding.RecordCount; i := DM.tblNorm.RecordCount;i := DM.tblNorm.RecNo; //
@@ -182,9 +186,12 @@ begin
 
               DM.tblNormOfBilding.FieldByName('N').AsString := DM.tblNorm.FieldByName('N').AsString;
               DM.tblNormOfBilding.FieldByName('Документ').AsString := DM.tblNorm.FieldByName('Документ').AsString;
-              DM.tblNormOfBilding.FieldByName('пункт').AsString := DM.tblNorm.FieldByName('пункт').AsString;
               DM.tblNormOfBilding.FieldByName('статья-раздел').AsString := DM.tblNorm.FieldByName('статья-раздел').AsString;
-              DM.tblNormOfBilding.FieldByName('подпункт').AsString := DM.tblNorm.FieldByName('подпункт').AsString;
+
+{ TODO 1 -oSVS -cNEXT : переименовать поле в tblNormOfBilding }
+              DM.tblNormOfBilding.FieldByName('часть (пункт)').AsString := DM.tblNorm.FieldByName('часть (пункт)').AsString; // переименовать
+              DM.tblNormOfBilding.FieldByName('примечание').AsString := DM.tblNorm.FieldByName('примечание').AsString; // переименовать
+
               DM.tblNormOfBilding.FieldByName('содержание норм').AsString := DM.tblNorm.FieldByName('содержание норм').AsString;
               DM.tblNormOfBilding.FieldByName('Соответствует да/нет').AsBoolean := False;
 
@@ -193,8 +200,9 @@ begin
           DM.tblNorm.Next;
         end; //while not DM.tblNorm.EOF do
 
-//Application.ProcessMessages;
+        Application.ProcessMessages;
         FormListOfBilding.cxProgressBarVypoln.Position := DM.tblVypoln.RecNo;
+        Application.ProcessMessages;
         DM.tblVypoln.Next;
       end;//while  not DM.tblVypoln.EOF do
 
@@ -218,11 +226,16 @@ begin
   except on E: Exception do
     // откатываем транзакцию в случае ошибки
     begin
-      Screen.Cursor := crDefault;
+
       dm.UniTransaction1.Rollback;
      // dm.ADOConnection1.RollbackTrans();  !!!
       ShowMessage(E.ClassName + ' db error: ' + E.Message);
     end;
+  end;
+  finally
+    Screen.Cursor := crDefault;
+    FormListOfBilding.cxProgressBarTrebovan.Visible := false;
+    FormListOfBilding.cxProgressBarVypoln.Visible := false;
   end;
 
 end; //procedure AddNewBuilding

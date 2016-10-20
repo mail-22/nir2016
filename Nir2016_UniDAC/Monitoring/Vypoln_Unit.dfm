@@ -1,8 +1,8 @@
 inherited Vypoln: TVypoln
-  Left = 109
-  Top = 150
-  Width = 1161
-  Height = 882
+  Left = 644
+  Top = 23
+  Width = 1181
+  Height = 1024
   Caption = 
     #1089#1087#1080#1089#1086#1082' '#1089' '#1086#1090#1084#1077#1090#1082#1072#1084#1080' '#1086' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1080' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103' '#1085#1086#1088#1084' '#1076#1083#1103' '#1074#1099#1073#1088#1072#1085#1085#1086#1075#1086' '#1079 +
     #1076#1072#1085#1080#1103
@@ -14,7 +14,7 @@ inherited Vypoln: TVypoln
   object lbl5: TLabel [0]
     Left = 0
     Top = 0
-    Width = 1145
+    Width = 1165
     Height = 13
     Align = alTop
     Alignment = taCenter
@@ -29,16 +29,16 @@ inherited Vypoln: TVypoln
   object pnlL: TPanel [1]
     Left = 0
     Top = 72
-    Width = 982
-    Height = 772
-    Align = alClient
+    Width = 1046
+    Height = 914
+    Align = alLeft
     Caption = 'pnlL'
     TabOrder = 0
     object pnlalClient: TPanel
       Left = 1
       Top = 1
-      Width = 980
-      Height = 770
+      Width = 1044
+      Height = 912
       Align = alClient
       Caption = 'pnlalClient'
       Font.Charset = DEFAULT_CHARSET
@@ -51,18 +51,18 @@ inherited Vypoln: TVypoln
       object pnlB: TPanel
         Left = 1
         Top = 401
-        Width = 978
-        Height = 368
+        Width = 1042
+        Height = 510
         Align = alClient
         TabOrder = 0
         object lbl4: TLabel
           Left = 1
-          Top = 177
-          Width = 976
+          Top = 257
+          Width = 1040
           Height = 13
           Align = alTop
           Alignment = taCenter
-          Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084' :'
+          Caption = #1074#1088#1077#1084#1077#1085#1085#1099#1081' '#1088#1072#1079#1076#1077#1083' -  '#1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084' : ('#1076#1083#1103' '#1089#1087#1088#1072#1074#1086#1082')'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
@@ -72,25 +72,30 @@ inherited Vypoln: TVypoln
         end
         object cxspltr2: TcxSplitter
           Left = 1
-          Top = 190
-          Width = 976
+          Top = 270
+          Width = 1040
           Height = 8
+          HotZoneClassName = 'TcxMediaPlayer8Style'
           AlignSplitter = salTop
-          Control = pnl1
+          Control = pnl1T
+          Color = clNavy
+          ParentColor = False
         end
-        object pnl1: TPanel
+        object pnl1T: TPanel
           Left = 1
           Top = 1
-          Width = 976
-          Height = 176
+          Width = 1040
+          Height = 256
           Align = alTop
-          Caption = 'pnl1'
+          BevelOuter = bvNone
+          Caption = 'pnl1T'
+          Color = clActiveCaption
           TabOrder = 1
           object Panel1: TPanel
-            Left = 1
-            Top = 1
-            Width = 974
-            Height = 174
+            Left = 0
+            Top = 0
+            Width = 1040
+            Height = 256
             Align = alClient
             Caption = 'pnlRR'
             TabOrder = 0
@@ -98,13 +103,13 @@ inherited Vypoln: TVypoln
               Left = 1
               Top = 1
               Width = 8
-              Height = 125
+              Height = 207
             end
             object cxGrid3: TcxGrid
               Left = 9
               Top = 1
-              Width = 964
-              Height = 125
+              Width = 1030
+              Height = 207
               Align = alClient
               BevelKind = bkSoft
               Font.Charset = RUSSIAN_CHARSET
@@ -157,39 +162,33 @@ inherited Vypoln: TVypoln
                 OptionsView.ShowColumnFilterButtons = sfbAlways
                 object cxgrdbclmnGridDBTableView3id: TcxGridDBColumn
                   DataBinding.FieldName = 'id'
-                  Width = 21
                 end
                 object cxgrdbclmnGridDBTableView3N: TcxGridDBColumn
                   DataBinding.FieldName = 'N'
-                  Width = 28
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn: TcxGridDBColumn
                   DataBinding.FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
-                  Width = 71
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn1: TcxGridDBColumn
-                  DataBinding.FieldName = #1087#1091#1085#1082#1090
-                  Width = 57
+                  DataBinding.FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn2: TcxGridDBColumn
-                  DataBinding.FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
-                  Width = 87
+                  DataBinding.FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn3: TcxGridDBColumn
-                  DataBinding.FieldName = #1087#1086#1076#1087#1091#1085#1082#1090
-                  Width = 59
+                  DataBinding.FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn4: TcxGridDBColumn
                   DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
-                  Width = 182
-                end
-                object cxgrdbclmnGridDBTableView3fid_Bilding: TcxGridDBColumn
-                  DataBinding.FieldName = 'fid_Bilding'
-                  Width = 50
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn5: TcxGridDBColumn
                   DataBinding.FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
-                  Width = 67
+                end
+                object cxgrdbclmnGridDBTableView3fid_Bilding: TcxGridDBColumn
+                  DataBinding.FieldName = 'fid_Bilding'
+                end
+                object cxgrdbclmnGridDBTableView3fid_Vypoln: TcxGridDBColumn
+                  DataBinding.FieldName = 'fid_Vypoln'
                 end
               end
               object cxGridLevel3: TcxGridLevel
@@ -198,8 +197,8 @@ inherited Vypoln: TVypoln
             end
             object Panel2: TPanel
               Left = 1
-              Top = 142
-              Width = 972
+              Top = 224
+              Width = 1038
               Height = 31
               Align = alBottom
               BevelInner = bvLowered
@@ -220,7 +219,7 @@ inherited Vypoln: TVypoln
               object cxDBNavigator1: TcxDBNavigator
                 Left = 115
                 Top = 2
-                Width = 840
+                Width = 915
                 Height = 23
                 DataSource = DM.dsNormOfBilding
                 Align = alClient
@@ -229,8 +228,8 @@ inherited Vypoln: TVypoln
             end
             object JvDBProgressBar1: TJvDBProgressBar
               Left = 1
-              Top = 126
-              Width = 972
+              Top = 208
+              Width = 1038
               Height = 16
               Align = alBottom
               TabOrder = 3
@@ -240,9 +239,9 @@ inherited Vypoln: TVypoln
         end
         object cxGrid1: TcxGrid
           Left = 1
-          Top = 198
-          Width = 976
-          Height = 122
+          Top = 278
+          Width = 1040
+          Height = 184
           Align = alClient
           BevelKind = bkSoft
           Font.Charset = RUSSIAN_CHARSET
@@ -283,11 +282,8 @@ inherited Vypoln: TVypoln
             OptionsData.Appending = True
             OptionsView.CellEndEllipsis = True
             OptionsView.ColumnAutoWidth = True
-            OptionsView.Footer = True
             OptionsView.FooterAutoHeight = True
             OptionsView.GroupByBox = False
-            OptionsView.GroupFooters = gfAlwaysVisible
-            OptionsView.GroupRowStyle = grsOffice11
             OptionsView.GroupSummaryLayout = gslAlignWithColumnsAndDistribute
             OptionsView.HeaderEndEllipsis = True
             OptionsView.Indicator = True
@@ -299,27 +295,27 @@ inherited Vypoln: TVypoln
             end
             object cxgrdbclmnGridDBTableView1N: TcxGridDBColumn
               DataBinding.FieldName = 'N'
-              Width = 27
+              Width = 34
             end
             object cxgrdbclmnGridDBTableView1DBColumn: TcxGridDBColumn
-              DataBinding.FieldName = #1087#1091#1085#1082#1090
-              Width = 61
+              DataBinding.FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
+              Width = 147
             end
             object cxgrdbclmnGridDBTableView1DBColumn1: TcxGridDBColumn
               DataBinding.FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
-              Width = 165
+              Width = 102
             end
             object cxgrdbclmnGridDBTableView1DBColumn2: TcxGridDBColumn
-              DataBinding.FieldName = #1087#1086#1076#1087#1091#1085#1082#1090
-              Width = 81
+              DataBinding.FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
+              Width = 109
             end
             object cxgrdbclmnGridDBTableView1DBColumn3: TcxGridDBColumn
-              DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
-              Width = 116
+              DataBinding.FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
+              Width = 91
             end
             object cxgrdbclmnGridDBTableView1DBColumn4: TcxGridDBColumn
-              DataBinding.FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
-              Width = 164
+              DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
+              Width = 507
             end
           end
           object cxGridLevel1: TcxGridLevel
@@ -328,8 +324,8 @@ inherited Vypoln: TVypoln
         end
         object Panel3: TPanel
           Left = 1
-          Top = 320
-          Width = 976
+          Top = 462
+          Width = 1040
           Height = 31
           Align = alBottom
           BevelInner = bvLowered
@@ -350,7 +346,7 @@ inherited Vypoln: TVypoln
           object cxDBNavigator2: TcxDBNavigator
             Left = 115
             Top = 2
-            Width = 855
+            Width = 915
             Height = 23
             DataSource = DM.dsNorm
             Align = alClient
@@ -359,8 +355,8 @@ inherited Vypoln: TVypoln
         end
         object JvDBProgressBar3: TJvDBProgressBar
           Left = 1
-          Top = 351
-          Width = 976
+          Top = 493
+          Width = 1040
           Height = 16
           Align = alBottom
           TabOrder = 4
@@ -371,7 +367,7 @@ inherited Vypoln: TVypoln
       object pnlT: TPanel
         Left = 1
         Top = 1
-        Width = 978
+        Width = 1042
         Height = 392
         Align = alTop
         Caption = 'pnlT'
@@ -388,10 +384,9 @@ inherited Vypoln: TVypoln
             Top = 1
             Width = 190
             Height = 388
-            ActivePage = jvlktpgLookOutPage2
+            ActivePage = jvlktpgLookOutPage1
             Align = alClient
             AutoSize = True
-            BorderStyle = bsNone
             Color = clMoneyGreen
             Smooth = True
             object jvlktpgLookOutPage1: TJvLookOutPage
@@ -411,7 +406,7 @@ inherited Vypoln: TVypoln
               Color = clCream
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -15
+              Font.Height = -13
               Font.Name = 'Times New Roman'
               Font.Style = []
               ParentFont = False
@@ -634,7 +629,7 @@ inherited Vypoln: TVypoln
             end
             object jvlktpgLookOutPage2: TJvLookOutPage
               Left = 0
-              Top = 20
+              Top = 325
               Width = 186
               Height = 328
               ImageSize = isSmall
@@ -759,7 +754,7 @@ inherited Vypoln: TVypoln
         object pnlGrid: TPanel
           Left = 193
           Top = 1
-          Width = 784
+          Width = 848
           Height = 390
           Align = alClient
           AutoSize = True
@@ -767,7 +762,7 @@ inherited Vypoln: TVypoln
           object lbl1: TLabel
             Left = 1
             Top = 1
-            Width = 782
+            Width = 846
             Height = 13
             Align = alTop
             Alignment = taCenter
@@ -782,7 +777,7 @@ inherited Vypoln: TVypoln
           object cxgrd1: TcxGrid
             Left = 1
             Top = 14
-            Width = 782
+            Width = 846
             Height = 245
             Align = alClient
             BevelKind = bkSoft
@@ -912,14 +907,15 @@ inherited Vypoln: TVypoln
           object pnlBBB: TPanel
             Left = 1
             Top = 328
-            Width = 782
+            Width = 846
             Height = 61
             Align = alBottom
             TabOrder = 1
+            Visible = False
             object lbl2: TLabel
               Left = 1
               Top = 1
-              Width = 780
+              Width = 844
               Height = 16
               Align = alTop
               Alignment = taCenter
@@ -934,7 +930,7 @@ inherited Vypoln: TVypoln
             object dbrchvwdtrtf: TDBRichViewEdit
               Left = 1
               Top = 17
-              Width = 780
+              Width = 844
               Height = 43
               DataField = 'rtf'
               DataSource = ds1
@@ -953,12 +949,12 @@ inherited Vypoln: TVypoln
             DataBinding.DataField = 'id'
             DataBinding.DataSource = DM.dstblVypoln
             TabOrder = 2
-            Width = 782
+            Width = 846
           end
           object Panel4: TPanel
             Left = 1
             Top = 297
-            Width = 782
+            Width = 846
             Height = 31
             Align = alBottom
             BevelInner = bvLowered
@@ -979,7 +975,7 @@ inherited Vypoln: TVypoln
             object cxDBNavigator3: TcxDBNavigator
               Left = 115
               Top = 2
-              Width = 660
+              Width = 720
               Height = 23
               DataSource = DM.dstblVypoln
               Align = alClient
@@ -989,7 +985,7 @@ inherited Vypoln: TVypoln
           object JvDBProgressBar2: TJvDBProgressBar
             Left = 1
             Top = 259
-            Width = 782
+            Width = 846
             Height = 16
             Align = alBottom
             TabOrder = 4
@@ -1000,26 +996,29 @@ inherited Vypoln: TVypoln
       object cxspltr3: TcxSplitter
         Left = 1
         Top = 393
-        Width = 978
+        Width = 1042
         Height = 8
+        HotZoneClassName = 'TcxMediaPlayer8Style'
         AlignSplitter = salTop
         Control = pnlT
+        Color = clNavy
+        ParentColor = False
       end
     end
   end
   object pnlRight: TPanel [2]
-    Left = 982
+    Left = 1054
     Top = 72
-    Width = 146
-    Height = 772
-    Align = alRight
+    Width = 111
+    Height = 914
+    Align = alClient
     Caption = 'pnlRight'
     TabOrder = 1
     Visible = False
     object lbl3: TLabel
       Left = 1
       Top = 1
-      Width = 144
+      Width = 109
       Height = 18
       Align = alTop
       Alignment = taCenter
@@ -1031,20 +1030,10 @@ inherited Vypoln: TVypoln
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object spl2: TSplitter
-      Left = 1
-      Top = 403
-      Width = 144
-      Height = 7
-      Cursor = crVSplit
-      Align = alTop
-      Color = clGradientActiveCaption
-      ParentColor = False
-    end
     object cxdbvrtclgrd1: TcxDBVerticalGrid
       Left = 1
       Top = 19
-      Width = 144
+      Width = 109
       Height = 384
       Align = alTop
       OptionsView.CellEndEllipsis = True
@@ -1158,11 +1147,21 @@ inherited Vypoln: TVypoln
         Version = 1
       end
     end
+    object spl2: TcxSplitter
+      Left = 1
+      Top = 403
+      Width = 109
+      Height = 510
+      Cursor = crVSplit
+      AutoSnap = True
+      Color = clNavy
+      ParentColor = False
+    end
   end
   object pnlH: TPanel [3]
     Left = 0
     Top = 37
-    Width = 1145
+    Width = 1165
     Height = 35
     Align = alTop
     Caption = 'pnlTop'
@@ -1171,7 +1170,7 @@ inherited Vypoln: TVypoln
     object mmo1: TMemo
       Left = 1
       Top = 1
-      Width = 1143
+      Width = 1163
       Height = 33
       Align = alClient
       Lines.Strings = (
@@ -1179,12 +1178,13 @@ inherited Vypoln: TVypoln
           #1074#1099#1087#1086#1083#1085#1077#1085#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081' '#1085#1086#1088#1084#1072#1090#1080#1074#1085#1099#1093' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074'- ('#1087#1088#1086#1089#1090#1072#1085#1086#1074#1082#1072' '#1086#1090#1084#1077#1090 +
           #1086#1082' '#1086' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1080')  -> ')
       TabOrder = 0
+      Visible = False
     end
   end
   object actmmb1: TActionMainMenuBar [4]
     Left = 0
     Top = 13
-    Width = 1145
+    Width = 1165
     Height = 24
     UseSystemFont = False
     ActionManager = actmgr1
@@ -1200,53 +1200,15 @@ inherited Vypoln: TVypoln
     PersistentHotKeys = True
     Spacing = 0
   end
-  object pnlRR: TPanel [5]
-    Left = 1128
+  object cxspltr4: TcxSplitter [5]
+    Left = 1046
     Top = 72
-    Width = 17
-    Height = 772
-    Align = alRight
-    Caption = 'pnlRR'
-    TabOrder = 4
-    object cxspltr1: TcxSplitter
-      Left = 1
-      Top = 1
-      Width = 8
-      Height = 739
-      Color = clGradientActiveCaption
-      ParentColor = False
-    end
-    object pnlBB: TPanel
-      Left = 1
-      Top = 740
-      Width = 15
-      Height = 31
-      Align = alBottom
-      BevelInner = bvLowered
-      BevelOuter = bvLowered
-      BorderStyle = bsSingle
-      TabOrder = 1
-      object jvdbstslbl1: TJvDBStatusLabel
-        Left = 2
-        Top = 2
-        Width = 81
-        Height = 23
-        DataSource = DM.dsNormOfBilding
-        CalcRecCount = True
-        ShowOptions = doBoth
-        Align = alLeft
-        Alignment = taRightJustify
-      end
-      object cxdbnvgtr1: TcxDBNavigator
-        Left = 83
-        Top = 2
-        Width = 225
-        Height = 23
-        DataSource = DM.dsNormOfBilding
-        Align = alClient
-        TabOrder = 0
-      end
-    end
+    Width = 8
+    Height = 914
+    HotZoneClassName = 'TcxXPTaskBarStyle'
+    Control = pnlL
+    Color = clPurple
+    ParentColor = False
   end
   object ds1: TDataSource [6]
     Left = 585
@@ -1612,7 +1574,7 @@ inherited Vypoln: TVypoln
           'Height')
       end
       item
-        Component = pnl1
+        Component = pnl1T
         Properties.Strings = (
           'Height'
           'Width')
@@ -1625,12 +1587,6 @@ inherited Vypoln: TVypoln
       end
       item
         Component = pnlB
-        Properties.Strings = (
-          'Height'
-          'Width')
-      end
-      item
-        Component = pnlBB
         Properties.Strings = (
           'Height'
           'Width')
@@ -1667,12 +1623,6 @@ inherited Vypoln: TVypoln
       end
       item
         Component = pnlRight
-        Properties.Strings = (
-          'Height'
-          'Width')
-      end
-      item
-        Component = pnlRR
         Properties.Strings = (
           'Height'
           'Width')

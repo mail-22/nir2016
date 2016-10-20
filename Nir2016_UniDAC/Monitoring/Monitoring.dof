@@ -96,7 +96,7 @@ PackageDLLOutputDir=
 PackageDCPOutputDir=
 SearchPath=;c:\Program Files\TeeChart\Sources\..\TeeTree\Compiled\Delphi7\Lib;c:\Program Files\TeeChart\Sources\Compiled\Delphi7\Lib
 Packages=vcl;rtl;dbrtl;inet;inetdb;dsnap;bdertl;vclx;vcldb;vcldbx;visualclx;visualdbclx;vclactnband;vclshlctrls;vclie;xmlrtl;inetdbbde;inetdbxpress;webdsnap;soaprtl;websnap;adortl;dbexpress;dsnapcon;dbxcds;ibxpress;indy;VclSmp;qrpt;IntrawebDB_50_70;Intraweb_50_70;VclNewlyext;dxCoreD7;dxmdsD7;dxBarDBNavD7;dxBarD7;dxBarExtDBItemsD7;dxdbtrD7;dxtrmdD7;dxComnD7;dxMasterViewD7;cxTreeListdxBarPopupMenuD7;cxPageControlVCLD7;dxSkinscxPCPainterD7;dxSkinsCoreD7;dxSkinscxScheduler3PainterD7;cxSchedulerD7;dxSkinsdxNavBar2PainterD7;dxNavBarD7;cxExtEditorsVCLD7;cxEditorsVCLD7;dxPSCoreD7;dxPSLnksD7;dxPScxCommonD7;dxPScxExtCommonD7;dxPScxPivotGrid2LnkD7;dxPScxScheduler3LnkD7;dxPScxSSLnkD7;dxPSdxOCLnkD7;dxPSdxDBOCLnkD7;dxPSdxDBTVLnkD7;dxPSdxFCLnkD7;dxPSdxLC2LnkD7;dxPSdxMVLnkD7;dxPScxPCProdD7;dxPsPrVwAdvD7;dxBarExtItemsD7;dxPSPrVwRibbonD7;dxRibbonD7;JclDeveloperTools;Jcl;JclVcl;JclContainers;JvCore;JvSystem;JvStdCtrls;JvAppFrm;JvBands;JvDB;JvDlgs;JvBDE;JvControls;JvCmp;JvCrypt;JvCustom;JvDocking;JvDotNetCtrls;JvGlobus;JvHMI;JvJans;JvManagedThreads;JvMM;JvNet;JvPageComps;JvPascalInterpreter;JvPluginSystem;JvPrintPreview;JvRuntimeDesign;JvTimeFramework;JvWizards;JvXPCtrls;Rave50CLX;Rave50VCL;AnyDAC_PhysSQLite_D7;AnyDAC_Phys_D7;AnyDAC_ComI_D7;AnyDAC_PhysPg_D7;AnyDAC_PhysIB_D7;AnyDAC_PhysADS_D7;AnyDAC_PhysDBExp_D7;AnyDAC_PhysASA_D7;AnyDAC_PhysODBC_D7;AnyDAC_PhysOracle_D7;AnyDAC_PhysMySQL_D7;AnyDAC_PhysDb2_D7;AnyDAC_PhysMSSQL_D7;AnyDAC_PhysMSAcc_D7;AnyDAC_GUIxForms_D7;AnyDAC_Comp_D7;BetterADO;cxLibraryVCLD7;dxGDIPlusD7;dxEdtrD7;dxELibD7;dxThemeD7;cxDataD7;cxBarEditItemD7;dxDockingD7;dxsbD7;dxLayoutControlD7;cxSpreadSheetVCLD7;dxFlowChartD7;EQTLD7;ECQDBCD7;EQDBTLD7;cxTreeListD7;EQGridD7;dxGrEdD7;dxExELD7;cxGridD7;dxDBEdD7;dxInsD7;dxObjInsD7;dxExRwD7;cxVerticalGridVCLD7;dxorgcD7;dxdborD7;cxSchedulerGridD7;cxPivotGridD7;cxPivotGridChartD7;cxPivotGridOLAPD7;dcldxSkinsCoreD7;dxSkinsdxRibbonPainterD7;dxSkinsdxBarPainterD7;dxSkinsdxDLPainterD7;dxSkinBlackD7;dxSkinBlueD7;dxSkinCaramelD7;dxSkinCoffeeD7;dxSkinDarkSideD7;dxSkinGlassOceansD7;dxSkiniMaginaryD7;dxSkinLilianD7;dxSkinLiquidSkyD7;dxSkinLondonLiquidSkyD7;dxSkinMcSkinD7;dxSkinMoneyTwinsD7;dxSkinOffice2007BlackD7;dxSkinOffice2007BlueD7;dxSkinOffice2007GreenD7;dxSkinOffice2007PinkD7;dxSkinOffice2007SilverD7;dxSkinPumpkinD7;dxSkinSilverD7;dxSkinSpringTimeD7;dxSkinStardustD7;dxSkinSummer2008D7;dxSkinValentineD7;dxSkinXmas2008BlueD7;dxSkinSevenD7;dxSkinFoggyD7;dxSkinDarkRoomD7;dxSkinSharpD7;dxPScxTL5LnkD7;dxPScxVGridLnkD7;dxPScxGrid6LnkD7;cxWebD7;cxWebPascalScriptD7;cxWebSnapD7;dxSpellCheckerD7;Tee77;TeeUI77;TeeDB77;TeePro77;TeeGL77;TeeImage77;TeeLanguage77;TeeQR77;TeeTree2D7Tee7
-Conditionals=EUREKALOG;EUREKALOG_VER6
+Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
@@ -134,7 +134,7 @@ OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
 LastCompiledTime=2016.01.31 21:11:59
-Last Compile=06.09.2016 10:45:52
+Last Compile=20.10.2016 13:40:45
 [Excluded Packages]
 C:\Users\Admin\Documents\DevExpress VCL\Library\Delphi7\dcldxPSCoreD7.bpl=ExpressPrinting System 4 by Developer Express Inc.
 C:\Users\Admin\Documents\DevExpress VCL\Library\Delphi7\dcldxPSLnksD7.bpl=ExpressPrinting System 4 ReportLinks (Standard) by Developer Express Inc.
@@ -180,7 +180,7 @@ Count=1
 Item0=c:\tmp\dcu
 [Exception Log]
 EurekaLog Version=6101
-Activate=1
+Activate=0
 Activate Handle=1
 Save Log File=1
 Foreground Tab=0
@@ -659,6 +659,6 @@ Count mtException_AntiFreeze=1
 mtException_AntiFreeze0="The application seems to be frozen."
 Count mtInvalidEmailMsg=1
 mtInvalidEmailMsg0="Invalid email."
-TextsCollection=English
+TextsCollection=
 
 

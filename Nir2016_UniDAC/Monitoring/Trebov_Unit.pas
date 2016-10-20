@@ -15,7 +15,8 @@ uses
   ImgList, JvExControls, JvLabel, JvDBControls, ADODB, JvAppStorage,
   JvAppIniStorage, JvComponentBase, JvFormPlacement, ComCtrls, dxtree,
   dxdbtree, cxTL, cxMaskEdit, cxCheckBox, cxMemo, cxTLdxBarBuiltInMenu,
-  cxDBTL, cxTLData, JvExComCtrls, JvDBTreeView, cxLocalization, cxNavigator;
+  cxDBTL, cxTLData, JvExComCtrls, JvDBTreeView, cxLocalization, cxNavigator,
+  cxSplitter;
 
 type
   TTrebov = class(TBaseForm)
@@ -33,16 +34,13 @@ type
     cxgrdbtblvwcxgrd1DBTableView1: TcxGridDBTableView;
     cxgrdlvl1: TcxGridLevel;
     lbl1: TLabel;
-    spl1: TSplitter;
     pnlR: TPanel;
     lbl2: TLabel;
     cxdbvrtclgrd1: TcxDBVerticalGrid;
     dbnvgr1: TDBNavigator;
     pnlB: TPanel;
-    spl2: TSplitter;
     rvstyl1: TRVStyle;
     dbrchvwdtole: TDBRichViewEdit;
-    spl3: TSplitter;
     img1: TcxDBImage;
     acttb1: TActionToolBar;
     actmmb1: TActionMainMenuBar;
@@ -65,6 +63,9 @@ type
     cxgrdbtblvw1ParentField: TcxGridDBColumn;
     cxgrdbtblvw1DetailField: TcxGridDBColumn;
     cxlclzr1: TcxLocalizer;
+    spl2: TcxSplitter;
+    spl1: TcxSplitter;
+    spl3: TcxSplitter;
     procedure img1Click(Sender: TObject);
     procedure dbrchvwdtoleClick(Sender: TObject);
     procedure act1CopyExecute(Sender: TObject);

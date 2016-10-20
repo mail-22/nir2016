@@ -7,7 +7,8 @@ uses
   Dialogs, DMUnit, Unit_BaseForm, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxClasses, cxCustomData, cxStyles, cxEdit,
   cxCustomPivotGrid, cxDBPivotGrid, cxPivotGridOLAPDataSource, DB, ExtCtrls,
-  JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement   ;
+  JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
+  cxSplitter   ;
 
 type
   TOLAPForm = class(TBaseForm)
@@ -19,7 +20,6 @@ type
     cxdbpvtgrdfldcxdbpvtgrd1cxDBPivotGridField1: TcxDBPivotGridField;
     cxdbpvtgrdfldcxdbpvtgrd1fid_Bilding: TcxDBPivotGridField;
     cxdbpvtgrdfldcxdbpvtgrd1cxDBPivotGridField11: TcxDBPivotGridField;
-    spl1: TSplitter;
     cxdbpvtgrd2: TcxDBPivotGrid;
     ds2: TDataSource;
     cxdbpvtgrdfldcxdbpvtgrd2id: TcxDBPivotGridField;
@@ -55,6 +55,7 @@ type
     cxdbpvtgrdfldcxdbpvtgrd2cxDBPivotGridField27: TcxDBPivotGridField;
     cxdbpvtgrdfldcxdbpvtgrd2cxDBPivotGridField28: TcxDBPivotGridField;
     cxdbpvtgrdfldcxdbpvtgrd2rtf: TcxDBPivotGridField;
+    spl1: TcxSplitter;
   private
     { Private declarations }
   public

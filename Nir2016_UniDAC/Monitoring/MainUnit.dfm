@@ -12,7 +12,7 @@ inherited FormMain: TFormMain
   object img1: TJvImage [0]
     Left = 0
     Top = 171
-    Width = 637
+    Width = 629
     Height = 158
     Align = alTop
     AutoSize = True
@@ -1623,14 +1623,14 @@ inherited FormMain: TFormMain
   object actmmb1: TActionMainMenuBar [1]
     Left = 0
     Top = 0
-    Width = 637
+    Width = 629
     Height = 26
     UseSystemFont = False
     ActionManager = actmgr1
     Caption = 'actmmb1'
-    ColorMap.HighlightColor = 14410210
+    ColorMap.HighlightColor = clWhite
     ColorMap.BtnSelectedColor = clBtnFace
-    ColorMap.UnusedColor = 14410210
+    ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -1642,7 +1642,7 @@ inherited FormMain: TFormMain
   object jvstctxt1: TJvStaticText [2]
     Left = 0
     Top = 26
-    Width = 637
+    Width = 629
     Height = 25
     Align = alTop
     Alignment = taCenter
@@ -1666,7 +1666,7 @@ inherited FormMain: TFormMain
   object jvstctxt2: TJvStaticText [3]
     Left = 0
     Top = 51
-    Width = 637
+    Width = 629
     Height = 96
     Align = alTop
     Alignment = taCenter
@@ -1695,7 +1695,7 @@ inherited FormMain: TFormMain
   object jvstctxt3: TJvStaticText [4]
     Left = 0
     Top = 351
-    Width = 637
+    Width = 629
     Height = 80
     Align = alTop
     Alignment = taCenter
@@ -1723,7 +1723,7 @@ inherited FormMain: TFormMain
   object jvstctxt4: TJvStaticText [5]
     Left = 0
     Top = 147
-    Width = 637
+    Width = 629
     Height = 24
     Align = alTop
     Alignment = taCenter
@@ -1747,7 +1747,7 @@ inherited FormMain: TFormMain
   object jvstctxt5: TJvStaticText [6]
     Left = 0
     Top = 329
-    Width = 637
+    Width = 629
     Height = 22
     Align = alTop
     Alignment = taCenter

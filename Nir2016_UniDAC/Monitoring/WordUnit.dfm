@@ -1,5 +1,5 @@
 object WordForm: TWordForm
-  Left = 469
+  Left = 397
   Top = 124
   Width = 1111
   Height = 768
@@ -68,7 +68,7 @@ object WordForm: TWordForm
   object StringGrid1: TStringGrid
     Left = 0
     Top = 0
-    Width = 1078
+    Width = 1095
     Height = 768
     Align = alClient
     ColCount = 99

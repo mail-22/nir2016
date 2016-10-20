@@ -153,11 +153,7 @@ begin
   //FormGrAll_Show;
   //OLAPForm_Show;
 
-<<<<<<< HEAD
   //WordForm.show;
-=======
-  WordForm.show;
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
 
 Exit;
   sl := TStringList.Create;

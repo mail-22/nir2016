@@ -98,6 +98,7 @@ var
   errCell: Boolean;
 label StartHere;
 begin
+  exit;
   AWordDoc := 'Tablica ITOG.doc';
   AWordDoc := ExtractFilePath(Application.ExeName) + AWordDoc;
   if not FileExists(AWordDoc) then Exit;

@@ -1,13 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-<<<<<<< HEAD
   Left = 745
   Top = 286
-=======
-  Left = 679
-  Top = 132
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
   Height = 458
   Width = 760
   object OpenDialog1: TOpenDialog
@@ -46,11 +41,7 @@ object DM: TDM
   end
   object UniConnection1: TUniConnection
     ProviderName = 'Access'
-<<<<<<< HEAD
     Database = 'D:\Dropbox\Share5\Work\Monitoring_2017\db1.mdb'
-=======
-    Database = 'D:\Dropbox\Share5\Work\Nir2016_UniDAC\Monitoring\db1.mdb'
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     DefaultTransaction = UniTransaction1
     Connected = True
     Left = 38
@@ -325,11 +316,7 @@ object DM: TDM
     MasterFields = 'N'
     DetailFields = 'N'
     Active = True
-<<<<<<< HEAD
     Left = 394
-=======
-    Left = 402
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     Top = 82
     ParamData = <
       item
@@ -435,11 +422,7 @@ object DM: TDM
     MasterFields = 'id'
     DetailFields = 'id'
     ObjectView = True
-<<<<<<< HEAD
     Left = 288
-=======
-    Left = 296
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     Top = 88
     ParamData = <
       item
@@ -511,10 +494,7 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'id;N'
-<<<<<<< HEAD
     Active = True
-=======
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     Left = 408
     Top = 272
     ParamData = <
@@ -593,13 +573,8 @@ object DM: TDM
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Trebovan')
-    Active = True
     ObjectView = True
-<<<<<<< HEAD
     Left = 648
-=======
-    Left = 656
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
     Top = 32
     object strngfldTrebovanN: TStringField
       DisplayWidth = 55

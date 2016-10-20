@@ -133,12 +133,8 @@ LegalTrademarks=
 OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
-<<<<<<< HEAD
 LastCompiledTime=2016.01.31 21:11:59
 Last Compile=20.10.2016 13:40:45
-=======
-Last Compile=10.09.2016 19:39:53
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71
 [Excluded Packages]
 C:\Users\Admin\Documents\DevExpress VCL\Library\Delphi7\dcldxPSCoreD7.bpl=ExpressPrinting System 4 by Developer Express Inc.
 C:\Users\Admin\Documents\DevExpress VCL\Library\Delphi7\dcldxPSLnksD7.bpl=ExpressPrinting System 4 ReportLinks (Standard) by Developer Express Inc.
@@ -182,7 +178,6 @@ Item0=c:\tmp\dcu
 [HistoryLists\hlOutputDirectorry]
 Count=1
 Item0=c:\tmp\dcu
-<<<<<<< HEAD
 [Exception Log]
 EurekaLog Version=6101
 Activate=0
@@ -667,5 +662,3 @@ mtInvalidEmailMsg0="Invalid email."
 TextsCollection=
 
 
-=======
->>>>>>> c109d0ac3013fb8369fb334568d1ad8cf70d4b71

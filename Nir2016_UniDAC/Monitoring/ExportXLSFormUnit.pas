@@ -196,53 +196,6 @@ begin
   end;
 end;
 
-procedure ExportXLSDetailTabl;
-var //DataSet:TCustomADODataSet;
-  i: Integer;
-  tmpRecordIndex: Integer;
-  s1, sFn, sF: string;
-  DataSetDetail: TDataSet;
-  RichEdit: TRichEdit;
-  NNTrebovan: Integer;
-    strBool: string;
-begin
-  DataSetDetail := DM.tblVypoln;
-  RichEdit := ExportForm.redt1;
-                //RichEdit.Lines.Append('Добавляемая строка');
-  s1 := '';
-  i := DataSetDetail.FieldCount;
-  i := DataSetDetail.RecNo;
-
-  DataSetDetail.First; NNTrebovan := 0;
-  for i := 0 to DataSetDetail.RecordCount - 1 do
-  begin
-    NNTrebovan := NNTrebovan + 1;
-    //s1 := 'требование N:' + IntToStr(NNTrebovan);
-    s1 := 'категория требования N: ' + DataSetDetail.FieldByName('N').AsString;
-    Sheet.Cells[Row, Col] := s1; //Row := Row + 1; //Col:=Col+1;
-
-    s1 := 'наименование требования: '
-      + DataSetDetail.FieldByName('Соответствие требованиям пожарной безопасности').AsString;
-    Sheet.Cells[Row, Col +1] := s1; //Row := Row + 1; //Col:=Col+1;
-
-      if (DataSetDetail.FieldByName('Соответствует да/нет').AsBoolean = True) then
-      begin
-          strBool := 'Соответствует';
-      end
-      else
-      begin
-        strBool := 'НЕ соответствует';
-      end;
-
-    s1 := 'Соответствует да/нет:'       + strBool;
-    Sheet.Cells[Row, Col +2] := s1;
-    Row := Row + 1; //Col:=Col+1;
-
-    application.ProcessMessages;
-    DataSetDetail.Next;
-  end;
-
-end;
 
 procedure ExportXLSRecordFields();
 var //DataSet:TCustomADODataSet;
@@ -431,6 +384,55 @@ begin
     ExcelApp := UnAssigned;
   end;
 end;
+
+
+procedure ExportXLSDetailTabl;
+var //DataSet:TCustomADODataSet;
+  i: Integer;
+  tmpRecordIndex: Integer;
+  s1, sFn, sF: string;
+  DataSetDetail: TDataSet;
+  RichEdit: TRichEdit;
+  NNTrebovan: Integer;
+    strBool: string;
+begin
+  DataSetDetail := DM.tblVypoln;
+  RichEdit := ExportForm.redt1;
+                //RichEdit.Lines.Append('Добавляемая строка');
+  s1 := '';
+  i := DataSetDetail.FieldCount;
+  i := DataSetDetail.RecNo;
+
+  DataSetDetail.First; NNTrebovan := 0;
+  for i := 0 to DataSetDetail.RecordCount - 1 do
+  begin
+    NNTrebovan := NNTrebovan + 1;
+    //s1 := 'требование N:' + IntToStr(NNTrebovan);
+    s1 := 'категория требования N: ' + DataSetDetail.FieldByName('N').AsString;
+    Sheet.Cells[Row, Col] := s1; //Row := Row + 1; //Col:=Col+1;
+
+    s1 := 'наименование требования: '
+      + DataSetDetail.FieldByName('Соответствие требованиям пожарной безопасности').AsString;
+    Sheet.Cells[Row, Col +1] := s1; //Row := Row + 1; //Col:=Col+1;
+
+      if (DataSetDetail.FieldByName('Соответствует да/нет').AsBoolean = True) then
+      begin
+          strBool := 'Соответствует';
+      end
+      else
+      begin
+        strBool := 'НЕ соответствует';
+      end;
+
+    s1 := 'Соответствует да/нет:'   + strBool;
+    Sheet.Cells[Row, Col +2] := s1;
+    Row := Row + 1; //Col:=Col+1;
+
+    application.ProcessMessages;
+    DataSetDetail.Next;
+  end;
+
+end; //procedure ExportXLSDetailTabl;
 
 end.
 

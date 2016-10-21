@@ -186,7 +186,9 @@ try
   for N := 1 to 16 do
   begin
     sN := IntToStr(N) + '.';
+    DM.tblVypolnAll.RecordCount; DM.tblVypolnAll.RecNo;        if(DM.tblVypolnAll.RecordCount=0) then exit;
     DataSet.First; DataSet.RecordCount; DataSet.RecNo;        if(DataSet.RecordCount=0) then exit;
+
     fSum := 0;  kol_treb:=0;
     while not DataSet.EOF do
     begin

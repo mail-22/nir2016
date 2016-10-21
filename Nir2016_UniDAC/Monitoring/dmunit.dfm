@@ -420,7 +420,8 @@ object DM: TDM
       'select * from Vypoln where (fid_Bilding = :id) ')
     MasterSource = dsBilding
     MasterFields = 'id'
-    DetailFields = 'id'
+    DetailFields = 'fid_Bilding'
+    Active = True
     ObjectView = True
     Left = 288
     Top = 88

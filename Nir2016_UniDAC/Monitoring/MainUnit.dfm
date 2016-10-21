@@ -1636,7 +1636,6 @@ inherited FormMain: TFormMain
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    PersistentHotKeys = True
     Spacing = 0
   end
   object jvstctxt1: TJvStaticText [2]

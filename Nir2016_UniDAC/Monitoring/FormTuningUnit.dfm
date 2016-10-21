@@ -1,6 +1,6 @@
 inherited FormTuning: TFormTuning
-  Left = 143
-  Top = 234
+  Left = 571
+  Top = 241
   Width = 808
   Height = 627
   Caption = 'tuning'
@@ -9,20 +9,19 @@ inherited FormTuning: TFormTuning
   object actmmb1: TActionMainMenuBar [0]
     Left = 0
     Top = 0
-    Width = 800
+    Width = 792
     Height = 26
     UseSystemFont = False
     ActionManager = actmgr1
     Caption = 'actmmb1'
-    ColorMap.HighlightColor = 14410210
+    ColorMap.HighlightColor = clWhite
     ColorMap.BtnSelectedColor = clBtnFace
-    ColorMap.UnusedColor = 14410210
+    ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    PersistentHotKeys = True
     Spacing = 0
   end
   object actmgr1: TActionManager

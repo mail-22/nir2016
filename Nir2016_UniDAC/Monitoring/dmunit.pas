@@ -141,6 +141,15 @@ type
     tblNormOfBildingDSDesigner7: TStringField;
     tblNormOfBildingDSDesigner8: TStringField;
     tblNormOfBildingDSDesigner3: TStringField;
+    unqryAllNorm: TUniQuery;
+    intgrfld1: TIntegerField;
+    strngfld1: TStringField;
+    strngfld2: TStringField;
+    strngfld3: TStringField;
+    strngfld4: TStringField;
+    strngfld5: TStringField;
+    mfld1: TMemoField;
+    dsAllNorm: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryDescription0AfterPost(DataSet: TDataSet);
     procedure tblDescriptionAfterPost(DataSet: TDataSet);
@@ -246,6 +255,7 @@ begin
   SetLength(A, Length(A) + 1); A[High(A)] := DM.tblNorm;
   SetLength(A, Length(A) + 1); A[High(A)] := DM.tblNormOfBilding;    
   SetLength(A, Length(A) + 1); A[High(A)] := DM.tblVypoln_SOOTVETSTV;
+  SetLength(A, Length(A) + 1); A[High(A)] := DM.unqryAllNorm;
 
   //DM.tblNorm.Open;
   //tblNormOfBilding.Open;

@@ -16,56 +16,40 @@ uses
   JvAppIniStorage, JvComponentBase, JvFormPlacement, ComCtrls, dxtree,
   dxdbtree, cxTL, cxMaskEdit, cxCheckBox, cxMemo, cxTLdxBarBuiltInMenu,
   cxDBTL, cxTLData, JvExComCtrls, JvDBTreeView, cxLocalization, cxNavigator,
-  cxSplitter;
+  cxSplitter, cxTextEdit,JvExStdCtrls, JvEdit, JvDBSearchEdit, Mask, JvExMask,
+  JvToolEdit, JvMaskEdit, JvDBFindEdit;
 
 type
   TTrebov = class(TBaseForm)
     pnlH: TPanel;
     mmo1: TMemo;
-    pnlT: TPanel;
-    pnlL: TPanel;
     ds1: TDataSource;
-    cxgrd1: TcxGrid;
-    cxgrdbtblvw1: TcxGridDBTableView;
-    cxgrdbndtblvwcxgrd1DBBandedTableView1: TcxGridDBBandedTableView;
-    cxgrdbndclmncxgrdbndtblvwcxgrd1DBBandedTableView1Column1: TcxGridDBBandedColumn;
-    cxgrdbcrdvwcxgrd1DBCardView1: TcxGridDBCardView;
-    cxgrdbcrdvwcxgrd1DBCardView1Row1: TcxGridDBCardViewRow;
-    cxgrdbtblvwcxgrd1DBTableView1: TcxGridDBTableView;
-    cxgrdlvl1: TcxGridLevel;
-    lbl1: TLabel;
     pnlR: TPanel;
-    lbl2: TLabel;
-    cxdbvrtclgrd1: TcxDBVerticalGrid;
-    dbnvgr1: TDBNavigator;
-    pnlB: TPanel;
     rvstyl1: TRVStyle;
-    dbrchvwdtole: TDBRichViewEdit;
-    img1: TcxDBImage;
     acttb1: TActionToolBar;
-    actmmb1: TActionMainMenuBar;
     actmgr1: TActionManager;
     act1Copy: TAction;
-    pnlC: TPanel;
     il1: TImageList;
-    JvDBStatusLabel1: TJvDBStatusLabel;
-    cxdbdtrwcxdbvrtclgrd1id: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow1: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow2: TcxDBEditorRow;
-    cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn1: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1N: TcxGridDBColumn;
-    tv1: TdxDBTreeView;
-    cxgrdbtblvw1DBColumn1: TcxGridDBColumn;
-    cxgrdbtblvw1rtf: TcxGridDBColumn;
-    cxgrdbtblvw1ParentField: TcxGridDBColumn;
-    cxgrdbtblvw1DetailField: TcxGridDBColumn;
     cxlclzr1: TcxLocalizer;
-    spl2: TcxSplitter;
-    spl1: TcxSplitter;
     spl3: TcxSplitter;
+    pnlL: TPanel;
+    lbl3: TLabel;
+    jvdbstslbl1: TJvDBStatusLabel;
+    dbnvgr2: TDBNavigator;
+    cxdbm1: TcxDBMemo;
+    edt1: TJvDBFindEdit;
+    edt2: TJvDBSearchEdit;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    cxgrdbclmnGrid1DBTableView1id: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1N: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1DBColumn: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1DBColumn1: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1DBColumn2: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1DBColumn3: TcxGridDBColumn;
+    cxgrdbclmnGrid1DBTableView1DBColumn4: TcxGridDBColumn;
+    pnl1: TPanel;
     procedure img1Click(Sender: TObject);
     procedure dbrchvwdtoleClick(Sender: TObject);
     procedure act1CopyExecute(Sender: TObject);

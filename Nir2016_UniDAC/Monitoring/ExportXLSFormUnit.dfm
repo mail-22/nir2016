@@ -1,6 +1,6 @@
 inherited ExportXLSForm: TExportXLSForm
-  Left = 164
-  Top = 226
+  Left = 713
+  Top = 285
   Width = 886
   Caption = 'ExportForm'
   OnShow = FormShow

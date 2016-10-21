@@ -630,4 +630,48 @@ object DM: TDM
     Left = 440
     Top = 344
   end
+  object unqryAllNorm: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from norm')
+    ReadOnly = True
+    Active = True
+    FilterOptions = [foCaseInsensitive]
+    Left = 524
+    Top = 72
+    object intgrfld1: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object strngfld1: TStringField
+      FieldName = 'N'
+      Size = 255
+    end
+    object strngfld2: TStringField
+      FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
+      Size = 255
+    end
+    object strngfld3: TStringField
+      FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
+      Size = 255
+    end
+    object strngfld4: TStringField
+      FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
+      Size = 255
+    end
+    object strngfld5: TStringField
+      FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
+      Size = 255
+    end
+    object mfld1: TMemoField
+      FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
+      BlobType = ftMemo
+    end
+  end
+  object dsAllNorm: TDataSource
+    DataSet = unqryAllNorm
+    Left = 550
+    Top = 120
+  end
 end

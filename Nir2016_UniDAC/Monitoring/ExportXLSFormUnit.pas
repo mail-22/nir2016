@@ -21,6 +21,7 @@ type
   public
     procedure ExportXLSAll;
     procedure ExportXLS_1_Record;
+    procedure ExportXLSDetailTabl3;
     { Public declarations }
   end;
 
@@ -359,17 +360,32 @@ begin
     i := DataSetMaster.FieldCount;
     i := DataSetMaster.RecNo;
     SaveRecNo := DataSetMaster.RecNo;
+//заголовок
+     s1 := 'Здание N' + IntToStr(NNBilding + 1);
+     Sheet.Cells[Row, Col] := s1;
 
+     Row := Row + 2;
+
+    s1 := 'категория требования N: ';
+    Sheet.Cells[Row, Col] := s1; //Row := Row + 1; //Col:=Col+1;
+
+    s1 := 'наименование требования: ';
+    Sheet.Cells[Row, Col +1] := s1; //Row := Row + 1; //Col:=Col+1;
+
+    s1 := 'Соответствует да/нет: '   ;
+    Sheet.Cells[Row, Col +2] := s1;
+
+// тело отчета
     //DataSetMaster.First;
     //for i := 0 to DataSetMaster.RecordCount - 1 do
     begin
-      s1 := 'Здание N' + IntToStr(NNBilding + 1);
-      Row := Row + 1; Row := Row + 1;
-      Sheet.Cells[Row, Col] := s1; Row := Row + 1; //Col:=Col+1;
+      Row := Row + 1;
+      //Sheet.Cells[Row, Col] := s1;
+      //Row := Row + 1; //Col:=Col+1;
       s1 := s1 + #13#10 + #13#10 + #13#10;
     //RichEdit.Lines.Append(s1); //RichEdit.Lines.Append(#13#10) ;
 
-      ExportXLSDetailTabl1();
+      ExportXLSDetailTabl3();
       application.ProcessMessages;
       //DataSetMaster.Next; NNBilding := NNBilding + 1;
       Sheet.Cells[Row, Col] := s1; Row := Row + 1; //Col:=Col+1;
@@ -488,6 +504,61 @@ begin
   end;
 
 end; //procedure ExportXLSDetailTabl2;
+
+
+procedure TExportXLSForm.ExportXLSDetailTabl3;
+var //DataSet:TCustomADODataSet;
+  i: Integer;
+  tmpRecordIndex: Integer;
+  s1, sFn, sF: string;
+  DataSetDetail: TDataSet;
+  RichEdit: TRichEdit;
+  NNTrebovan: Integer;
+    strBool: string;
+begin
+  DataSetDetail := DM.tblVypoln;
+  RichEdit := ExportForm.redt1;
+                //RichEdit.Lines.Append('Добавляемая строка');
+  s1 := '';
+  i := DataSetDetail.FieldCount;
+  i := DataSetDetail.RecNo;
+
+  DataSetDetail.First; NNTrebovan := 0;
+  for i := 0 to DataSetDetail.RecordCount - 1 do
+  begin
+    NNTrebovan := NNTrebovan + 1;
+    //s1 := 'требование N:' + IntToStr(NNTrebovan);
+    s1 := 'категория требования N: ' + DataSetDetail.FieldByName('N').AsString;
+    s1 := '' + DataSetDetail.FieldByName('N').AsString;
+    Sheet.Cells[Row, Col] := s1; //Row := Row + 1; //Col:=Col+1;
+
+    s1 := 'наименование требования: '
+      + DataSetDetail.FieldByName('Соответствие требованиям пожарной безопасности').AsString;
+    s1 := '' + DataSetDetail.FieldByName('Соответствие требованиям пожарной безопасности').AsString;
+    Sheet.Cells[Row, Col +1] := s1; //Row := Row + 1; //Col:=Col+1;
+
+    s1 := 'Соответствует да/нет: '   ;
+    s1 := ''   ;
+    //Sheet.Cells[Row, Col +2] := s1;
+//Соответствует да/нет                 tblVypolnDSDesigner2
+      if (DM.blnfldVypolnsoot.AsBoolean = True) then
+      //if (DataSetDetail.FieldByName('Соответствует да/нет').AsBoolean = True) then
+      begin
+          strBool := 'Соответствует';
+      end
+      else
+      begin
+        strBool := 'НЕ соответствует';
+      end;
+
+    s1 := ''   + strBool;
+    Sheet.Cells[Row, Col +2] := s1;
+    Row := Row + 1; //Col:=Col+1;
+
+    application.ProcessMessages;
+    DataSetDetail.Next;
+  end;
+  end; //procedure ExportXLSDetailTabl3;
 
 end.
 

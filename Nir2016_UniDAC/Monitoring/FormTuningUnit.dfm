@@ -36,6 +36,10 @@ inherited FormTuning: TFormTuning
           end
           item
             Action = acTreb
+          end
+          item
+            Action = act1
+            Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1053#1045' '#1074#1099#1087#1086#1083#1085#1077#1085#1085#1099#1084' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1085#1077' '#1086#1073#1098#1077#1082#1090#1077' '
           end>
         ActionBar = actmmb1
       end>
@@ -58,6 +62,10 @@ inherited FormTuning: TFormTuning
     object acTreb: TAction
       Caption = #1088#1072#1073#1086#1090#1072' '#1089' '#1087#1077#1088#1077#1095#1085#1077#1084' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081' '#1053#1044
       OnExecute = acTrebExecute
+    end
+    object act1: TAction
+      Caption = 'act1'
+      OnExecute = act1Execute
     end
   end
   object actlst1: TActionList

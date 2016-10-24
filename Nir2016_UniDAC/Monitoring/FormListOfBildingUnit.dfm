@@ -1,6 +1,6 @@
 inherited FormListOfBilding: TFormListOfBilding
-  Left = 502
-  Top = 158
+  Left = 592
+  Top = 129
   Width = 1198
   Height = 800
   Caption = #1089#1087#1080#1089#1086#1082' '#1079#1076#1072#1085#1080#1081' '#1087#1086#1076#1083#1077#1078#1072#1097#1080#1093' '#1084#1086#1085#1080#1090#1086#1088#1080#1085#1075#1091
@@ -411,7 +411,7 @@ inherited FormListOfBilding: TFormListOfBilding
           Width = 826
           Height = 16
           Align = alBottom
-          Position = 38
+          Position = 30
           TabOrder = 4
           DataField = 'id'
           DataSource = DM.dsBilding
@@ -823,22 +823,22 @@ inherited FormListOfBilding: TFormListOfBilding
             Left = 1
             Top = 1
             Width = 332
-            Height = 18
+            Height = 16
             Align = alTop
             Alignment = taCenter
             Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103' ('#1086#1087#1080#1089#1072#1085#1080#1077' '#1079#1076#1072#1085#1080#1103')'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -13
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object scrlbx1: TScrollBox
             Left = 1
-            Top = 19
+            Top = 17
             Width = 332
-            Height = 83
+            Height = 85
             Align = alClient
             AutoSize = True
             TabOrder = 0
@@ -846,7 +846,7 @@ inherited FormListOfBilding: TFormListOfBilding
               Left = 0
               Top = 0
               Width = 328
-              Height = 79
+              Height = 81
               DataField = 'rtf'
               DataSource = ds1
               ReadOnly = False
@@ -865,6 +865,7 @@ inherited FormListOfBilding: TFormListOfBilding
           Height = 8
           HotZoneClassName = 'TcxMediaPlayer8Style'
           AlignSplitter = salTop
+          Control = cxdbvrtclgrd1
         end
       end
       object spl2: TcxSplitter
@@ -875,6 +876,7 @@ inherited FormListOfBilding: TFormListOfBilding
         Cursor = crHSplit
         HotZoneClassName = 'TcxMediaPlayer8Style'
         AutoSnap = True
+        Control = pnlL
         Color = clSkyBlue
         ParentColor = False
       end
@@ -930,7 +932,7 @@ inherited FormListOfBilding: TFormListOfBilding
     Spacing = 0
   end
   object btn1: TButton [4]
-    Left = 648
+    Left = 8
     Top = 0
     Width = 113
     Height = 25
@@ -938,20 +940,12 @@ inherited FormListOfBilding: TFormListOfBilding
     TabOrder = 4
     OnClick = btn1Click
   end
-  object btn2: TButton [5]
-    Left = 824
-    Top = 16
-    Width = 75
-    Height = 25
-    Caption = 'btn2'
-    TabOrder = 5
-  end
-  object ds1: TDataSource [6]
+  object ds1: TDataSource [5]
     DataSet = DM.tblBilding
     Left = 450
     Top = 40
   end
-  object actmgr1: TActionManager [7]
+  object actmgr1: TActionManager [6]
     ActionBars = <
       item
         Items = <
@@ -966,9 +960,6 @@ inherited FormListOfBilding: TFormListOfBilding
           end
           item
             Action = actAct_Vypoln_Show
-          end
-          item
-            Action = act5
           end
           item
             Caption = '-'
@@ -1142,10 +1133,11 @@ inherited FormListOfBilding: TFormListOfBilding
     end
     object act5: TAction
       Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1053#1045' '#1074#1099#1087#1086#1083#1085#1077#1085#1085#1099#1084' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1085#1077' '#1086#1073#1098#1077#1082#1090#1077' '
+      Hint = #1054#1090#1095#1077#1090' '#1087#1086' '#1053#1045' '#1074#1099#1087#1086#1083#1085#1077#1085#1085#1099#1084' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1085#1077' '#1086#1073#1098#1077#1082#1090#1077' '
       OnExecute = act5Execute
     end
   end
-  object rvstyl1: TRVStyle [8]
+  object rvstyl1: TRVStyle [7]
     TextStyles = <
       item
         StyleName = 'Normal text'

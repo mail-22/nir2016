@@ -18,7 +18,9 @@ type
     actConn: TAction;
     acBack: TAction;
     acTreb: TAction;
+    act1: TAction;
     procedure acBackExecute(Sender: TObject);
+    procedure act1Execute(Sender: TObject);
     procedure actConnExecute(Sender: TObject);
     procedure acTrebExecute(Sender: TObject);
   private
@@ -34,7 +36,7 @@ var
 
 implementation
 
-uses MainUnit;
+uses MainUnit, Vypoln_Unit;
 
 {$R *.dfm}
 
@@ -42,6 +44,12 @@ procedure TFormTuning.acBackExecute(Sender: TObject);
 begin
   inherited;
  // FileCopy(Source, Destination: string);
+end;
+
+procedure TFormTuning.act1Execute(Sender: TObject);
+begin
+  inherited;
+    Vypoln.actExport11Execute(Sender);
 end;
 
 procedure TFormTuning.actConnExecute(Sender: TObject);

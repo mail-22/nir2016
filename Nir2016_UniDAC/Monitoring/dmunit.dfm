@@ -234,9 +234,7 @@ object DM: TDM
     SQL.Strings = (
       'select * from Vypoln where (fid_Bilding = :id) '
       'and (N like :N) and '
-      
-        '(  (['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090'] = :SOOTVETSTV1)  OR  (['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' ' +
-        #1076#1072'/'#1085#1077#1090'] = :SOOTVETSTV2) )')
+      '(  (soot = :SOOTVETSTV1)  OR  (soot = :SOOTVETSTV2) )')
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'fid_Bilding'
@@ -281,10 +279,6 @@ object DM: TDM
       FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080
       Size = 255
     end
-    object tblVypolnDSDesigner2: TBooleanField
-      FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
-      Required = True
-    end
     object tblVypolnfid_Bilding: TIntegerField
       FieldName = 'fid_Bilding'
     end
@@ -306,6 +300,10 @@ object DM: TDM
     end
     object tblVypolntest: TIntegerField
       FieldName = 'test'
+    end
+    object blnfldVypolnsoot: TBooleanField
+      FieldName = 'soot'
+      Required = True
     end
   end
   object tblNorm: TUniQuery
@@ -361,6 +359,7 @@ object DM: TDM
     MasterSource = dstblVypoln
     MasterFields = 'id'
     DetailFields = 'fid_Vypoln'
+    Active = True
     Left = 570
     Top = 170
     ParamData = <
@@ -421,6 +420,7 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'fid_Bilding'
+    ReadOnly = True
     Active = True
     ObjectView = True
     Left = 288
@@ -437,12 +437,6 @@ object DM: TDM
       FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080
       Origin = '['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080']'
       Size = 255
-    end
-    object tblVypolnAllADDSDesigner2: TBooleanField
-      DisplayWidth = 5
-      FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
-      Origin = '['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090']'
-      Required = True
     end
     object tblVypolnAllfid_Bilding: TIntegerField
       DisplayWidth = 10
@@ -486,12 +480,21 @@ object DM: TDM
       Origin = '[N]'
       Size = 255
     end
+    object intgrfldVypolnAllid: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object blnfldVypolnAllsoot: TBooleanField
+      FieldName = 'soot'
+      Required = True
+    end
   end
   object tblVypoln_SOOTVETSTV: TUniQuery
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Vypoln where (fid_Bilding = :id) and (N like :N) '
-      'and (['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090'] = :SOOTVETSTV)')
+      'and ( soot = :SOOTVETSTV)')
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'id;N'
@@ -526,12 +529,6 @@ object DM: TDM
       FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080
       Origin = '['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080']'
       Size = 255
-    end
-    object blnfldVypoln_SOOTVETSTVADDSDesigner2: TBooleanField
-      DisplayWidth = 5
-      FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
-      Origin = '['#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090']'
-      Required = True
     end
     object intgrfldVypoln_SOOTVETSTVfid_Bilding: TIntegerField
       DisplayWidth = 10
@@ -569,11 +566,21 @@ object DM: TDM
       FieldName = 'test'
       Origin = 'test'
     end
+    object intgrfldVypoln_SOOTVETSTVid: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object blnfldVypoln_SOOTVETSTVsoot: TBooleanField
+      FieldName = 'soot'
+      Required = True
+    end
   end
   object tdlTrebovan: TUniQuery
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Trebovan')
+    Active = True
     ObjectView = True
     Left = 648
     Top = 32

@@ -89,23 +89,10 @@ type
     btnFormGr: TJvLookOutButton;
     actFormGr: TAction;
     actDel: TAction;
-    rvstyl1: TRVStyle;
-    dbrchvwdtrtf: TDBRichViewEdit;
     btnLookOutButton1: TJvLookOutButton;
     actGr2: TAction;
     actAnal: TAction;
     btnAnal: TJvLookOutButton;
-    cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1N: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn1: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1fid_Bilding: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn11: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1SOOTVETSTV: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1rtf: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1NTreb: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1NTreb2: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1test: TcxGridDBColumn;
     cxdbdtrwcxdbvrtclgrd1id: TcxDBEditorRow;
     cxdbdtrwcxdbvrtclgrd1N: TcxDBEditorRow;
     cxdbdtrwcxdbvrtclgrd1DBEditorRow: TcxDBEditorRow;
@@ -174,6 +161,17 @@ type
     cxgrdbclmnGridDBTableView1DBColumn4: TcxGridDBColumn;
     btnLookOutButton3: TJvLookOutButton;
     actExportEx1: TAction;
+    cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1N: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1DBColumn: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1fid_Bilding: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1DBColumn1: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1SOOTVETSTV: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1rtf: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1NTreb: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1NTreb2: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1test: TcxGridDBColumn;
+    cxgrdbclmncxgrdbtblvw1soot: TcxGridDBColumn;
     procedure act210Execute(Sender: TObject);
     procedure act211Execute(Sender: TObject);
     procedure act212Execute(Sender: TObject);
@@ -521,6 +519,7 @@ procedure TVypoln.rgjvrdgrp1Click(Sender: TObject);
 begin
   inherited;
 
+  //DM.blnfldVypolnsoot.
   DM.tblVypoln.Close;
   if rgjvrdgrp1.ItemIndex = 0 then
     begin

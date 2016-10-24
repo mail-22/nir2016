@@ -4,6 +4,7 @@ program Monitoring;
 
 uses 
   //ExceptionLog,           
+  ExceptionLog,
   Forms,
   DMUnit in 'dmunit.pas' {DM: TDataModule},
   CommonUnit in 'CommonUnit.pas' {Common: TDataModule},
@@ -38,11 +39,14 @@ except
 
 end;
 
+//Application.CreateForm(TTrebov, Trebov);
+
   ///////////////////////////////////////////////////////////////////////////////
   Application.CreateForm(TFormMain, FormMain);
 /////////////////////////////////////////////////////////////////////////////////
   Application.CreateForm(TBaseForm, BaseForm);
   Application.CreateForm(TFormListOfBilding, FormListOfBilding);
+//
   Application.CreateForm(TTrebov, Trebov);
   Application.CreateForm(TVypoln, Vypoln);
   Application.CreateForm(TExportForm, ExportForm);

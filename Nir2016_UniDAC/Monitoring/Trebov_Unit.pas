@@ -17,7 +17,7 @@ uses
   dxdbtree, cxTL, cxMaskEdit, cxCheckBox, cxMemo, cxTLdxBarBuiltInMenu,
   cxDBTL, cxTLData, JvExComCtrls, JvDBTreeView, cxLocalization, cxNavigator,
   cxSplitter, cxTextEdit,JvExStdCtrls, JvEdit, JvDBSearchEdit, Mask, JvExMask,
-  JvToolEdit, JvMaskEdit, JvDBFindEdit;
+  JvToolEdit, JvMaskEdit, JvDBFindEdit, IniFiles;
 
 type
   TTrebov = class(TBaseForm)
@@ -25,23 +25,20 @@ type
     mmo1: TMemo;
     ds1: TDataSource;
     pnlR: TPanel;
-    rvstyl1: TRVStyle;
     acttb1: TActionToolBar;
     actmgr1: TActionManager;
     act1Copy: TAction;
     il1: TImageList;
-    cxlclzr1: TcxLocalizer;
+    cxLocalizer1: TcxLocalizer;
     spl3: TcxSplitter;
     pnlL: TPanel;
     lbl3: TLabel;
     jvdbstslbl1: TJvDBStatusLabel;
     dbnvgr2: TDBNavigator;
     cxdbm1: TcxDBMemo;
-    edt1: TJvDBFindEdit;
-    edt2: TJvDBSearchEdit;
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
+    cxGrid2DBTableView1: TcxGridDBTableView;
+    cxGrid2Level1: TcxGridLevel;
+    cxGrid2: TcxGrid;
     cxgrdbclmnGrid1DBTableView1id: TcxGridDBColumn;
     cxgrdbclmnGrid1DBTableView1N: TcxGridDBColumn;
     cxgrdbclmnGrid1DBTableView1DBColumn: TcxGridDBColumn;
@@ -50,6 +47,7 @@ type
     cxgrdbclmnGrid1DBTableView1DBColumn3: TcxGridDBColumn;
     cxgrdbclmnGrid1DBTableView1DBColumn4: TcxGridDBColumn;
     pnl1: TPanel;
+    procedure FormCreate(Sender: TObject);
     procedure img1Click(Sender: TObject);
     procedure dbrchvwdtoleClick(Sender: TObject);
     procedure act1CopyExecute(Sender: TObject);
@@ -67,6 +65,37 @@ implementation
 uses FormJPGUnit, FormRTFUnit, DMUnit;
 
 {$R *.dfm}
+
+procedure TTrebov.FormCreate(Sender: TObject);
+var sMyDocAppPath :string;
+begin
+  inherited;
+
+  sMyDocAppPath := ExtractFilePath(Application.ExeName)+'\';
+  cxLocalizer1.FileName:='DevExRus100Proc.ini';
+ cxLocalizer1.Active:=true;
+ cxLocalizer1.Locale:=1049;
+
+if FileExists(sMyDocAppPath + 'DevExRus100Proc.ini') then
+  begin
+      cxLocalizer1.Active   := false;
+      cxLocalizer1.FileName := sMyDocAppPath + 'DevExRus100Proc.ini';
+      cxLocalizer1.Active   := True;
+
+      if FileExists(sMyDocAppPath + 'lang.ini') then
+        with TIniFile.Create(sMyDocAppPath + 'lang.ini') do
+        begin
+          cxLocalizer1.Locale := ReadInteger('LANG', 'Locale', GetThreadLocale);//если пользователь ещё не указал, то берём локаль винды
+          free;
+        end//with
+      else
+        cxLocalizer1.Locale := GetThreadLocale;//если пользователь ещё не указал, то берём локаль винды
+  end;//if FileExists(sMyDocAppPath + 'Lang\lang.ini') then
+
+  if cxLocalizer1.Locale = 0 then
+    cxLocalizer1.Locale := GetThreadLocale;
+
+end;
 
 procedure TTrebov.img1Click(Sender: TObject);
 begin

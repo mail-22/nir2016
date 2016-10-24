@@ -80,7 +80,6 @@ type
     tblVypolnid: TIntegerField;
     tblVypolnN: TStringField;
     tblVypolnDSDesigner: TStringField;
-    tblVypolnDSDesigner2: TBooleanField;
     tblVypolnfid_Bilding: TIntegerField;
     tblVypolnDSDesigner1: TIntegerField;
     tblVypolnSOOTVETSTV: TSmallintField;
@@ -98,7 +97,6 @@ type
     UniTransaction1: TUniTransaction;
     tblVypolnAll: TUniQuery;
     tblVypolnAllADDSDesigner: TStringField;
-    tblVypolnAllADDSDesigner2: TBooleanField;
     tblVypolnAllfid_Bilding: TIntegerField;
     tblVypolnAllADDSDesigner1: TIntegerField;
     tblVypolnAllSOOTVETSTV: TSmallintField;
@@ -110,7 +108,6 @@ type
     tblVypoln_SOOTVETSTV: TUniQuery;
     strngfldVypoln_SOOTVETSTVN: TStringField;
     strngfldVypoln_SOOTVETSTVADDSDesigner: TStringField;
-    blnfldVypoln_SOOTVETSTVADDSDesigner2: TBooleanField;
     intgrfldVypoln_SOOTVETSTVfid_Bilding: TIntegerField;
     intgrfldVypoln_SOOTVETSTVADDSDesigner1: TIntegerField;
     smlntfldVypoln_SOOTVETSTVSOOTVETSTV: TSmallintField;
@@ -150,6 +147,11 @@ type
     strngfld5: TStringField;
     mfld1: TMemoField;
     dsAllNorm: TDataSource;
+    intgrfldVypolnAllid: TIntegerField;
+    blnfldVypolnAllsoot: TBooleanField;
+    blnfldVypolnsoot: TBooleanField;
+    intgrfldVypoln_SOOTVETSTVid: TIntegerField;
+    blnfldVypoln_SOOTVETSTVsoot: TBooleanField;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryDescription0AfterPost(DataSet: TDataSet);
     procedure tblDescriptionAfterPost(DataSet: TDataSet);

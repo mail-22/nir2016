@@ -181,7 +181,6 @@ type
     cxPropertiesStore1: TcxPropertiesStore;
     act5: TAction;
     btn1: TButton;
-    btn2: TButton;
     spl2: TcxSplitter;
     cxSplitter1: TcxSplitter;
     procedure FormCreate(Sender: TObject);
@@ -487,6 +486,7 @@ procedure TFormListOfBilding.act_AddNewBuildingExecute(Sender: TObject);
 begin
   //inherited;
  // AddNewBuilding; //
+ btn1.Click;
 end;
 
 procedure TFormListOfBilding.FormClose(Sender: TObject; var Action:

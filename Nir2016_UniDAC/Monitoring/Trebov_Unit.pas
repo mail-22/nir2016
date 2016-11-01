@@ -7,7 +7,7 @@ uses
   Dialogs, Unit_BaseForm, DB, StdCtrls, ExtCtrls, cxGraphics, cxControls,
   cxLookAndFeels, cxLookAndFeelPainters, cxStyles, cxCustomData, cxFilter,
   cxData, cxDataStorage, cxEdit, cxDBData, cxImage, cxContainer, cxDBEdit,
-  RVScroll, RichView, RVEdit, DBRV, RVStyle, DBCtrls, cxVGrid, cxDBVGrid,
+DBCtrls, cxVGrid, cxDBVGrid,
   cxInplaceContainer, cxGridLevel, cxGridCardView, cxGridDBCardView,
   cxGridBandedTableView, cxGridDBBandedTableView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid,

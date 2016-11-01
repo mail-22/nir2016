@@ -2,8 +2,7 @@ program Monitoring;
 {$WARNINGS OFF}
 {$WARN UNIT_PLATFORM OFF}
 
-uses 
-  //ExceptionLog,           
+uses
   ExceptionLog,
   Forms,
   DMUnit in 'dmunit.pas' {DM: TDataModule},
@@ -24,12 +23,16 @@ uses
   ExportXLSFormUnit in 'ExportXLSFormUnit.pas' {ExportXLSForm},
   ABOUT in 'ABOUT.PAS' {AboutForm},
   UBusyRtl in 'BusyDetect\UBusyrtl.pas',
-  WordUnit in 'WordUnit.pas' {WordForm};
+  WordUnit in 'WordUnit.pas' {WordForm},
+  ImportXLSUnit in 'ImportXLSUnit.pas' {ImportXLSUnitForm};
 
 {$R *.res}
 
 begin
   Application.Initialize;
+  
+ // Application.CreateForm(TImportXLSUnitForm, ImportXLSUnitForm);
+
 /////////////////////////////////////////////////////////////////////////////////
   Application.CreateForm(TCommon, Common);
   Application.CreateForm(TDM, DM);

@@ -4,16 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, RVScroll, RichView, RVEdit, DBRV, RVStyle, cxGraphics,
+  Dialogs, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   cxTextEdit, cxMemo, cxRichEdit, cxDBRichEdit, StdCtrls, JvExStdCtrls,
-  JvRichEdit, JvDBRichEdit, ComCtrls;
+  JvRichEdit, JvDBRichEdit, ComCtrls, DBCtrls, DB;
 
 type
   TFormRTF = class(TForm)
-    dbrchvwdtole: TDBRichViewEdit;
     ds1: TDataSource;
-    rvstyl1: TRVStyle;
     cxdbrchdt1: TcxDBRichEdit;
     pgc1: TPageControl;
     ts1: TTabSheet;
@@ -21,6 +19,7 @@ type
     ts3: TTabSheet;
     edtole2: TJvDBRichEdit;
     mmo1: TMemo;
+    dbrchvwdtole: TDBMemo;
   private
     { Private declarations }
   public

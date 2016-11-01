@@ -14,11 +14,12 @@ uses
    ADODB   ,Unit_BaseForm, JvExControls,
   JvLookOut, ActnList, XPStyleActnCtrls, ActnMan, JvExStdCtrls
   ,ComCtrls, ToolWin, ActnCtrls, ActnMenus, JvLabel, JvDBControls,
-  RVScroll, RichView, RVEdit, DBRV, RVStyle, JvAppStorage, JvAppIniStorage,
+  JvAppStorage, JvAppIniStorage,
   JvComponentBase, JvFormPlacement, ActnColorMaps,
   cxNavigator, cxDBNavigator, cxMRUEdit,utility, StdActns, cxCheckBox,
   cxContainer, cxProgressBar, JvExComCtrls, JvProgressBar, JvDBProgressBar,
-  cxPropertiesStore, cxDBLookupComboBox, cxSplitter;
+  cxPropertiesStore, cxDBLookupComboBox, cxSplitter
+  ;
 
 type
   TFormListOfBilding = class(TBaseForm)
@@ -72,8 +73,6 @@ type
     actAct_Vypoln_Show: TAction;
     actmmb1: TActionMainMenuBar;
     act_AddNewBuilding: TAction;
-    dbrchvwdtole: TDBRichViewEdit;
-    rvstyl1: TRVStyle;
     cxstylrpstry1: TcxStyleRepository;
     cxstyl1: TcxStyle;
     xpclrmp1: TXPColorMap;
@@ -183,6 +182,7 @@ type
     btn1: TButton;
     spl2: TcxSplitter;
     cxSplitter1: TcxSplitter;
+    dbrchvwdtole: TDBMemo;
     procedure FormCreate(Sender: TObject);
     procedure act0Execute(Sender: TObject);
     procedure act3Execute(Sender: TObject);

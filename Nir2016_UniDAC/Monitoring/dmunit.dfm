@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 745
-  Top = 286
+  Left = 644
+  Top = 401
   Height = 458
   Width = 760
   object OpenDialog1: TOpenDialog
@@ -43,7 +43,6 @@ object DM: TDM
     ProviderName = 'Access'
     Database = 'D:\Dropbox\Share5\Work\Monitoring_2017\db1.mdb'
     DefaultTransaction = UniTransaction1
-    Connected = True
     Left = 38
     Top = 72
   end
@@ -51,7 +50,6 @@ object DM: TDM
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Bilding')
-    Active = True
     Left = 150
     Top = 40
     object tblBildingid: TIntegerField
@@ -238,7 +236,6 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'fid_Bilding'
-    Active = True
     Left = 300
     Top = 20
     ParamData = <
@@ -313,7 +310,6 @@ object DM: TDM
     MasterSource = dstblVypoln
     MasterFields = 'N'
     DetailFields = 'N'
-    Active = True
     Left = 394
     Top = 82
     ParamData = <
@@ -359,9 +355,8 @@ object DM: TDM
     MasterSource = dstblVypoln
     MasterFields = 'id'
     DetailFields = 'fid_Vypoln'
-    Active = True
     Left = 570
-    Top = 170
+    Top = 178
     ParamData = <
       item
         DataType = ftInteger
@@ -421,7 +416,6 @@ object DM: TDM
     MasterFields = 'id'
     DetailFields = 'fid_Bilding'
     ReadOnly = True
-    Active = True
     ObjectView = True
     Left = 288
     Top = 88
@@ -498,7 +492,6 @@ object DM: TDM
     MasterSource = dsBilding
     MasterFields = 'id'
     DetailFields = 'id;N'
-    Active = True
     Left = 408
     Top = 272
     ParamData = <
@@ -580,7 +573,6 @@ object DM: TDM
     Connection = UniConnection1
     SQL.Strings = (
       'select * from Trebovan')
-    Active = True
     ObjectView = True
     Left = 648
     Top = 32
@@ -642,7 +634,6 @@ object DM: TDM
     SQL.Strings = (
       'select * from norm')
     ReadOnly = True
-    Active = True
     FilterOptions = [foCaseInsensitive]
     Left = 524
     Top = 72

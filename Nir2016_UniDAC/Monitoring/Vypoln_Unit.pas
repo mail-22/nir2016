@@ -5,9 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, cxGraphics, cxControls, cxLookAndFeels,
-  cxLookAndFeelPainters, cxContainer, cxEdit, RVScroll, RichView, RVEdit,
-  DBRV, cxImage, cxDBEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit,
-  cxBlobEdit, RVStyle, cxStyles, cxCustomData, cxFilter, cxData,
+  cxLookAndFeelPainters, cxContainer, cxEdit,
+  cxImage, cxDBEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit,
+  cxBlobEdit,  cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, DB, cxDBData, cxRichEdit, StdCtrls, DBCtrls, cxVGrid,
   cxDBVGrid, cxInplaceContainer, cxGridLevel, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid

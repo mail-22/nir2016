@@ -7,18 +7,10 @@ uses Forms, ADOint, IniFiles, DbUtil
   , utility
   , SysUtils, Classes, ADODB, DB, DisplayLabel, Dialogs
   , JvJCLUtils, JvComponentBase, JvBDEFilter, Windows,
-  JvDSADialogs, cxClasses, uADStanIntf, uADStanOption, uADStanError,
-  uADGUIxIntf, uADPhysIntf, uADStanDef, uADStanPool, uADStanAsync,
-  uADPhysManager, uADStanParam, uADDatSManager, uADDAptIntf,
-  uADDAptManager, uADPhysODBCBase, uADPhysMSAcc, uADCompDataSet,
-  uADCompClient, uADGUIxFormsWait, uADCompGUIx, MemDS, DBAccess, Uni,
-  UniProvider, ODBCUniProvider, AccessUniProvider, DAAlerter, UniAlerter,
-  DASQLMonitor, UniSQLMonitor
-//, frxClass
-//, frxDBSet
-  //, frxClass, frxDBSet
-  ;
-            
+  JvDSADialogs, cxClasses, DAAlerter, UniAlerter, DASQLMonitor,
+  UniSQLMonitor, DBAccess, Uni, UniProvider, ODBCUniProvider,
+  AccessUniProvider, MemDS   ;
+
 type
   TDM = class(TDataModule)
     OpenDialog1: TOpenDialog;

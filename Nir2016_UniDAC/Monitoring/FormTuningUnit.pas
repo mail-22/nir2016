@@ -7,7 +7,7 @@ uses
   Dialogs, Unit_BaseForm, ActnList, ToolWin, ActnMan, ActnCtrls, ActnMenus,
   XPStyleActnCtrls
   ,ShellAPI, JvAppStorage, JvAppIniStorage, JvComponentBase,
-  JvFormPlacement
+  JvFormPlacement, StdCtrls, cxPropertiesStore
   ;
 
 type
@@ -19,10 +19,15 @@ type
     acBack: TAction;
     acTreb: TAction;
     act1: TAction;
+    btn1: TButton;
+    cxprprtstr1: TcxPropertiesStore;
+    procedure FormCreate(Sender: TObject);
     procedure acBackExecute(Sender: TObject);
     procedure act1Execute(Sender: TObject);
     procedure actConnExecute(Sender: TObject);
     procedure acTrebExecute(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -39,6 +44,22 @@ implementation
 uses MainUnit, Vypoln_Unit;
 
 {$R *.dfm}
+
+procedure TFormTuning.FormCreate(Sender: TObject);
+begin
+  inherited;
+
+  cxprprtstr1.StorageName:=ExtractFilePath(Application.ExeName) +
+    Self.Name + '.cxprprtstr1.ini';
+    AFileName := cxprprtstr1.StorageName;
+    if not FileExists(AFileName) then begin
+       cxprprtstr1.StoreTo(True);
+    end
+    else begin
+      cxprprtstr1.RestoreFrom;
+    end;
+
+end;
 
 procedure TFormTuning.acBackExecute(Sender: TObject);
 begin
@@ -73,6 +94,18 @@ procedure TFormTuning.acTrebExecute(Sender: TObject);
 begin
   inherited;
    FormMain.Trebov_Show;
+end;
+
+procedure TFormTuning.btn1Click(Sender: TObject);
+begin
+  inherited;
+  FormMain.ImportXLSUnit_Show;
+end;
+
+procedure TFormTuning.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+   cxprprtstr1.StoreTo(True);
 end;
 
 function FileCopy(Source, Destination: string): boolean;

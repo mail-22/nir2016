@@ -9,8 +9,8 @@ inherited FormGr: TFormGr
   object cht1: TChart [0]
     Left = 0
     Top = 24
-    Width = 792
-    Height = 509
+    Width = 784
+    Height = 498
     BackWall.Brush.Color = clWhite
     BackWall.Brush.Style = bsClear
     BackWall.Dark3D = False
@@ -119,9 +119,7 @@ inherited FormGr: TFormGr
     object brsrsSeries1: TBarSeries
       BarPen.Visible = False
       ColorEachPoint = True
-      Marks.Arrow.Visible = True
       Marks.Callout.Brush.Color = clBlack
-      Marks.Callout.Arrow.Visible = True
       Marks.Font.Height = -13
       Marks.Frame.Color = clGray
       Marks.MultiLine = True
@@ -147,14 +145,14 @@ inherited FormGr: TFormGr
   object actmmb1: TActionMainMenuBar [1]
     Left = 0
     Top = 0
-    Width = 792
+    Width = 784
     Height = 24
     UseSystemFont = False
     ActionManager = actmgr1
     Caption = 'actmmb1'
-    ColorMap.HighlightColor = 14410210
+    ColorMap.HighlightColor = clWhite
     ColorMap.BtnSelectedColor = clBtnFace
-    ColorMap.UnusedColor = 14410210
+    ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

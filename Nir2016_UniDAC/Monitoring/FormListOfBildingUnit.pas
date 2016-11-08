@@ -40,7 +40,6 @@ type
     cxdbvrtclgrd1: TcxDBVerticalGrid;
     pnlB: TPanel;
     lbl3: TLabel;
-    scrlbx1: TScrollBox;
     pnlH: TPanel;
     mmo1: TMemo;
     ds1: TDataSource;
@@ -86,94 +85,6 @@ type
     Action1: TAction;
     act4: THelpContextAction;
     cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn1: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn2: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn3: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn4: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn5: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn6: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn7: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn8: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn9: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn10: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn11: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn12: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn13: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn14: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn15: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn16: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1C: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn17: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn18: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn19: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn20: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn21: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn22: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn23: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn24: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn0: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn25: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn26: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn27: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn28: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1Adress: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1Street: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1BildingNo: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1Region: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn29: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1DBColumn30: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1sootvet: TcxGridDBColumn;
-    cxdbdtrwcxdbvrtclgrd1id: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow1: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow2: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow3: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow4: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow5: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow6: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow7: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow8: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow9: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow10: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow11: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow12: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow13: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow14: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow15: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow16: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1C: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow17: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow18: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow19: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow20: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow21: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow22: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow23: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow24: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow0: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow25: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow26: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow27: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow28: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1rtf: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1Adress: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1Street: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1BildingNo: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1Region: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow29: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1DBEditorRow30: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1sootvet: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1PprT: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1ZT: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1Et: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1P1: TcxDBEditorRow;
-    cxdbdtrwcxdbvrtclgrd1P2: TcxDBEditorRow;
-    cxgrdbclmncxgrdbtblvw1PprT: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1ZT: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1Et: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1P1: TcxGridDBColumn;
-    cxgrdbclmncxgrdbtblvw1P2: TcxGridDBColumn;
     cxProgressBarVypoln: TcxProgressBar;
     cxProgressBarTrebovan: TcxProgressBar;
     JvDBProgressBar1: TJvDBProgressBar;
@@ -182,7 +93,108 @@ type
     btn1: TButton;
     spl2: TcxSplitter;
     cxSplitter1: TcxSplitter;
-    dbrchvwdtole: TDBMemo;
+    dbmmortf: TDBMemo;
+    cxgrdbtblvw1DBColumn: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn1: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn2: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn_FUNC: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn4: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn5: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn6: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn7: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn8: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn9: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn10: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn11: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn12: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn13: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn14: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn15: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn16: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn17: TcxGridDBColumn;
+    cxgrdbtblvw1C: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn18: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn19: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn20: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn21: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn22: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn23: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn24: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn25: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn26: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn27: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn28: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn29: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn30: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn31: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn32: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn33: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn34: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn35: TcxGridDBColumn;
+    cxgrdbtblvw1rtf: TcxGridDBColumn;
+    cxgrdbtblvw1Adress: TcxGridDBColumn;
+    cxgrdbtblvw1Street: TcxGridDBColumn;
+    cxgrdbtblvw1BildingNo: TcxGridDBColumn;
+    cxgrdbtblvw1Region: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn36: TcxGridDBColumn;
+    cxgrdbtblvw1DBColumn37: TcxGridDBColumn;
+    cxgrdbtblvw1sootvet: TcxGridDBColumn;
+    cxgrdbtblvw1PprT: TcxGridDBColumn;
+    cxgrdbtblvw1ZT: TcxGridDBColumn;
+    cxgrdbtblvw1Et: TcxGridDBColumn;
+    cxgrdbtblvw1P1: TcxGridDBColumn;
+    cxgrdbtblvw1P2: TcxGridDBColumn;
+    cxdbvrtclgrd1id: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow1: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow2: TcxDBEditorRow;
+    cxdbdtrwcxdbvrtclgrd1DBEditor_FUN: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow4: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow5: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow6: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow7: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow8: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow9: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow10: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow11: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow12: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow13: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow14: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow15: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow16: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow17: TcxDBEditorRow;
+    cxdbvrtclgrd1C: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow18: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow19: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow20: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow21: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow22: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow23: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow24: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow25: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow26: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow27: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow28: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow29: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow30: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow31: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow32: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow33: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow34: TcxDBEditorRow;
+    cxdbvrtclgrd1rtf: TcxDBEditorRow;
+    cxdbvrtclgrd1Adress: TcxDBEditorRow;
+    cxdbvrtclgrd1Street: TcxDBEditorRow;
+    cxdbvrtclgrd1BildingNo: TcxDBEditorRow;
+    cxdbvrtclgrd1Region: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow35: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow36: TcxDBEditorRow;
+    cxdbvrtclgrd1sootvet: TcxDBEditorRow;
+    cxdbvrtclgrd1PprT: TcxDBEditorRow;
+    cxdbvrtclgrd1ZT: TcxDBEditorRow;
+    cxdbvrtclgrd1Et: TcxDBEditorRow;
+    cxdbvrtclgrd1P1: TcxDBEditorRow;
+    cxdbvrtclgrd1P2: TcxDBEditorRow;
+    cxdbvrtclgrd1DBEditorRow37: TcxDBEditorRow;
     procedure FormCreate(Sender: TObject);
     procedure act0Execute(Sender: TObject);
     procedure act3Execute(Sender: TObject);
@@ -240,16 +252,6 @@ var MRUEdit_rubricator: string;
 begin
   inherited;
 
-    cxPropertiesStore1.StorageName:=ExtractFilePath(Application.ExeName) +
-    Self.Name + '.cxPropertiesStore1.ini';
-    AFileName := cxPropertiesStore1.StorageName;
-    if not FileExists(AFileName) then begin
-       cxPropertiesStore1.StoreTo(True);
-    end
-    else begin
-      cxPropertiesStore1.RestoreFrom;
-      cxPropertiesStore1.Active := True ;
-    end;
 
 
     //cxIntlPrintSys31.FileName := ExtractFilePath(Application.ExeName) +     'cxIntlPrintSys3.ini';
@@ -271,14 +273,33 @@ begin
 
  //MRU
   MRUEdit_rubricator :=ExtractFilePath(Application.ExeName) + Self.Name +'.'+ 'MRUEdit.rubricator_F.txt';
-  if FileExists1(MRUEdit_rubricator) then begin
-       TcxMRUEditProperties(cxgrdbclmncxgrdbtblvw1DBColumn3.Properties).LookupItems.LoadFromFile(MRUEdit_rubricator);
-  TcxMRUEditProperties(cxgrdbclmncxgrdbtblvw1DBColumn3.Properties).LookupItems.Text;
+  MRUEdit_rubricator :=ExtractFilePath(Application.ExeName)                 + 'MRUEdit.rubricator_F.txt';
+  if FileExists1(MRUEdit_rubricator) then
+  begin
+    TcxMRUEditProperties(cxgrdbtblvw1DBColumn_FUNC.Properties).LookupItems.LoadFromFile(MRUEdit_rubricator);
+    TcxMRUEditProperties(cxgrdbtblvw1DBColumn_FUNC.Properties).LookupItems.Text;
+
+    //TcxMRUEditProperties(cxdbdtrwcxdbvrtclgrd1DBEditor_FUN.Properties).LookupItems.LoadFromFile(MRUEdit_rubricator);
+    //TcxMRUEditProperties(cxdbdtrwcxdbvrtclgrd1DBEditor_FUN.Properties).LookupItems := TcxMRUEditProperties(cxgrdbtblvw1DBColumn_FUNC.Properties).LookupItems;
+     //TcxMRUEditProperties(cxdbdtrwcxdbvrtclgrd1DBEditor_FUN.Properties).LookupItems.LoadFromFile(MRUEdit_rubricator);
+    //TcxMRUEditProperties(cxdbdtrwcxdbvrtclgrd1DBEditor_FUN.Properties).LookupItems.Text;
   end
   else
-  begin 
+  begin
   end;
 
+
+exit; // !!!  
+    cxPropertiesStore1.StorageName:=ExtractFilePath(Application.ExeName) +
+    Self.Name + '.cxPropertiesStore1.ini';
+    AFileName := cxPropertiesStore1.StorageName;
+    if not FileExists(AFileName) then begin
+       cxPropertiesStore1.StoreTo(True);
+    end
+    else begin
+      cxPropertiesStore1.RestoreFrom;
+      cxPropertiesStore1.Active := True ;
+    end;
 
 
 end;
@@ -494,6 +515,9 @@ procedure TFormListOfBilding.FormClose(Sender: TObject; var Action:
 begin
   inherited;  
   //состо€ние таблицы
+
+   cxgrdbtblvw1.StoreToIniFile(AFileName, true); // сохранить! состо€ние таблицы
+
   if FileExists(AFileName)  then
     cxgrdbtblvw1.StoreToIniFile(AFileName, true);//Ќ≈ сохран€ть состо€ние таблицы
 

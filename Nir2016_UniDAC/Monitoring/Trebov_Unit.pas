@@ -17,7 +17,8 @@ DBCtrls, cxVGrid, cxDBVGrid,
   dxdbtree, cxTL, cxMaskEdit, cxCheckBox, cxMemo, cxTLdxBarBuiltInMenu,
   cxDBTL, cxTLData, JvExComCtrls, JvDBTreeView, cxLocalization, cxNavigator,
   cxSplitter, cxTextEdit,JvExStdCtrls, JvEdit, JvDBSearchEdit, Mask, JvExMask,
-  JvToolEdit, JvMaskEdit, JvDBFindEdit, IniFiles;
+  JvToolEdit, JvMaskEdit, JvDBFindEdit, IniFiles, cxDBNavigator,
+  cxPropertiesStore;
 
 type
   TTrebov = class(TBaseForm)
@@ -33,8 +34,6 @@ type
     spl3: TcxSplitter;
     pnlL: TPanel;
     lbl3: TLabel;
-    jvdbstslbl1: TJvDBStatusLabel;
-    dbnvgr2: TDBNavigator;
     cxdbm1: TcxDBMemo;
     cxGrid2DBTableView1: TcxGridDBTableView;
     cxGrid2Level1: TcxGridLevel;
@@ -47,10 +46,19 @@ type
     cxgrdbclmnGrid1DBTableView1DBColumn3: TcxGridDBColumn;
     cxgrdbclmnGrid1DBTableView1DBColumn4: TcxGridDBColumn;
     pnl1: TPanel;
+    pnl_Navigator1: TPanel;
+    cxdbnvgtr1: TcxDBNavigator;
+    pnl3: TPanel;
+    jvdbstslbl2: TJvDBStatusLabel;
+    pnl4: TPanel;
+    jvdbstslbl3: TJvDBStatusLabel;
+    cxgrdbclmnGrid2DBTableView1F: TcxGridDBColumn;
+    cxprprtstr1: TcxPropertiesStore;
     procedure FormCreate(Sender: TObject);
     procedure img1Click(Sender: TObject);
     procedure dbrchvwdtoleClick(Sender: TObject);
     procedure act1CopyExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -95,6 +103,15 @@ if FileExists(sMyDocAppPath + 'DevExRus100Proc.ini') then
   if cxLocalizer1.Locale = 0 then
     cxLocalizer1.Locale := GetThreadLocale;
 
+    cxprprtstr1.StorageName:=ExtractFilePath(Application.ExeName) +
+    Self.Name + '.cxprprtstr1.ini'; 
+    if not FileExists(cxprprtstr1.StorageName) then begin
+       cxprprtstr1.StoreTo(True);
+    end
+    else begin
+      cxprprtstr1.RestoreFrom;
+    end;
+
 end;
 
 procedure TTrebov.img1Click(Sender: TObject);
@@ -125,6 +142,14 @@ var
     DataSet2:TDataSet;
 begin
   //dm.tblBilding_Add;
+
+end;
+
+procedure TTrebov.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+
+  cxprprtstr1.StoreTo(True);
 
 end;
 

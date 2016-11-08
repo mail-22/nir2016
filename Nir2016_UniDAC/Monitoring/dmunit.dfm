@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 644
-  Top = 401
+  Left = 711
+  Top = 363
   Height = 458
   Width = 760
   object OpenDialog1: TOpenDialog
@@ -41,8 +41,10 @@ object DM: TDM
   end
   object UniConnection1: TUniConnection
     ProviderName = 'Access'
-    Database = 'D:\Dropbox\Share5\Work\Monitoring_2017\db1.mdb'
+    Database = 'D:\Dropbox\Share5\Work\Monitoring_2017\bin\db1.mdb'
     DefaultTransaction = UniTransaction1
+    Username = 'admin'
+    Connected = True
     Left = 38
     Top = 72
   end
@@ -58,11 +60,11 @@ object DM: TDM
       ReadOnly = True
     end
     object tblBildingDSDesigner: TStringField
-      FieldName = #1055#1088#1077#1076#1087#1088#1080#1103#1090#1080#1077', '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103' '#1086#1089#1091#1097#1077#1089#1090#1074#1083#1103#1077#1090' '#1074#1080#1076' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080':'
+      FieldName = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1080' '#1072#1076#1088#1077#1089' '#1086#1073#1098#1077#1082#1090#1072' '#1079#1072#1097#1080#1090#1099
       Size = 255
     end
     object tblBildingDSDesigner2: TStringField
-      FieldName = #1047#1076#1072#1085#1080#1103', '#1087#1086#1084#1077#1097#1077#1085#1080#1103' '#1087#1088#1077#1076#1085#1072#1079#1085#1072#1095#1077#1085#1099' '#1076#1083#1103':'
+      FieldName = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1087#1088#1072#1074#1086#1086#1073#1083#1072#1076#1072#1090#1077#1083#1103
       Size = 255
     end
     object tblBildingDSDesigner3: TStringField
@@ -70,58 +72,62 @@ object DM: TDM
       Size = 255
     end
     object tblBildingDSDesigner4: TStringField
-      FieldName = #1050#1083#1072#1089#1089' '#1092#1091#1085#1082#1094#1080#1086#1085#1072#1083#1100#1085#1086#1081' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1086#1087#1072#1089#1085#1086#1089#1090#1080':'
+      FieldName = #1050#1083#1072#1089#1089' '#1092#1091#1085#1082#1094#1080#1086#1085#1072#1083#1100#1085#1086#1081' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1086#1087#1072#1089#1085#1086#1089#1090#1080
       Size = 255
     end
     object tblBildingDSDesigner5: TStringField
-      FieldName = #1069#1090#1072#1078#1085#1086#1089#1090#1100':'
+      FieldName = #1069#1090#1072#1078#1085#1086#1089#1090#1100
       Size = 255
     end
     object tblBildingDSDesigner6: TStringField
-      FieldName = #1060#1091#1085#1076#1072#1084#1077#1085#1090' '#1079#1076#1072#1085#1080#1103':'
+      FieldName = #1042#1099#1089#1086#1090#1072' '#1079#1076#1072#1085#1080#1103
       Size = 255
     end
     object tblBildingDSDesigner7: TStringField
-      FieldName = #1057#1090#1077#1085#1099' '#1085#1072#1088#1091#1078#1085#1099#1077'('#1084#1072#1090#1077#1088#1080#1072#1083'):'
+      FieldName = #1057#1090#1077#1085#1099' '#1085#1072#1088#1091#1078#1085#1099#1077'('#1084#1072#1090#1077#1088#1080#1072#1083')'
       Size = 255
     end
     object tblBildingDSDesigner8: TStringField
-      FieldName = #1042#1085#1091#1090#1088#1077#1085#1085#1080#1077' '#1089#1090#1077#1085#1099' '#1080' '#1087#1077#1088#1077#1075#1086#1088#1086#1076#1082#1080' ('#1084#1072#1090#1077#1088#1080#1072#1083'):'
+      FieldName = #1060#1091#1085#1076#1072#1084#1077#1085#1090' '#1079#1076#1072#1085#1080#1103':'
       Size = 255
     end
     object tblBildingDSDesigner9: TStringField
-      FieldName = #1050#1088#1086#1074#1083#1103' ('#1090#1080#1087', '#1084#1072#1090#1077#1088#1080#1072#1083'):'
+      FieldName = #1042#1085#1091#1090#1088#1077#1085#1085#1080#1077' '#1089#1090#1077#1085#1099' '#1080' '#1087#1077#1088#1077#1075#1086#1088#1086#1076#1082#1080' ('#1084#1072#1090#1077#1088#1080#1072#1083')'
       Size = 255
     end
     object tblBildingDSDesigner10: TStringField
-      FieldName = #1051#1077#1089#1090#1085#1080#1094#1099' ('#1084#1072#1090#1077#1088#1080#1072#1083'):'
+      FieldName = #1050#1088#1086#1074#1083#1103' ('#1090#1080#1087', '#1084#1072#1090#1077#1088#1080#1072#1083')'
       Size = 255
     end
     object tblBildingDSDesigner11: TStringField
-      FieldName = #1042#1099#1089#1086#1090#1072' '#1079#1076#1072#1085#1080#1103':'
+      FieldName = #1058#1080#1087' '#1083#1077#1089#1090#1085#1080#1094#1099', '#1082#1086#1083#1080#1095#1077#1089#1090#1074#1086
       Size = 255
     end
     object tblBildingDSDesigner12: TStringField
-      FieldName = #1055#1083#1086#1097#1072#1076#1100' '#1079#1076#1072#1085#1080#1103', '#1087#1086#1084#1077#1097#1077#1085#1080#1081':'
+      FieldName = #1055#1083#1086#1097#1072#1076#1100' '#1079#1076#1072#1085#1080#1103
       Size = 255
     end
     object tblBildingDSDesigner13: TStringField
-      FieldName = #1054#1073#1098#1077#1084' '#1079#1076#1072#1085#1080#1103':'
+      FieldName = #1042#1099#1089#1086#1090#1072' '#1079#1076#1072#1085#1080#1103':'
       Size = 255
     end
     object tblBildingDSDesigner14: TStringField
-      FieldName = #1054#1089#1074#1077#1097#1077#1085#1080#1077':'
+      FieldName = #1054#1073#1098#1077#1084' '#1079#1076#1072#1085#1080#1103
       Size = 255
     end
     object tblBildingDSDesigner15: TStringField
-      FieldName = #1042#1077#1085#1090#1080#1083#1103#1094#1080#1103':'
+      FieldName = #1040#1074#1072#1088#1080#1081#1085#1086#1077' '#1086#1089#1074#1077#1097#1077#1085#1080#1077
       Size = 255
     end
     object tblBildingDSDesigner16: TStringField
-      FieldName = #1054#1090#1086#1087#1083#1077#1085#1080#1077':'
+      FieldName = #1042#1077#1085#1090#1080#1083#1103#1094#1080#1103':'
       Size = 255
     end
     object tblBildingDSDesigner17: TStringField
+      FieldName = #1054#1090#1086#1087#1083#1077#1085#1080#1077':'
+      Size = 255
+    end
+    object tblBildingDSDesigner18: TStringField
       FieldName = #1054#1073#1098#1077#1082#1090' '#1086#1093#1088#1072#1085#1103#1077#1090#1089#1103':'
       Size = 255
     end
@@ -129,51 +135,68 @@ object DM: TDM
       FieldName = 'C'#1090#1077#1087#1077#1085#1100' '#1086#1075#1085#1077#1089#1090#1086#1081#1082#1086#1089#1090#1080' '#1079#1076#1072#1085#1080#1103':'
       Size = 255
     end
-    object tblBildingDSDesigner18: TStringField
+    object tblBildingDSDesigner19: TStringField
       FieldName = #1055#1088#1077#1076#1077#1083#1099' '#1086#1075#1085#1077#1089#1090#1086#1081#1082#1086#1089#1090#1080' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1085#1099#1093' '#1082#1086#1085#1089#1090#1088#1091#1082#1094#1080#1081':'
       Size = 255
     end
-    object tblBildingDSDesigner19: TStringField
+    object tblBildingDSDesigner20: TStringField
       FieldName = '- '#1085#1077#1089#1091#1097#1080#1077' '#1101#1083#1077#1084#1077#1085#1090#1099' '#1079#1076#1072#1085#1080#1103', '#1085#1077' '#1084#1077#1085#1077#1077
       Size = 255
     end
-    object tblBildingDSDesigner20: TStringField
+    object tblBildingDSDesigner21: TStringField
       FieldName = '- '#1085#1072#1088#1091#1078#1085#1099#1077' '#1085#1077' '#1085#1077#1089#1091#1097#1080#1077' '#1089#1090#1077#1085#1099', '#1085#1077' '#1084#1077#1085#1077#1077
       Size = 255
     end
-    object tblBildingDSDesigner21: TStringField
+    object tblBildingDSDesigner22: TStringField
       FieldName = '- '#1087#1077#1088#1077#1082#1088#1099#1090#1080#1103' '#1084#1077#1078#1076#1091#1101#1090#1072#1078#1085#1099#1077', '#1085#1077' '#1084#1077#1085#1077#1077
       Size = 255
     end
-    object tblBildingDSDesigner22: TStringField
+    object tblBildingDSDesigner23: TStringField
       FieldName = '- '#1074#1085#1091#1090#1088#1077#1085#1085#1080#1077' '#1089#1090#1077#1085#1099' '#1083#1077#1089#1090#1085#1080#1095#1085#1099#1093' '#1082#1083#1077#1090#1086#1082', '#1085#1077' '#1084#1077#1085#1077#1077
       Size = 255
     end
-    object tblBildingDSDesigner23: TStringField
+    object tblBildingDSDesigner24: TStringField
       FieldName = '- '#1084#1072#1088#1096#1080' '#1080' '#1087#1083#1086#1097#1072#1076#1082#1080' '#1083#1077#1089#1090#1085#1080#1094' '#1083#1077#1089#1090#1085#1080#1095#1085#1099#1093' '#1082#1083#1077#1090#1086#1082', '#1085#1077' '#1084#1077#1085#1077#1077
       Size = 255
     end
-    object tblBildingDSDesigner24: TStringField
+    object tblBildingDSDesigner25: TStringField
       FieldName = #1050#1083#1072#1089#1089' '#1082#1086#1085#1089#1090#1088#1091#1082#1090#1080#1074#1085#1086#1081' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1086#1087#1072#1089#1085#1086#1089#1090#1080' '#1079#1076#1072#1085#1080#1103':'
       Size = 255
     end
-    object tblBildingDSDesigner25: TStringField
+    object tblBildingDSDesigner26: TStringField
       FieldName = #1050#1083#1072#1089#1089' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1086#1087#1072#1089#1085#1086#1089#1090#1080' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1085#1099#1093' '#1082#1086#1085#1089#1090#1088#1091#1082#1094#1080#1081':'
       Size = 255
     end
-    object tblBildingDSDesigner0: TIntegerField
-      FieldName = #1043#1086#1076'0'
+    object tblBildingDSDesigner27: TStringField
+      FieldName = '- '#1085#1077#1089#1091#1097#1080#1077' '#1089#1090#1077#1088#1078#1085#1077#1074#1099#1077' '#1101#1083#1077#1084#1077#1085#1090#1099' ('#1082#1086#1083#1086#1085#1085#1099', '#1088#1080#1075#1077#1083#1080', '#1092#1077#1088#1084#1099')'
+      Size = 255
     end
-    object tblBildingDSDesigner26: TIntegerField
+    object tblBildingDSDesigner28: TStringField
+      FieldName = '- '#1085#1072#1088#1091#1078#1085#1099#1077' '#1089#1090#1077#1085#1099' '#1089' '#1074#1085#1077#1096#1085#1077#1081' '#1089#1090#1086#1088#1086#1085#1099
+      Size = 255
+    end
+    object tblBildingDSDesigner29: TStringField
+      FieldName = '- '#1089#1090#1077#1085#1099', '#1087#1077#1088#1077#1075#1086#1088#1086#1076#1082#1080' '#1080' '#1073#1077#1089#1095#1077#1088#1076#1072#1095#1085#1099#1077' '#1087#1077#1088#1077#1082#1088#1099#1090#1080#1103
+      Size = 255
+    end
+    object tblBildingDSDesigner30: TStringField
+      FieldName = '- '#1089#1090#1077#1085#1099' '#1083#1077#1089#1090#1085#1080#1095#1085#1099#1093' '#1082#1083#1077#1090#1086#1082' '#1080' '#1087#1088#1086#1090#1080#1074#1086#1087#1086#1078#1072#1088#1085#1099#1077' '#1087#1088#1077#1075#1088#1072#1076#1099
+      Size = 255
+    end
+    object tblBildingDSDesigner31: TStringField
+      FieldName = '- '#1084#1072#1088#1096#1080' '#1080' '#1087#1083#1086#1097#1072#1076#1082#1080' '#1083#1077#1089#1090#1085#1080#1094' '#1074' '#1083#1077#1089#1090#1085#1080#1095#1085#1099#1093' '#1082#1083#1077#1090#1082#1072#1093
+      Size = 255
+    end
+    object tblBildingDSDesigner33: TIntegerField
       FieldName = #1075#1086#1076' '#1087#1086#1078#1072#1088#1072
     end
-    object tblBildingDSDesigner27: TIntegerField
+    object tblBildingDSDesigner34: TIntegerField
       FieldName = #1091#1097#1077#1088#1073' '#1086#1090' '#1087#1086#1078#1072#1088#1072
     end
-    object tblBildingDSDesigner28: TIntegerField
+    object tblBildingDSDesigner35: TIntegerField
       FieldName = #1087#1086#1075#1080#1073#1083#1086' '#1087#1088#1080' '#1087#1086#1078#1072#1088#1077
     end
-    object tblBildingDSDesigner29: TIntegerField
+    object tblBildingDSDesigner36: TIntegerField
       FieldName = #1087#1086#1089#1090#1088#1072#1076#1072#1083#1086' '#1087#1088#1080' '#1087#1086#1078#1072#1088#1077
     end
     object tblBildingrtf: TMemoField
@@ -196,11 +219,11 @@ object DM: TDM
       FieldName = 'Region'
       Size = 255
     end
-    object tblBildingDSDesigner30: TStringField
+    object tblBildingDSDesigner37: TStringField
       FieldName = #1085#1086#1084#1077#1088' '#1057#1069#1059
       Size = 50
     end
-    object tblBildingDSDesigner31: TStringField
+    object tblBildingDSDesigner38: TStringField
       FieldName = #1085#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077'  '#1057#1069#1059
       Size = 50
     end
@@ -221,6 +244,9 @@ object DM: TDM
     end
     object tblBildingP2: TIntegerField
       FieldName = 'P2'
+    end
+    object tblBildingDSDesigner32: TIntegerField
+      FieldName = #1075#1086#1076
     end
   end
   object AccessUniProvider1: TAccessUniProvider
@@ -347,6 +373,10 @@ object DM: TDM
       FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
       BlobType = ftMemo
     end
+    object strngfldNormF: TStringField
+      FieldName = 'F'
+      Size = 255
+    end
   end
   object tblNormOfBilding: TUniQuery
     Connection = UniConnection1
@@ -355,6 +385,9 @@ object DM: TDM
     MasterSource = dstblVypoln
     MasterFields = 'id'
     DetailFields = 'fid_Vypoln'
+    Active = True
+    Filtered = True
+    OnFilterRecord = tblNormOfBildingFilterRecord
     Left = 570
     Top = 178
     ParamData = <
@@ -401,6 +434,10 @@ object DM: TDM
     end
     object tblNormOfBildingfid_Vypoln: TIntegerField
       FieldName = 'fid_Vypoln'
+    end
+    object strngfldNormOfBildingF: TStringField
+      FieldName = 'F'
+      Size = 255
     end
   end
   object UniTransaction1: TUniTransaction
@@ -665,6 +702,10 @@ object DM: TDM
     object mfld1: TMemoField
       FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
       BlobType = ftMemo
+    end
+    object strngfldAllNormF: TStringField
+      FieldName = 'F'
+      Size = 255
     end
   end
   object dsAllNorm: TDataSource

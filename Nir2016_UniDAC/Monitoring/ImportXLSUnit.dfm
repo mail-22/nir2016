@@ -1,8 +1,8 @@
 object ImportXLSUnitForm: TImportXLSUnitForm
-  Left = 561
-  Top = 225
-  Width = 1305
-  Height = 675
+  Left = -1528
+  Top = 59
+  Width = 1280
+  Height = 1024
   Caption = 'ImportXLSUnitForm'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object ImportXLSUnitForm: TImportXLSUnitForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -34,6 +35,15 @@ object ImportXLSUnitForm: TImportXLSUnitForm
     Lines.Strings = (
       'Memo1')
     TabOrder = 1
+  end
+  object btn1: TButton
+    Left = 850
+    Top = 10
+    Width = 75
+    Height = 25
+    Caption = 'btn1'
+    TabOrder = 2
+    OnClick = btn1Click
   end
   object UniConnection1: TUniConnection
     ProviderName = 'Access'
@@ -89,6 +99,10 @@ object ImportXLSUnitForm: TImportXLSUnitForm
     object mfld1: TMemoField
       FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
       BlobType = ftMemo
+    end
+    object strngfldAllNormF: TStringField
+      FieldName = 'F'
+      Size = 255
     end
   end
   object dsAllNorm: TDataSource

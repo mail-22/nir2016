@@ -388,7 +388,8 @@ begin
       ExportXLSDetailTabl3();
       application.ProcessMessages;
       //DataSetMaster.Next; NNBilding := NNBilding + 1;
-      Sheet.Cells[Row, Col] := s1; Row := Row + 1; //Col:=Col+1;
+      //Sheet.Cells[Row, Col] := s1;
+      Row := Row + 1; //Col:=Col+1;
     end;
 
 // Делаем Excel видимым
@@ -530,6 +531,7 @@ begin
     //s1 := 'требование N:' + IntToStr(NNTrebovan);
     s1 := 'категория требования N: ' + DataSetDetail.FieldByName('N').AsString;
     s1 := '' + DataSetDetail.FieldByName('N').AsString;
+    //Sheet.Cells[Row, Col].NumberFormat := 'General';
     Sheet.Cells[Row, Col] := s1; //Row := Row + 1; //Col:=Col+1;
 
     s1 := 'наименование требования: '

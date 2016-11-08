@@ -1,16 +1,16 @@
 inherited FormTuning: TFormTuning
   Left = 571
   Top = 241
-  Width = 808
-  Height = 627
   Caption = 'tuning'
+  Position = poDesktopCenter
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object actmmb1: TActionMainMenuBar [0]
     Left = 0
     Top = 0
-    Width = 792
-    Height = 26
+    Width = 784
+    Height = 51
     UseSystemFont = False
     ActionManager = actmgr1
     Caption = 'actmmb1'
@@ -23,6 +23,15 @@ inherited FormTuning: TFormTuning
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
+  end
+  object btn1: TButton [1]
+    Left = 10
+    Top = 80
+    Width = 131
+    Height = 25
+    Caption = 'ImportXLSUnit_Show'
+    TabOrder = 1
+    OnClick = btn1Click
   end
   object actmgr1: TActionManager
     ActionBars = <
@@ -71,5 +80,20 @@ inherited FormTuning: TFormTuning
   object actlst1: TActionList
     Left = 160
     Top = 248
+  end
+  object cxprprtstr1: TcxPropertiesStore
+    Components = <
+      item
+        Component = Owner
+        Properties.Strings = (
+          'Height'
+          'Left'
+          'Position'
+          'Top'
+          'Width')
+      end>
+    StorageName = 'cxprprtstr1'
+    Left = 430
+    Top = 280
   end
 end

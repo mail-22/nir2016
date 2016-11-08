@@ -90,7 +90,7 @@ MaxStackSize=1048576
 ImageBase=4194304
 ExeDescription=
 [Directories]
-OutputDir=
+OutputDir=.\bin
 UnitOutputDir=c:\tmp\dcu
 PackageDLLOutputDir=
 PackageDCPOutputDir=
@@ -133,7 +133,7 @@ LegalTrademarks=
 OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
-Last Compile=01.11.2016 12:21:45
+Last Compile=08.11.2016 13:19:04
 [Excluded Packages]
 c:\program files (x86)\borland\delphi7\Projects\Bpl\RVDBPkgD7.bpl=RichView DataAware
 C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl\RVPkgD7.bpl=RichView
@@ -178,5 +178,8 @@ Item0=;c:\Program Files\TeeChart\Sources\..\TeeTree\Compiled\Delphi7\Lib;c:\Prog
 Count=1
 Item0=c:\tmp\dcu
 [HistoryLists\hlOutputDirectorry]
-Count=1
-Item0=c:\tmp\dcu
+Count=4
+Item0=.\bin
+Item1=\bin
+Item2=..\bin
+Item3=c:\tmp\dcu

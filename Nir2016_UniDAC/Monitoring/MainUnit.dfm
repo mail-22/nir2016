@@ -5,6 +5,7 @@ inherited FormMain: TFormMain
   Height = 498
   Caption = #1052#1086#1085#1080#1090#1086#1088#1080#1085#1075
   Color = clGradientInactiveCaption
+  OnClose = FormClose
   OnHelp = FormHelp
   OnShow = FormShow
   PixelsPerInch = 96
@@ -2150,5 +2151,11 @@ inherited FormMain: TFormMain
     OnHotKey = jvplctnhtky1HotKey
     Left = 16
     Top = 120
+  end
+  object cxprprtstr1: TcxPropertiesStore
+    Components = <>
+    StorageName = 'cxprprtstr1'
+    Left = 330
+    Top = 30
   end
 end

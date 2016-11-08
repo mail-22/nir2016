@@ -23,50 +23,6 @@ type
     UniConnection1: TUniConnection;
     tblBilding: TUniQuery;
     tblBildingid: TIntegerField;
-    tblBildingDSDesigner: TStringField;
-    tblBildingDSDesigner2: TStringField;
-    tblBildingDSDesigner3: TStringField;
-    tblBildingDSDesigner4: TStringField;
-    tblBildingDSDesigner5: TStringField;
-    tblBildingDSDesigner6: TStringField;
-    tblBildingDSDesigner7: TStringField;
-    tblBildingDSDesigner8: TStringField;
-    tblBildingDSDesigner9: TStringField;
-    tblBildingDSDesigner10: TStringField;
-    tblBildingDSDesigner11: TStringField;
-    tblBildingDSDesigner12: TStringField;
-    tblBildingDSDesigner13: TStringField;
-    tblBildingDSDesigner14: TStringField;
-    tblBildingDSDesigner15: TStringField;
-    tblBildingDSDesigner16: TStringField;
-    tblBildingDSDesigner17: TStringField;
-    tblBildingC: TStringField;
-    tblBildingDSDesigner18: TStringField;
-    tblBildingDSDesigner19: TStringField;
-    tblBildingDSDesigner20: TStringField;
-    tblBildingDSDesigner21: TStringField;
-    tblBildingDSDesigner22: TStringField;
-    tblBildingDSDesigner23: TStringField;
-    tblBildingDSDesigner24: TStringField;
-    tblBildingDSDesigner25: TStringField;
-    tblBildingDSDesigner0: TIntegerField;
-    tblBildingDSDesigner26: TIntegerField;
-    tblBildingDSDesigner27: TIntegerField;
-    tblBildingDSDesigner28: TIntegerField;
-    tblBildingDSDesigner29: TIntegerField;
-    tblBildingrtf: TMemoField;
-    tblBildingAdress: TStringField;
-    tblBildingStreet: TStringField;
-    tblBildingBildingNo: TStringField;
-    tblBildingRegion: TStringField;
-    tblBildingDSDesigner30: TStringField;
-    tblBildingDSDesigner31: TStringField;
-    tblBildingsootvet: TBooleanField;
-    tblBildingPprT: TIntegerField;
-    tblBildingZT: TIntegerField;
-    tblBildingEt: TIntegerField;
-    tblBildingP1: TIntegerField;
-    tblBildingP2: TIntegerField;
     AccessUniProvider1: TAccessUniProvider;
     tblVypoln: TUniQuery;
     tblVypolnid: TIntegerField;
@@ -144,6 +100,59 @@ type
     blnfldVypolnsoot: TBooleanField;
     intgrfldVypoln_SOOTVETSTVid: TIntegerField;
     blnfldVypoln_SOOTVETSTVsoot: TBooleanField;
+    tblBildingDSDesigner: TStringField;
+    tblBildingDSDesigner2: TStringField;
+    tblBildingDSDesigner3: TStringField;
+    tblBildingDSDesigner4: TStringField;
+    tblBildingDSDesigner5: TStringField;
+    tblBildingDSDesigner6: TStringField;
+    tblBildingDSDesigner7: TStringField;
+    tblBildingDSDesigner8: TStringField;
+    tblBildingDSDesigner9: TStringField;
+    tblBildingDSDesigner10: TStringField;
+    tblBildingDSDesigner11: TStringField;
+    tblBildingDSDesigner12: TStringField;
+    tblBildingDSDesigner13: TStringField;
+    tblBildingDSDesigner14: TStringField;
+    tblBildingDSDesigner15: TStringField;
+    tblBildingDSDesigner16: TStringField;
+    tblBildingDSDesigner17: TStringField;
+    tblBildingDSDesigner18: TStringField;
+    tblBildingC: TStringField;
+    tblBildingDSDesigner19: TStringField;
+    tblBildingDSDesigner20: TStringField;
+    tblBildingDSDesigner21: TStringField;
+    tblBildingDSDesigner22: TStringField;
+    tblBildingDSDesigner23: TStringField;
+    tblBildingDSDesigner24: TStringField;
+    tblBildingDSDesigner25: TStringField;
+    tblBildingDSDesigner26: TStringField;
+    tblBildingDSDesigner27: TStringField;
+    tblBildingDSDesigner28: TStringField;
+    tblBildingDSDesigner29: TStringField;
+    tblBildingDSDesigner30: TStringField;
+    tblBildingDSDesigner31: TStringField;
+    tblBildingDSDesigner33: TIntegerField;
+    tblBildingDSDesigner34: TIntegerField;
+    tblBildingDSDesigner35: TIntegerField;
+    tblBildingDSDesigner36: TIntegerField;
+    tblBildingrtf: TMemoField;
+    tblBildingAdress: TStringField;
+    tblBildingStreet: TStringField;
+    tblBildingBildingNo: TStringField;
+    tblBildingRegion: TStringField;
+    tblBildingDSDesigner37: TStringField;
+    tblBildingDSDesigner38: TStringField;
+    tblBildingsootvet: TBooleanField;
+    tblBildingPprT: TIntegerField;
+    tblBildingZT: TIntegerField;
+    tblBildingEt: TIntegerField;
+    tblBildingP1: TIntegerField;
+    tblBildingP2: TIntegerField;
+    tblBildingDSDesigner32: TIntegerField;
+    strngfldAllNormF: TStringField;
+    strngfldNormF: TStringField;
+    strngfldNormOfBildingF: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryDescription0AfterPost(DataSet: TDataSet);
     procedure tblDescriptionAfterPost(DataSet: TDataSet);
@@ -156,6 +165,7 @@ type
     procedure tblMetroBeforePost(DataSet: TDataSet);
     procedure tblBildingAfterInsert(DataSet: TDataSet);
     procedure tblNormFilterRecord(DataSet: TDataSet; var Accept: Boolean);
+    procedure tblNormOfBildingFilterRecord(DataSet: TDataSet; var Accept: Boolean);
     procedure tblVypoln0AfterScroll(DataSet: TDataSet);
     procedure tblVypolnAfterScroll(DataSet: TDataSet);
 
@@ -206,6 +216,8 @@ procedure TestADO();
 procedure WillChangeRecord(DataSet: TDataSet;
   const Reason: TEventReason; const RecordCount: Integer;
   var EventStatus: TEventStatus);
+function NormOfBildingFilterRecord () : Boolean;
+ 
 
 var
   DM: TDM;
@@ -823,7 +835,33 @@ begin
 }
 end;
 
+function NormOfBildingFilterRecord () : Boolean;
+var
+  Accept : Boolean;
+  iRes : integer;
+  Bilding_F :string; Norm_F :string;
+begin
+              Accept := True;
+              Bilding_F := DM.tblBilding.FieldByName('Класс функциональной пожарной опасности').AsString;
+              Norm_F := DM.tblNormOfBilding.FieldByName('F').AsString;
+              if ( not (Bilding_F = '')) and ( not (Norm_F = ''))then
+              begin
+                 //beep;
+                 iRes := AnsiCompareStr(Bilding_F, Norm_F);
+                 iRes := Pos(Bilding_F, Norm_F);
+                 if iRes = 0 then begin
+                                     Accept := False;
+                                  end;
+              end;
+              Result  := Accept;
+end;
 
+procedure TDM.tblNormOfBildingFilterRecord(DataSet: TDataSet; var Accept:
+    Boolean);
+begin
+    Accept := NormOfBildingFilterRecord ();
+    Accept := true;
+end;
 
 procedure TDM.tblVypoln0AfterScroll(DataSet: TDataSet);
 var

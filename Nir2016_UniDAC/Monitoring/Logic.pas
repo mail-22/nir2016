@@ -49,7 +49,7 @@ implementation
 {$R *.dfm}
 
 uses
-  MainUnit, FormListOfBildingUnit;
+  MainUnit, FormListOfBildingUnit, Math, AddBildUnit;
 
 
 procedure AddNewBuilding;
@@ -69,6 +69,7 @@ var
   s1, s2: string;  bResN : Boolean;
   sRes: string;
   iRes : integer;
+  Bilding_F :string; Norm_F :string;
 begin
   try
   try
@@ -94,7 +95,7 @@ begin
      DM.tblNorm.Filtered:=False;
      DM.tblNormofbilding.Filtered:=False;
      tblVypolnAfterScroll := DM.tblVypoln.AfterScroll;
-     
+
     // DM.tblVypoln.AfterScroll:=nil;   //
 
     DecodeDate(Now, Year, Month, Day);
@@ -106,7 +107,7 @@ begin
     dm.tblBilding.Append;
    // DM.tblBilding.FieldByName('Предприятие, организация осуществляет вид деятельности:').AsString
    //   := IntToStr(DM.tblBilding.FieldByName('id').AsInteger);
-    DM.tblBilding.FieldByName('год0').AsInteger := Year;
+    DM.tblBilding.FieldByName('год').AsInteger := Year;
 
     //номер СЭУ     NumberSAU
     NumberSAU := utility.INI(IniFile, 'SAU', 'NumberSAU', 'номер СЭУ');//
@@ -115,6 +116,16 @@ begin
     //наименование  СЭУ NameSAU
     NameSAU := utility.INI(IniFile, 'SAU', 'NumberSAU', 'наименование  СЭУ');//
     DM.tblBilding.FieldByName('наименование  СЭУ').AsString := NameSAU;
+///
+
+    FormMain.AddBildForm_Show;
+    if (AddBildForm.AddBildFormResult = -1) then
+    begin   dm.UniTransaction1.Rollback; Exit; end;
+    if (AddBildForm.AddBildFormResult = +1) then
+    begin ;
+    end;
+
+
 
 
     dm.tblBilding.Post; // !!!
@@ -124,6 +135,8 @@ begin
     DM.tblBilding.Resync([]);
 
     dm.tblBilding.FindLast;
+
+///
 
 //tblVypoln
     tblVypoln_RecNo := DM.tblVypoln.RecNo;
@@ -137,7 +150,7 @@ begin
 
       DM.tblVypoln.Append;
       DM.tblVypoln.FieldByName('Соответствие требованиям пожарной безопасности').AsString := DM.tdlTrebovan.FieldByName('Соответствие требованиям пожарной безопасности').AsString;
-      DM.tblVypoln.FieldByName('Соответствует да/нет').AsBoolean := False;
+      DM.tblVypoln.FieldByName('soot').AsBoolean := False;  //'Соответствует да/нет'
       DM.tblVypoln.FieldByName('N').AsString := DM.tdlTrebovan.FieldByName('N').AsString;
       DM.tblVypoln.FieldByName('год1').AsInteger := Year;
       //DataSet2.FieldByName('fid_Bilding').AsInteger := DM.tblBilding.FieldByName('id').AsInteger;
@@ -169,7 +182,9 @@ begin
     tblNormOfBilding_RecNo := DM.tblNormOfBilding.RecNo;
 
     DM.tblVypoln.First;
-    while  not DM.tblVypoln.EOF do
+    DM.tblVypoln.FindFirst;
+    //while  not DM.tblVypoln.EOF do
+    repeat
     begin
         DM.tblNorm.First;
         while not DM.tblNorm.EOF do
@@ -180,6 +195,22 @@ begin
           bResN := iRes = 0;
           if bResN then    //if not bResN then Continue;
           begin
+
+              //Bilding_F := DM.tblBilding.FieldByName('F').AsString;
+              Bilding_F := DM.tblBilding.FieldByName('Класс функциональной пожарной опасности').AsString;
+              Norm_F := DM.tblNorm.FieldByName('F').AsString;
+              if ( not (Bilding_F = '')) and ( not (Norm_F = ''))then
+              begin   beep;
+                 iRes := AnsiCompareStr(Bilding_F, Norm_F);
+                 iRes := Pos(Bilding_F, Norm_F);
+                 if iRes = 0 then begin
+                                     //DM.tblNorm.Next;
+                                     Continue;
+                                  end;
+              end;
+
+              //if (not NormOfBildingFilterRecord) then Continue;
+
               DM.tblNormOfBilding.RecNo; i := DM.tblNorm.FieldCount; i := DM.tblNormOfBilding.RecordCount; i := DM.tblNorm.RecordCount;i := DM.tblNorm.RecNo; //
               DM.tblNormOfBilding.Append;
               DM.tblNormOfBilding.FieldByName('fid_Vypoln').AsInteger := DM.tblVypoln.FieldByName('id').AsInteger;
@@ -194,6 +225,7 @@ begin
 
               DM.tblNormOfBilding.FieldByName('содержание норм').AsString := DM.tblNorm.FieldByName('содержание норм').AsString;
               DM.tblNormOfBilding.FieldByName('Соответствует да/нет').AsBoolean := False;
+              DM.tblNormOfBilding.FieldByName('F').AsString := DM.tblNorm.FieldByName('F').AsString;
 
               DM.tblNormOfBilding.Post;
           end;
@@ -205,8 +237,9 @@ begin
         Application.ProcessMessages;
         DM.tblVypoln.Next;
       end;//while  not DM.tblVypoln.EOF do
+      until not DM.tblVypoln.FindNext;
 
-
+     DM.tblNormOfBilding.Filtered := true;   DM.tblNorm.Filtered := true;
 
    //dm.tblBilding.Post;
    // DM.OpenDB(DM.tblNormOfBilding); // !!!

@@ -1,17 +1,18 @@
 inherited Trebov: TTrebov
-  Left = 684
+  Left = 401
   Top = 143
-  Width = 994
-  Height = 729
+  Width = 1182
+  Height = 803
   Action = act1Copy
   Caption = #1089#1087#1080#1089#1086#1082' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081' '#1085#1086#1088#1084'.'#1076#1086#1082'.  '#1082' '#1079#1076#1072#1085#1080#1103#1084
   OnClick = act1CopyExecute
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object pnlH: TPanel [0]
     Left = 0
     Top = 23
-    Width = 1139
+    Width = 1166
     Height = 41
     Align = alTop
     Caption = 'pnlH'
@@ -19,7 +20,7 @@ inherited Trebov: TTrebov
     object mmo1: TMemo
       Left = 1
       Top = 1
-      Width = 1137
+      Width = 1164
       Height = 39
       Align = alClient
       Lines.Strings = (
@@ -30,8 +31,8 @@ inherited Trebov: TTrebov
   object pnlR: TPanel [1]
     Left = 1139
     Top = 64
-    Width = 0
-    Height = 610
+    Width = 27
+    Height = 701
     Align = alClient
     Caption = 'pnlR'
     TabOrder = 1
@@ -43,13 +44,13 @@ inherited Trebov: TTrebov
       DataBinding.DataSource = DM.dsAllNorm
       Properties.ReadOnly = True
       TabOrder = 0
-      Height = 567
-      Width = 94
+      Height = 658
+      Width = 25
     end
     object pnl1: TPanel
       Left = 1
       Top = 1
-      Width = 94
+      Width = 25
       Height = 41
       Align = alTop
       Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084' :'
@@ -59,7 +60,7 @@ inherited Trebov: TTrebov
   object acttb1: TActionToolBar [2]
     Left = 0
     Top = 0
-    Width = 1139
+    Width = 1166
     Height = 23
     ActionManager = actmgr1
     Caption = 'acttb1'
@@ -72,7 +73,7 @@ inherited Trebov: TTrebov
     Left = 0
     Top = 64
     Width = 1131
-    Height = 610
+    Height = 701
     Align = alLeft
     Caption = 'pnlL'
     TabOrder = 3
@@ -91,30 +92,11 @@ inherited Trebov: TTrebov
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object jvdbstslbl1: TJvDBStatusLabel
-      Left = 63
-      Top = 1
-      Width = 81
-      Height = 13
-      DataSource = ds1
-      CalcRecCount = True
-      ShowOptions = doBoth
-      Alignment = taRightJustify
-    end
-    object dbnvgr2: TDBNavigator
-      Left = 1
-      Top = 584
-      Width = 1129
-      Height = 25
-      DataSource = ds1
-      Align = alBottom
-      TabOrder = 0
-    end
     object cxGrid2: TcxGrid
       Left = 1
       Top = 19
       Width = 1129
-      Height = 565
+      Height = 650
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -122,15 +104,15 @@ inherited Trebov: TTrebov
       Font.Name = 'Times New Roman'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 0
       object cxGrid2DBTableView1: TcxGridDBTableView
         NavigatorButtons.ConfirmDelete = False
         FilterBox.Visible = fvAlways
-        DataController.DataModeController.GridMode = True
         DataController.DataModeController.SmartRefresh = True
         DataController.DataSource = DM.dsAllNorm
         DataController.DetailKeyFieldNames = 'id'
         DataController.Filter.Options = [fcoCaseInsensitive]
+        DataController.Filter.PercentWildcard = '*'
         DataController.Filter.Active = True
         DataController.Filter.AutoDataSetFilter = True
         DataController.KeyFieldNames = 'id'
@@ -141,6 +123,8 @@ inherited Trebov: TTrebov
         FilterRow.Visible = True
         FilterRow.ApplyChanges = fracImmediately
         OptionsBehavior.CellHints = True
+        OptionsBehavior.ImmediateEditor = False
+        OptionsBehavior.IncSearch = True
         OptionsBehavior.NavigatorHints = True
         OptionsView.CellEndEllipsis = True
         OptionsView.Navigator = True
@@ -185,6 +169,10 @@ inherited Trebov: TTrebov
           Options.SortByDisplayText = isbtOn
           Width = 33
         end
+        object cxgrdbclmnGrid2DBTableView1F: TcxGridDBColumn
+          DataBinding.FieldName = 'F'
+          Width = 33
+        end
         object cxgrdbclmnGrid1DBTableView1DBColumn4: TcxGridDBColumn
           DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
           PropertiesClassName = 'TcxMemoProperties'
@@ -196,12 +184,71 @@ inherited Trebov: TTrebov
         GridView = cxGrid2DBTableView1
       end
     end
+    object pnl_Navigator1: TPanel
+      Left = 1
+      Top = 669
+      Width = 1129
+      Height = 31
+      Align = alBottom
+      BevelInner = bvLowered
+      BevelOuter = bvLowered
+      BorderStyle = bsSingle
+      TabOrder = 1
+      object cxdbnvgtr1: TcxDBNavigator
+        Left = 250
+        Top = 2
+        Width = 870
+        Height = 23
+        DataSource = DM.dsAllNorm
+        Align = alClient
+        TabOrder = 0
+      end
+      object pnl3: TPanel
+        Left = 187
+        Top = 2
+        Width = 63
+        Height = 23
+        Align = alLeft
+        AutoSize = True
+        TabOrder = 1
+        object jvdbstslbl2: TJvDBStatusLabel
+          Left = 1
+          Top = 3
+          Width = 61
+          Height = 13
+          DataSource = DM.dsAllNorm
+          Style = lsRecordNo
+          CalcRecCount = True
+          ShowOptions = doBoth
+          Alignment = taCenter
+        end
+      end
+      object pnl4: TPanel
+        Left = 2
+        Top = 2
+        Width = 185
+        Height = 23
+        Align = alLeft
+        TabOrder = 2
+        object jvdbstslbl3: TJvDBStatusLabel
+          Left = 1
+          Top = 1
+          Width = 81
+          Height = 21
+          DataSource = DM.dsAllNorm
+          CalcRecCount = True
+          ShowOptions = doBoth
+          Align = alLeft
+          Alignment = taRightJustify
+        end
+      end
+    end
   end
   object spl3: TcxSplitter [4]
     Left = 1131
     Top = 64
     Width = 8
-    Height = 610
+    Height = 701
     Cursor = crHSplit
     HotZoneClassName = 'TcxMediaPlayer8Style'
     AutoSnap = True
@@ -237,5 +284,167 @@ inherited Trebov: TTrebov
     FileName = 'D:\Dropbox\Share5\Work\Monitoring_2017\DevExRus100Proc.ini'
     Left = 484
     Top = 15
+  end
+  object cxprprtstr1: TcxPropertiesStore
+    Components = <
+      item
+        Component = pnlH
+        Properties.Strings = (
+          'Align'
+          'Alignment'
+          'Anchors'
+          'AutoSize'
+          'BevelInner'
+          'BevelOuter'
+          'BevelWidth'
+          'BiDiMode'
+          'BorderStyle'
+          'BorderWidth'
+          'Caption'
+          'Color'
+          'Constraints'
+          'Ctl3D'
+          'Cursor'
+          'DockSite'
+          'DragCursor'
+          'DragKind'
+          'DragMode'
+          'Enabled'
+          'Font'
+          'FullRepaint'
+          'Height'
+          'HelpContext'
+          'HelpKeyword'
+          'HelpType'
+          'Hint'
+          'Left'
+          'Locked'
+          'Name'
+          'ParentBackground'
+          'ParentBiDiMode'
+          'ParentColor'
+          'ParentCtl3D'
+          'ParentFont'
+          'ParentShowHint'
+          'PopupMenu'
+          'ShowHint'
+          'TabOrder'
+          'TabStop'
+          'Tag'
+          'Top'
+          'UseDockManager'
+          'Visible'
+          'Width')
+      end
+      item
+        Component = pnlL
+        Properties.Strings = (
+          'Align'
+          'Alignment'
+          'Anchors'
+          'AutoSize'
+          'BevelInner'
+          'BevelOuter'
+          'BevelWidth'
+          'BiDiMode'
+          'BorderStyle'
+          'BorderWidth'
+          'Caption'
+          'Color'
+          'Constraints'
+          'Ctl3D'
+          'Cursor'
+          'DockSite'
+          'DragCursor'
+          'DragKind'
+          'DragMode'
+          'Enabled'
+          'Font'
+          'FullRepaint'
+          'Height'
+          'HelpContext'
+          'HelpKeyword'
+          'HelpType'
+          'Hint'
+          'Left'
+          'Locked'
+          'Name'
+          'ParentBackground'
+          'ParentBiDiMode'
+          'ParentColor'
+          'ParentCtl3D'
+          'ParentFont'
+          'ParentShowHint'
+          'PopupMenu'
+          'ShowHint'
+          'TabOrder'
+          'TabStop'
+          'Tag'
+          'Top'
+          'UseDockManager'
+          'Visible'
+          'Width')
+      end
+      item
+        Component = pnlR
+        Properties.Strings = (
+          'Align'
+          'Alignment'
+          'Anchors'
+          'AutoSize'
+          'BevelInner'
+          'BevelOuter'
+          'BevelWidth'
+          'BiDiMode'
+          'BorderStyle'
+          'BorderWidth'
+          'Caption'
+          'Color'
+          'Constraints'
+          'Ctl3D'
+          'Cursor'
+          'DockSite'
+          'DragCursor'
+          'DragKind'
+          'DragMode'
+          'Enabled'
+          'Font'
+          'FullRepaint'
+          'Height'
+          'HelpContext'
+          'HelpKeyword'
+          'HelpType'
+          'Hint'
+          'Left'
+          'Locked'
+          'Name'
+          'ParentBackground'
+          'ParentBiDiMode'
+          'ParentColor'
+          'ParentCtl3D'
+          'ParentFont'
+          'ParentShowHint'
+          'PopupMenu'
+          'ShowHint'
+          'TabOrder'
+          'TabStop'
+          'Tag'
+          'Top'
+          'UseDockManager'
+          'Visible'
+          'Width')
+      end
+      item
+        Component = Owner
+        Properties.Strings = (
+          'Height'
+          'Left'
+          'Position'
+          'Top'
+          'Width')
+      end>
+    StorageName = 'cxprprtstr1'
+    Left = 680
+    Top = 314
   end
 end

@@ -112,36 +112,27 @@ type
     pnlGrid: TPanel;
     btnExport1: TJvLookOutButton;
     actExport11: TAction;
-    cxspltr2: TcxSplitter;
     pnl1T: TPanel;
     Panel1: TPanel;
     cxSplitter1: TcxSplitter;
     cxGrid3: TcxGrid;
     cxGridDBTableView3: TcxGridDBTableView;
     cxGridLevel3: TcxGridLevel;
-    Panel2: TPanel;
+    pnl_Navigator: TPanel;
     JvDBStatusLabel1: TJvDBStatusLabel;
     cxDBNavigator1: TcxDBNavigator;
     pnlT: TPanel;
     cxspltr3: TcxSplitter;
-    cxGrid1: TcxGrid;
-    cxGridDBTableView1: TcxGridDBTableView;
-    cxGridLevel1: TcxGridLevel;
-    Panel3: TPanel;
-    JvDBStatusLabel2: TJvDBStatusLabel;
-    cxDBNavigator2: TcxDBNavigator;
     cxDBProgressBar1: TcxDBProgressBar;
-    Panel4: TPanel;
+    pnl_Navigator1: TPanel;
     JvDBStatusLabel3: TJvDBStatusLabel;
     cxDBNavigator3: TcxDBNavigator;
     JvDBProgressBar1: TJvDBProgressBar;
     JvDBProgressBar2: TJvDBProgressBar;
     JvDBProgressBar3: TJvDBProgressBar;
     cxPropertiesStore1: TcxPropertiesStore;
-    lbl4: TLabel;
     lbl5: TLabel;
     cxspltr4: TcxSplitter;
-    spl2: TcxSplitter;
     cxgrdbclmnGridDBTableView3id: TcxGridDBColumn;
     cxgrdbclmnGridDBTableView3N: TcxGridDBColumn;
     cxgrdbclmnGridDBTableView3DBColumn: TcxGridDBColumn;
@@ -152,13 +143,6 @@ type
     cxgrdbclmnGridDBTableView3DBColumn5: TcxGridDBColumn;
     cxgrdbclmnGridDBTableView3fid_Bilding: TcxGridDBColumn;
     cxgrdbclmnGridDBTableView3fid_Vypoln: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1id: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1N: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1DBColumn: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1DBColumn1: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1DBColumn2: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1DBColumn3: TcxGridDBColumn;
-    cxgrdbclmnGridDBTableView1DBColumn4: TcxGridDBColumn;
     btnLookOutButton3: TJvLookOutButton;
     actExportEx1: TAction;
     cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn;
@@ -172,6 +156,14 @@ type
     cxgrdbclmncxgrdbtblvw1NTreb2: TcxGridDBColumn;
     cxgrdbclmncxgrdbtblvw1test: TcxGridDBColumn;
     cxgrdbclmncxgrdbtblvw1soot: TcxGridDBColumn;
+    JvDBStatusLabel4: TJvDBStatusLabel;
+    pnl1: TPanel;
+    pnl2: TPanel;
+    pnl3: TPanel;
+    pnl4: TPanel;
+    jvdbstslbl1: TJvDBStatusLabel;
+    lbl4: TLabel;
+    cxgrdbclmnGridDBTableView3F: TcxGridDBColumn;
     procedure act210Execute(Sender: TObject);
     procedure act211Execute(Sender: TObject);
     procedure act212Execute(Sender: TObject);
@@ -447,7 +439,7 @@ begin
   //cxgrdbtblvw1.DataController.Groups.FullExpand;
   //Beep;
   cxPropertiesStore1.StorageName:=ExtractFilePath(Application.ExeName) +
-    Self.Name + '.cxPropertiesStore1.ini';
+    Self.Name + 'Vypoln.cxPropertiesStore1.ini';
     AFileName := cxPropertiesStore1.StorageName;
     if not FileExists(AFileName) then begin
        cxPropertiesStore1.StoreTo(True);
@@ -455,11 +447,6 @@ begin
     else begin
       cxPropertiesStore1.RestoreFrom;
     end;
-
-
-
-  
-
 
 // Vypoln таблица
   AFileName := ExtractFilePath(Application.ExeName) + 'Vypoln.cxgrdbtblvw1.ini';
@@ -475,14 +462,14 @@ begin
    AFileName := ExtractFilePath(Application.ExeName) + 'Vypoln.cxGridDBTableView3.ini';
   if not FileExists(AFileName) then
      cxGridDBTableView3.StoreToIniFile(AFileName, true);
-  cxGridDBTableView3.RestoreFromIniFile(AFileName); //   восстанавливать состояние таблицы
-
+  cxGridDBTableView3.RestoreFromIniFile(AFileName); //   восстанавливать состояние табл
+{
   // cxgrdbtblvw1 таблица
    AFileName := ExtractFilePath(Application.ExeName) + 'Vypoln.cxGridDBTableView1.ini';
   if not FileExists(AFileName) then
      cxGridDBTableView1.StoreToIniFile(AFileName, true);
   cxGridDBTableView1.RestoreFromIniFile(AFileName); //   восстанавливать состояние таблицы
-
+}
 
 end;
 
@@ -500,10 +487,10 @@ begin
 
   if FileExists(AFileName) then
     cxGridDBTableView3.StoreToIniFile(AFileName, true); // сохранять состояние таблицы
-
+{
   if FileExists(AFileName) then
     cxGridDBTableView1.StoreToIniFile(AFileName, true); // сохранять состояние таблицы
-
+}
 
   cxPropertiesStore1.StoreTo(True);
 

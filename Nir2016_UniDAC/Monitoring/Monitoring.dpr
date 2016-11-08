@@ -24,7 +24,9 @@ uses
   ABOUT in 'ABOUT.PAS' {AboutForm},
   UBusyRtl in 'BusyDetect\UBusyrtl.pas',
   WordUnit in 'WordUnit.pas' {WordForm},
-  ImportXLSUnit in 'ImportXLSUnit.pas' {ImportXLSUnitForm};
+  ImportXLSUnit in 'ImportXLSUnit.pas' {ImportXLSUnitForm},
+  LexUnit in 'LexUnit.pas' {Form1},
+  AddBildUnit in 'AddBildUnit.pas' {AddBildForm};
 
 {$R *.res}
 
@@ -59,8 +61,11 @@ end;
   Application.CreateForm(TOLAPForm, OLAPForm);
   Application.CreateForm(TLogicForm, LogicForm);
   Application.CreateForm(TExportXLSForm, ExportXLSForm);
-  
+
   Application.CreateForm(TWordForm, WordForm);
   //Application.CreateForm(TAboutForm, AboutForm);
+    Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TAddBildForm, AddBildForm);
+
   Application.Run;
 end.

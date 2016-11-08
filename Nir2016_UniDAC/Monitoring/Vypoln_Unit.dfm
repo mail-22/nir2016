@@ -1,6 +1,6 @@
 inherited Vypoln: TVypoln
-  Left = 321
-  Top = 56
+  Left = 331
+  Top = 58
   Width = 1181
   Height = 912
   Caption = 
@@ -29,15 +29,15 @@ inherited Vypoln: TVypoln
   object pnlL: TPanel [1]
     Left = 0
     Top = 72
-    Width = 1046
+    Width = 1135
     Height = 802
-    Align = alLeft
+    Align = alClient
     Caption = 'pnlL'
     TabOrder = 0
     object pnlalClient: TPanel
-      Left = 1
+      Left = 193
       Top = 1
-      Width = 1044
+      Width = 941
       Height = 800
       Align = alClient
       Caption = 'pnlalClient'
@@ -50,67 +50,58 @@ inherited Vypoln: TVypoln
       TabOrder = 0
       object pnlB: TPanel
         Left = 1
-        Top = 401
-        Width = 1042
-        Height = 398
+        Top = 499
+        Width = 939
+        Height = 300
         Align = alClient
+        BevelOuter = bvLowered
         TabOrder = 0
-        object lbl4: TLabel
-          Left = 1
-          Top = 257
-          Width = 1040
-          Height = 13
-          Align = alTop
-          Alignment = taCenter
-          Caption = #1074#1088#1077#1084#1077#1085#1085#1099#1081' '#1088#1072#1079#1076#1077#1083' -  '#1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084' : ('#1076#1083#1103' '#1089#1087#1088#1072#1074#1086#1082')'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Times New Roman'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object cxspltr2: TcxSplitter
-          Left = 1
-          Top = 270
-          Width = 1040
-          Height = 8
-          HotZoneClassName = 'TcxMediaPlayer8Style'
-          AlignSplitter = salTop
-          Control = pnl1T
-          Color = clNavy
-          ParentColor = False
-        end
         object pnl1T: TPanel
           Left = 1
           Top = 1
-          Width = 1040
-          Height = 256
-          Align = alTop
+          Width = 937
+          Height = 282
+          Align = alClient
           BevelOuter = bvNone
           Caption = 'pnl1T'
           Color = clActiveCaption
-          TabOrder = 1
+          TabOrder = 0
           object Panel1: TPanel
             Left = 0
             Top = 0
-            Width = 1040
-            Height = 256
+            Width = 937
+            Height = 282
             Align = alClient
             Caption = 'pnlRR'
             TabOrder = 0
-            object cxSplitter1: TcxSplitter
+            object lbl4: TLabel
               Left = 1
               Top = 1
+              Width = 935
+              Height = 13
+              Align = alTop
+              Alignment = taCenter
+              Caption = #1089#1087#1080#1089#1086#1082' '#1085#1086#1088#1084':'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object cxSplitter1: TcxSplitter
+              Left = 1
+              Top = 14
               Width = 8
-              Height = 207
+              Height = 220
             end
             object cxGrid3: TcxGrid
               Left = 9
-              Top = 1
-              Width = 1030
-              Height = 207
+              Top = 14
+              Width = 927
+              Height = 220
               Align = alClient
+              BevelInner = bvLowered
               BevelKind = bkSoft
               Font.Charset = RUSSIAN_CHARSET
               Font.Color = clWindowText
@@ -162,76 +153,119 @@ inherited Vypoln: TVypoln
                 OptionsView.ShowColumnFilterButtons = sfbAlways
                 object cxgrdbclmnGridDBTableView3id: TcxGridDBColumn
                   DataBinding.FieldName = 'id'
+                  Width = 29
                 end
                 object cxgrdbclmnGridDBTableView3N: TcxGridDBColumn
                   DataBinding.FieldName = 'N'
+                  Width = 31
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn: TcxGridDBColumn
                   DataBinding.FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
+                  Width = 90
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn1: TcxGridDBColumn
                   DataBinding.FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
+                  Width = 110
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn2: TcxGridDBColumn
                   DataBinding.FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
+                  Width = 103
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn4: TcxGridDBColumn
                   DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
+                  Width = 132
+                end
+                object cxgrdbclmnGridDBTableView3F: TcxGridDBColumn
+                  DataBinding.FieldName = 'F'
+                  Width = 22
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn5: TcxGridDBColumn
                   DataBinding.FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
+                  Width = 127
                 end
                 object cxgrdbclmnGridDBTableView3fid_Bilding: TcxGridDBColumn
                   DataBinding.FieldName = 'fid_Bilding'
                   Visible = False
+                  Width = 20
                 end
                 object cxgrdbclmnGridDBTableView3fid_Vypoln: TcxGridDBColumn
                   DataBinding.FieldName = 'fid_Vypoln'
                   Visible = False
+                  Width = 20
                 end
                 object cxgrdbclmnGridDBTableView3DBColumn3: TcxGridDBColumn
                   DataBinding.FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
+                  Width = 33
                 end
               end
               object cxGridLevel3: TcxGridLevel
                 GridView = cxGridDBTableView3
               end
             end
-            object Panel2: TPanel
+            object pnl_Navigator: TPanel
               Left = 1
-              Top = 224
-              Width = 1038
+              Top = 250
+              Width = 935
               Height = 31
               Align = alBottom
               BevelInner = bvLowered
               BevelOuter = bvLowered
               BorderStyle = bsSingle
               TabOrder = 2
-              object JvDBStatusLabel1: TJvDBStatusLabel
+              object cxDBNavigator1: TcxDBNavigator
+                Left = 209
+                Top = 2
+                Width = 720
+                Height = 23
+                DataSource = DM.dsNormOfBilding
+                Align = alRight
+                TabOrder = 0
+              end
+              object pnl1: TPanel
                 Left = 2
                 Top = 2
-                Width = 113
+                Width = 115
                 Height = 23
-                DataSource = DM.dsNormOfBilding
-                CalcRecCount = True
-                ShowOptions = doBoth
                 Align = alLeft
-                Alignment = taRightJustify
+                AutoSize = True
+                TabOrder = 1
+                object JvDBStatusLabel1: TJvDBStatusLabel
+                  Left = 1
+                  Top = 1
+                  Width = 113
+                  Height = 21
+                  DataSource = DM.dsNormOfBilding
+                  CalcRecCount = True
+                  ShowOptions = doBoth
+                  Align = alClient
+                  Alignment = taRightJustify
+                end
               end
-              object cxDBNavigator1: TcxDBNavigator
-                Left = 115
+              object pnl2: TPanel
+                Left = 117
                 Top = 2
-                Width = 915
+                Width = 24
                 Height = 23
-                DataSource = DM.dsNormOfBilding
-                Align = alClient
-                TabOrder = 0
+                Align = alLeft
+                AutoSize = True
+                TabOrder = 2
+                object JvDBStatusLabel4: TJvDBStatusLabel
+                  Left = 1
+                  Top = 2
+                  Width = 22
+                  Height = 14
+                  DataSource = DM.dsNormOfBilding
+                  Style = lsRecordNo
+                  CalcRecCount = True
+                  ShowOptions = doBoth
+                  Alignment = taCenter
+                end
               end
             end
             object JvDBProgressBar1: TJvDBProgressBar
               Left = 1
-              Top = 208
-              Width = 1038
+              Top = 234
+              Width = 935
               Height = 16
               Align = alBottom
               TabOrder = 3
@@ -239,129 +273,13 @@ inherited Vypoln: TVypoln
             end
           end
         end
-        object cxGrid1: TcxGrid
-          Left = 1
-          Top = 278
-          Width = 1040
-          Height = 72
-          Align = alClient
-          BevelKind = bkSoft
-          Font.Charset = RUSSIAN_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-          LevelTabs.Style = 8
-          LookAndFeel.Kind = lfOffice11
-          object cxGridDBTableView1: TcxGridDBTableView
-            DragMode = dmAutomatic
-            NavigatorButtons.ConfirmDelete = False
-            FilterBox.Visible = fvNever
-            DataController.DataModeController.DetailInSQLMode = True
-            DataController.DataModeController.GridMode = True
-            DataController.DataModeController.SmartRefresh = True
-            DataController.DataSource = DM.dsNorm
-            DataController.DetailKeyFieldNames = 'id'
-            DataController.Filter.Active = True
-            DataController.Filter.AutoDataSetFilter = True
-            DataController.KeyFieldNames = 'id'
-            DataController.Options = [dcoAnsiSort, dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding, dcoSortByDisplayText, dcoGroupsAlwaysExpanded]
-            DataController.Summary.DefaultGroupSummaryItems = <>
-            DataController.Summary.FooterSummaryItems = <
-              item
-                FieldName = 'rasstoyaniya'
-              end>
-            DataController.Summary.SummaryGroups = <>
-            Filtering.ColumnFilteredItemsList = True
-            Filtering.ColumnPopup.MultiSelect = False
-            FilterRow.ApplyChanges = fracImmediately
-            OptionsBehavior.CellHints = True
-            OptionsBehavior.NavigatorHints = True
-            OptionsCustomize.ColumnHiding = True
-            OptionsCustomize.ColumnsQuickCustomization = True
-            OptionsData.Appending = True
-            OptionsView.CellEndEllipsis = True
-            OptionsView.ColumnAutoWidth = True
-            OptionsView.FooterAutoHeight = True
-            OptionsView.GroupByBox = False
-            OptionsView.GroupSummaryLayout = gslAlignWithColumnsAndDistribute
-            OptionsView.HeaderEndEllipsis = True
-            OptionsView.Indicator = True
-            OptionsView.IndicatorWidth = 24
-            OptionsView.ShowColumnFilterButtons = sfbAlways
-            object cxgrdbclmnGridDBTableView1id: TcxGridDBColumn
-              DataBinding.FieldName = 'id'
-              Width = 20
-            end
-            object cxgrdbclmnGridDBTableView1N: TcxGridDBColumn
-              DataBinding.FieldName = 'N'
-              Width = 34
-            end
-            object cxgrdbclmnGridDBTableView1DBColumn: TcxGridDBColumn
-              DataBinding.FieldName = #1044#1086#1082#1091#1084#1077#1085#1090
-              Width = 147
-            end
-            object cxgrdbclmnGridDBTableView1DBColumn1: TcxGridDBColumn
-              DataBinding.FieldName = #1089#1090#1072#1090#1100#1103'-'#1088#1072#1079#1076#1077#1083
-              Width = 102
-            end
-            object cxgrdbclmnGridDBTableView1DBColumn2: TcxGridDBColumn
-              DataBinding.FieldName = #1095#1072#1089#1090#1100' ('#1087#1091#1085#1082#1090')'
-              Width = 109
-            end
-            object cxgrdbclmnGridDBTableView1DBColumn3: TcxGridDBColumn
-              DataBinding.FieldName = #1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
-              Width = 91
-            end
-            object cxgrdbclmnGridDBTableView1DBColumn4: TcxGridDBColumn
-              DataBinding.FieldName = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1085#1086#1088#1084
-              Width = 507
-            end
-          end
-          object cxGridLevel1: TcxGridLevel
-            GridView = cxGridDBTableView1
-          end
-        end
-        object Panel3: TPanel
-          Left = 1
-          Top = 350
-          Width = 1040
-          Height = 31
-          Align = alBottom
-          BevelInner = bvLowered
-          BevelOuter = bvLowered
-          BorderStyle = bsSingle
-          TabOrder = 3
-          object JvDBStatusLabel2: TJvDBStatusLabel
-            Left = 2
-            Top = 2
-            Width = 113
-            Height = 23
-            DataSource = DM.dsNorm
-            CalcRecCount = True
-            ShowOptions = doBoth
-            Align = alLeft
-            Alignment = taRightJustify
-          end
-          object cxDBNavigator2: TcxDBNavigator
-            Left = 115
-            Top = 2
-            Width = 915
-            Height = 23
-            DataSource = DM.dsNorm
-            Align = alClient
-            TabOrder = 0
-          end
-        end
         object JvDBProgressBar3: TJvDBProgressBar
           Left = 1
-          Top = 381
-          Width = 1040
+          Top = 283
+          Width = 937
           Height = 16
           Align = alBottom
-          TabOrder = 4
+          TabOrder = 1
           DataField = 'id'
           DataSource = DM.dsNorm
         end
@@ -369,415 +287,24 @@ inherited Vypoln: TVypoln
       object pnlT: TPanel
         Left = 1
         Top = 1
-        Width = 1042
-        Height = 392
+        Width = 939
+        Height = 490
         Align = alTop
+        BevelOuter = bvLowered
         Caption = 'pnlT'
         TabOrder = 1
-        object pnlLLL: TPanel
+        object pnlGrid: TPanel
           Left = 1
           Top = 1
-          Width = 192
-          Height = 390
-          Align = alLeft
-          TabOrder = 0
-          object jvlktOutlookBar1: TJvLookOut
-            Left = 1
-            Top = 1
-            Width = 190
-            Height = 388
-            ActivePage = jvlktpgLookOutPage3
-            Align = alClient
-            AutoSize = True
-            Color = clMoneyGreen
-            Smooth = True
-            object jvlktpgLookOutPage1: TJvLookOutPage
-              Left = 0
-              Top = 0
-              Width = 186
-              Height = 328
-              ImageSize = isSmall
-              HighlightFont.Charset = DEFAULT_CHARSET
-              HighlightFont.Color = clWindowText
-              HighlightFont.Height = -11
-              HighlightFont.Name = 'Tahoma'
-              HighlightFont.Style = []
-              ParentImageSize = False
-              ShowPressed = True
-              Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1080' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081
-              Color = clCream
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Times New Roman'
-              Font.Style = []
-              ParentFont = False
-              object btnLookOutButton4: TJvLookOutButton
-                Left = 4
-                Top = 26
-                Width = 180
-                Height = 50
-                Action = actAll
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton5: TJvLookOutButton
-                Left = 4
-                Top = 76
-                Width = 180
-                Height = 50
-                Action = act21
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton6: TJvLookOutButton
-                Left = 4
-                Top = 126
-                Width = 180
-                Height = 50
-                Action = act22
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton7: TJvLookOutButton
-                Left = 4
-                Top = 176
-                Width = 180
-                Height = 50
-                Action = act23
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton8: TJvLookOutButton
-                Left = 4
-                Top = 226
-                Width = 180
-                Height = 50
-                Action = act24
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton9: TJvLookOutButton
-                Left = 4
-                Top = 276
-                Width = 180
-                Height = 50
-                Action = act25
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-                ImageSize = isSmall
-                ParentImageSize = False
-              end
-              object btnLookOutButton10: TJvLookOutButton
-                Left = 3
-                Top = 326
-                Width = 180
-                Height = 50
-                Action = act26
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton11: TJvLookOutButton
-                Left = 3
-                Top = 2632
-                Width = 180
-                Height = 50
-                Action = act27
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton12: TJvLookOutButton
-                Left = 3
-                Top = 2961
-                Width = 180
-                Height = 50
-                Action = act28
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton13: TJvLookOutButton
-                Left = 3
-                Top = 3290
-                Width = 180
-                Height = 50
-                Action = act29
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton14: TJvLookOutButton
-                Left = 3
-                Top = 3619
-                Width = 180
-                Height = 50
-                Action = act210
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton15: TJvLookOutButton
-                Left = 3
-                Top = 3948
-                Width = 180
-                Height = 50
-                Action = act211
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton16: TJvLookOutButton
-                Left = 3
-                Top = 4277
-                Width = 180
-                Height = 50
-                Action = act212
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton17: TJvLookOutButton
-                Left = 3
-                Top = 4606
-                Width = 180
-                Height = 50
-                Action = act213
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton18: TJvLookOutButton
-                Left = 3
-                Top = 4935
-                Width = 180
-                Height = 50
-                Action = act214
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton19: TJvLookOutButton
-                Left = 3
-                Top = 5264
-                Width = 180
-                Height = 50
-                Action = act215
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton20: TJvLookOutButton
-                Left = 3
-                Top = 5593
-                Width = 180
-                Height = 50
-                Action = act216
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-            end
-            object jvlktpgLookOutPage2: TJvLookOutPage
-              Left = 0
-              Top = 20
-              Width = 186
-              Height = 328
-              ImageSize = isSmall
-              HighlightFont.Charset = DEFAULT_CHARSET
-              HighlightFont.Color = clWindowText
-              HighlightFont.Height = -11
-              HighlightFont.Name = 'Tahoma'
-              HighlightFont.Style = []
-              Caption = #1101#1082#1089#1087#1086#1088#1090' '#1074' ... '
-              Color = clMenuBar
-              object btnExport: TJvLookOutButton
-                Left = 37
-                Top = 26
-                Width = 111
-                Action = actExport
-                Caption = 'Export '#1074' '#1090#1077#1082#1089#1090#1086#1074#1099#1081' '#1092#1072#1081#1083'  '#1074#1089#1077#1093' '#1086#1073#1098#1077#1082#1090#1086#1074' ('#1079#1076#1072#1085#1080#1081')'
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton2: TJvLookOutButton
-                Left = 37
-                Top = 86
-                Width = 111
-                Action = actExportXLS
-                Caption = 'Export '#1074' Microsoft Office Excel '#1074#1089#1077#1093' '#1086#1073#1098#1077#1082#1090#1086#1074' ('#1079#1076#1072#1085#1080#1081')'
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnExport1: TJvLookOutButton
-                Left = 37
-                Top = 146
-                Width = 111
-                Action = actExport11
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton3: TJvLookOutButton
-                Left = 37
-                Top = 206
-                Width = 111
-                Action = actExportEx1
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-            end
-            object jvlktpgLookOutPage3: TJvLookOutPage
-              Left = 0
-              Top = 40
-              Width = 186
-              Height = 328
-              ImageSize = isSmall
-              HighlightFont.Charset = DEFAULT_CHARSET
-              HighlightFont.Color = clWindowText
-              HighlightFont.Height = -11
-              HighlightFont.Name = 'Tahoma'
-              HighlightFont.Style = []
-              Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1083#1080' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1053#1044
-              Color = clBtnFace
-              object rgjvrdgrp1: TRadioGroup
-                Left = 10
-                Top = 34
-                Width = 121
-                Height = 175
-                Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
-                ItemIndex = 2
-                Items.Strings = (
-                  #1076#1072
-                  #1085#1077#1090
-                  #1083#1102#1073#1099#1077)
-                TabOrder = 0
-                OnClick = rgjvrdgrp1Click
-              end
-            end
-            object jvlktpgFormGrLookOutPage1: TJvLookOutPage
-              Left = 0
-              Top = 365
-              Width = 186
-              Height = 328
-              ImageSize = isSmall
-              HighlightFont.Charset = DEFAULT_CHARSET
-              HighlightFont.Color = clWindowText
-              HighlightFont.Height = -11
-              HighlightFont.Name = 'Tahoma'
-              HighlightFont.Style = []
-              Caption = #1040#1085#1072#1083#1080#1079' '#1080' '#1074#1080#1079#1091#1072#1083#1080#1079#1072#1094#1080#1103
-              Color = clBtnFace
-              object btnFormGr: TJvLookOutButton
-                Left = 43
-                Top = 26
-                Width = 100
-                Action = actFormGr
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnLookOutButton1: TJvLookOutButton
-                Left = 43
-                Top = 86
-                Width = 100
-                Action = actGr2
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-              object btnAnal: TJvLookOutButton
-                Left = 43
-                Top = 146
-                Width = 100
-                Action = actAnal
-                HighlightFont.Charset = DEFAULT_CHARSET
-                HighlightFont.Color = clWindowText
-                HighlightFont.Height = -11
-                HighlightFont.Name = 'Tahoma'
-                HighlightFont.Style = []
-              end
-            end
-          end
-        end
-        object pnlGrid: TPanel
-          Left = 193
-          Top = 1
-          Width = 848
-          Height = 390
+          Width = 937
+          Height = 488
           Align = alClient
           AutoSize = True
-          TabOrder = 1
+          TabOrder = 0
           object lbl1: TLabel
             Left = 1
             Top = 1
-            Width = 846
+            Width = 935
             Height = 13
             Align = alTop
             Alignment = taCenter
@@ -792,9 +319,10 @@ inherited Vypoln: TVypoln
           object cxgrd1: TcxGrid
             Left = 1
             Top = 14
-            Width = 846
-            Height = 245
+            Width = 935
+            Height = 393
             Align = alClient
+            BevelInner = bvLowered
             BevelKind = bkSoft
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
@@ -845,55 +373,58 @@ inherited Vypoln: TVypoln
               OptionsView.ShowColumnFilterButtons = sfbAlways
               object cxgrdbclmncxgrdbtblvw1id: TcxGridDBColumn
                 DataBinding.FieldName = 'id'
-                Width = 44
+                Width = 30
               end
               object cxgrdbclmncxgrdbtblvw1N: TcxGridDBColumn
                 DataBinding.FieldName = 'N'
-                Width = 44
+                Width = 39
               end
               object cxgrdbclmncxgrdbtblvw1DBColumn: TcxGridDBColumn
                 DataBinding.FieldName = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1087#1086#1078#1072#1088#1085#1086#1081' '#1073#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1080
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1fid_Bilding: TcxGridDBColumn
-                DataBinding.FieldName = 'fid_Bilding'
-                Visible = False
-                Width = 44
+                Width = 548
               end
               object cxgrdbclmncxgrdbtblvw1DBColumn1: TcxGridDBColumn
+                Caption = #1075#1086#1076
                 DataBinding.FieldName = #1075#1086#1076'1'
                 Visible = False
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1SOOTVETSTV: TcxGridDBColumn
-                DataBinding.FieldName = 'SOOTVETSTV'
-                Visible = False
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1rtf: TcxGridDBColumn
-                DataBinding.FieldName = 'rtf'
-                Visible = False
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1NTreb: TcxGridDBColumn
-                DataBinding.FieldName = 'NTreb'
-                Visible = False
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1NTreb2: TcxGridDBColumn
-                DataBinding.FieldName = 'NTreb2'
-                Visible = False
-                Width = 44
-              end
-              object cxgrdbclmncxgrdbtblvw1test: TcxGridDBColumn
-                DataBinding.FieldName = 'test'
-                Visible = False
-                Width = 44
+                Width = 50
               end
               object cxgrdbclmncxgrdbtblvw1soot: TcxGridDBColumn
                 AlternateCaption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
                 Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
                 DataBinding.FieldName = 'soot'
+                Width = 199
+              end
+              object cxgrdbclmncxgrdbtblvw1fid_Bilding: TcxGridDBColumn
+                DataBinding.FieldName = 'fid_Bilding'
+                Visible = False
+                Width = 20
+              end
+              object cxgrdbclmncxgrdbtblvw1rtf: TcxGridDBColumn
+                Caption = #1090#1077#1082#1089#1090
+                DataBinding.FieldName = 'rtf'
+                Visible = False
+                Width = 20
+              end
+              object cxgrdbclmncxgrdbtblvw1NTreb: TcxGridDBColumn
+                DataBinding.FieldName = 'NTreb'
+                Visible = False
+                Width = 20
+              end
+              object cxgrdbclmncxgrdbtblvw1NTreb2: TcxGridDBColumn
+                DataBinding.FieldName = 'NTreb2'
+                Visible = False
+                Width = 20
+              end
+              object cxgrdbclmncxgrdbtblvw1test: TcxGridDBColumn
+                DataBinding.FieldName = 'test'
+                Visible = False
+                Width = 20
+              end
+              object cxgrdbclmncxgrdbtblvw1SOOTVETSTV: TcxGridDBColumn
+                DataBinding.FieldName = 'SOOTVETSTV'
+                Visible = False
+                Width = 20
               end
             end
             object cxgrdlvl1: TcxGridLevel
@@ -902,16 +433,16 @@ inherited Vypoln: TVypoln
           end
           object pnlBBB: TPanel
             Left = 1
-            Top = 328
-            Width = 846
-            Height = 61
+            Top = 476
+            Width = 935
+            Height = 11
             Align = alBottom
             TabOrder = 1
             Visible = False
             object lbl2: TLabel
               Left = 1
               Top = 1
-              Width = 844
+              Width = 933
               Height = 16
               Align = alTop
               Alignment = taCenter
@@ -926,48 +457,76 @@ inherited Vypoln: TVypoln
           end
           object cxDBProgressBar1: TcxDBProgressBar
             Left = 1
-            Top = 275
+            Top = 423
             Align = alBottom
             DataBinding.DataField = 'id'
             DataBinding.DataSource = DM.dstblVypoln
             TabOrder = 2
-            Width = 846
+            Width = 935
           end
-          object Panel4: TPanel
+          object pnl_Navigator1: TPanel
             Left = 1
-            Top = 297
-            Width = 846
+            Top = 445
+            Width = 935
             Height = 31
             Align = alBottom
             BevelInner = bvLowered
             BevelOuter = bvLowered
             BorderStyle = bsSingle
             TabOrder = 3
-            object JvDBStatusLabel3: TJvDBStatusLabel
-              Left = 2
-              Top = 2
-              Width = 113
-              Height = 23
-              DataSource = DM.dstblVypoln
-              CalcRecCount = True
-              ShowOptions = doBoth
-              Align = alLeft
-              Alignment = taRightJustify
-            end
             object cxDBNavigator3: TcxDBNavigator
-              Left = 115
+              Left = 247
               Top = 2
-              Width = 720
+              Width = 675
               Height = 23
               DataSource = DM.dstblVypoln
               Align = alClient
               TabOrder = 0
             end
+            object pnl3: TPanel
+              Left = 187
+              Top = 2
+              Width = 60
+              Height = 23
+              Align = alLeft
+              AutoSize = True
+              TabOrder = 1
+              object jvdbstslbl1: TJvDBStatusLabel
+                Left = 1
+                Top = 2
+                Width = 58
+                Height = 14
+                DataSource = DM.dstblVypoln
+                Style = lsRecordNo
+                CalcRecCount = True
+                ShowOptions = doBoth
+                Alignment = taCenter
+              end
+            end
+            object pnl4: TPanel
+              Left = 2
+              Top = 2
+              Width = 185
+              Height = 23
+              Align = alLeft
+              TabOrder = 2
+              object JvDBStatusLabel3: TJvDBStatusLabel
+                Left = 1
+                Top = 1
+                Width = 113
+                Height = 21
+                DataSource = DM.dstblVypoln
+                CalcRecCount = True
+                ShowOptions = doBoth
+                Align = alLeft
+                Alignment = taRightJustify
+              end
+            end
           end
           object JvDBProgressBar2: TJvDBProgressBar
             Left = 1
-            Top = 259
-            Width = 846
+            Top = 407
+            Width = 935
             Height = 16
             Align = alBottom
             TabOrder = 4
@@ -977,8 +536,8 @@ inherited Vypoln: TVypoln
       end
       object cxspltr3: TcxSplitter
         Left = 1
-        Top = 393
-        Width = 1042
+        Top = 491
+        Width = 939
         Height = 8
         HotZoneClassName = 'TcxMediaPlayer8Style'
         AlignSplitter = salTop
@@ -987,20 +546,412 @@ inherited Vypoln: TVypoln
         ParentColor = False
       end
     end
+    object pnlLLL: TPanel
+      Left = 1
+      Top = 1
+      Width = 192
+      Height = 800
+      Align = alLeft
+      TabOrder = 1
+      object jvlktOutlookBar1: TJvLookOut
+        Left = 1
+        Top = 1
+        Width = 190
+        Height = 798
+        ActivePage = jvlktpgLookOutPage1
+        Align = alClient
+        AutoSize = True
+        Color = clMoneyGreen
+        Smooth = True
+        object jvlktpgLookOutPage1: TJvLookOutPage
+          Left = 0
+          Top = 0
+          Width = 186
+          Height = 738
+          ImageSize = isSmall
+          HighlightFont.Charset = DEFAULT_CHARSET
+          HighlightFont.Color = clWindowText
+          HighlightFont.Height = -11
+          HighlightFont.Name = 'Tahoma'
+          HighlightFont.Style = []
+          ParentImageSize = False
+          ShowPressed = True
+          Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1080' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081
+          Color = clCream
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          ParentFont = False
+          object btnLookOutButton4: TJvLookOutButton
+            Left = 4
+            Top = 26
+            Width = 180
+            Height = 50
+            Action = actAll
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton5: TJvLookOutButton
+            Left = 4
+            Top = 76
+            Width = 180
+            Height = 50
+            Action = act21
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton6: TJvLookOutButton
+            Left = 4
+            Top = 126
+            Width = 180
+            Height = 50
+            Action = act22
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton7: TJvLookOutButton
+            Left = 4
+            Top = 176
+            Width = 180
+            Height = 50
+            Action = act23
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton8: TJvLookOutButton
+            Left = 4
+            Top = 226
+            Width = 180
+            Height = 50
+            Action = act24
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton9: TJvLookOutButton
+            Left = 4
+            Top = 276
+            Width = 180
+            Height = 50
+            Action = act25
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+            ImageSize = isSmall
+            ParentImageSize = False
+          end
+          object btnLookOutButton10: TJvLookOutButton
+            Left = 3
+            Top = 326
+            Width = 180
+            Height = 50
+            Action = act26
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton11: TJvLookOutButton
+            Left = 3
+            Top = 376
+            Width = 180
+            Height = 50
+            Action = act27
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton12: TJvLookOutButton
+            Left = 3
+            Top = 426
+            Width = 180
+            Height = 50
+            Action = act28
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton13: TJvLookOutButton
+            Left = 3
+            Top = 476
+            Width = 180
+            Height = 50
+            Action = act29
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton14: TJvLookOutButton
+            Left = 3
+            Top = 526
+            Width = 180
+            Height = 50
+            Action = act210
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton15: TJvLookOutButton
+            Left = 3
+            Top = 576
+            Width = 180
+            Height = 50
+            Action = act211
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton16: TJvLookOutButton
+            Left = 3
+            Top = 626
+            Width = 180
+            Height = 50
+            Action = act212
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton17: TJvLookOutButton
+            Left = 3
+            Top = 676
+            Width = 180
+            Height = 50
+            Action = act213
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton18: TJvLookOutButton
+            Left = 3
+            Top = 726
+            Width = 180
+            Height = 50
+            Action = act214
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton19: TJvLookOutButton
+            Left = 3
+            Top = 11824
+            Width = 180
+            Height = 50
+            Action = act215
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton20: TJvLookOutButton
+            Left = 3
+            Top = 12563
+            Width = 180
+            Height = 50
+            Action = act216
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+        end
+        object jvlktpgLookOutPage2: TJvLookOutPage
+          Left = 0
+          Top = 735
+          Width = 186
+          Height = 738
+          ImageSize = isSmall
+          HighlightFont.Charset = DEFAULT_CHARSET
+          HighlightFont.Color = clWindowText
+          HighlightFont.Height = -11
+          HighlightFont.Name = 'Tahoma'
+          HighlightFont.Style = []
+          Caption = #1101#1082#1089#1087#1086#1088#1090' '#1074' ... '
+          Color = clMenuBar
+          object btnExport: TJvLookOutButton
+            Left = 37
+            Top = 26
+            Width = 111
+            Action = actExport
+            Caption = 'Export '#1074' '#1090#1077#1082#1089#1090#1086#1074#1099#1081' '#1092#1072#1081#1083'  '#1074#1089#1077#1093' '#1086#1073#1098#1077#1082#1090#1086#1074' ('#1079#1076#1072#1085#1080#1081')'
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton2: TJvLookOutButton
+            Left = 37
+            Top = 86
+            Width = 111
+            Action = actExportXLS
+            Caption = 'Export '#1074' Microsoft Office Excel '#1074#1089#1077#1093' '#1086#1073#1098#1077#1082#1090#1086#1074' ('#1079#1076#1072#1085#1080#1081')'
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnExport1: TJvLookOutButton
+            Left = 37
+            Top = 146
+            Width = 111
+            Action = actExport11
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton3: TJvLookOutButton
+            Left = 37
+            Top = 206
+            Width = 111
+            Action = actExportEx1
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+        end
+        object jvlktpgLookOutPage3: TJvLookOutPage
+          Left = 0
+          Top = 755
+          Width = 186
+          Height = 738
+          ImageSize = isSmall
+          HighlightFont.Charset = DEFAULT_CHARSET
+          HighlightFont.Color = clWindowText
+          HighlightFont.Height = -11
+          HighlightFont.Name = 'Tahoma'
+          HighlightFont.Style = []
+          Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1083#1080' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103#1084' '#1053#1044
+          Color = clBtnFace
+          object rgjvrdgrp1: TRadioGroup
+            Left = 10
+            Top = 34
+            Width = 121
+            Height = 175
+            Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1091#1077#1090' '#1076#1072'/'#1085#1077#1090
+            ItemIndex = 2
+            Items.Strings = (
+              #1076#1072
+              #1085#1077#1090
+              #1083#1102#1073#1099#1077)
+            TabOrder = 0
+            OnClick = rgjvrdgrp1Click
+          end
+        end
+        object jvlktpgFormGrLookOutPage1: TJvLookOutPage
+          Left = 0
+          Top = 775
+          Width = 186
+          Height = 738
+          ImageSize = isSmall
+          HighlightFont.Charset = DEFAULT_CHARSET
+          HighlightFont.Color = clWindowText
+          HighlightFont.Height = -11
+          HighlightFont.Name = 'Tahoma'
+          HighlightFont.Style = []
+          Caption = #1040#1085#1072#1083#1080#1079' '#1080' '#1074#1080#1079#1091#1072#1083#1080#1079#1072#1094#1080#1103
+          Color = clBtnFace
+          object btnFormGr: TJvLookOutButton
+            Left = 43
+            Top = 26
+            Width = 100
+            Action = actFormGr
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnLookOutButton1: TJvLookOutButton
+            Left = 43
+            Top = 86
+            Width = 100
+            Action = actGr2
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+          object btnAnal: TJvLookOutButton
+            Left = 43
+            Top = 146
+            Width = 100
+            Action = actAnal
+            HighlightFont.Charset = DEFAULT_CHARSET
+            HighlightFont.Color = clWindowText
+            HighlightFont.Height = -11
+            HighlightFont.Name = 'Tahoma'
+            HighlightFont.Style = []
+          end
+        end
+      end
+    end
   end
   object pnlRight: TPanel [2]
-    Left = 1054
+    Left = 1143
     Top = 72
-    Width = 111
+    Width = 22
     Height = 802
-    Align = alClient
+    Align = alRight
     Caption = 'pnlRight'
     TabOrder = 1
     Visible = False
     object lbl3: TLabel
       Left = 1
       Top = 1
-      Width = 109
+      Width = 20
       Height = 18
       Align = alTop
       Alignment = taCenter
@@ -1015,11 +966,11 @@ inherited Vypoln: TVypoln
     object cxdbvrtclgrd1: TcxDBVerticalGrid
       Left = 1
       Top = 19
-      Width = 109
+      Width = 20
       Height = 384
       Align = alTop
       OptionsView.CellEndEllipsis = True
-      OptionsView.RowHeaderWidth = 54
+      OptionsView.RowHeaderWidth = 24
       TabOrder = 0
       Visible = False
       DataController.DataSource = ds1
@@ -1129,16 +1080,6 @@ inherited Vypoln: TVypoln
         Version = 1
       end
     end
-    object spl2: TcxSplitter
-      Left = 1
-      Top = 403
-      Width = 109
-      Height = 398
-      Cursor = crVSplit
-      AutoSnap = True
-      Color = clNavy
-      ParentColor = False
-    end
   end
   object pnlH: TPanel [3]
     Left = 0
@@ -1170,7 +1111,7 @@ inherited Vypoln: TVypoln
     Height = 24
     UseSystemFont = False
     ActionManager = actmgr1
-    Caption = 'actmmb1'
+    Caption = '-'
     ColorMap.HighlightColor = clWhite
     ColorMap.BtnSelectedColor = clBtnFace
     ColorMap.UnusedColor = clWhite
@@ -1183,11 +1124,12 @@ inherited Vypoln: TVypoln
     Spacing = 0
   end
   object cxspltr4: TcxSplitter [5]
-    Left = 1046
+    Left = 1135
     Top = 72
     Width = 8
     Height = 802
     HotZoneClassName = 'TcxXPTaskBarStyle'
+    AlignSplitter = salRight
     Control = pnlL
     Color = clPurple
     ParentColor = False
@@ -1359,19 +1301,13 @@ inherited Vypoln: TVypoln
           'Width')
       end
       item
-        Component = Panel2
+        Component = pnl_Navigator
         Properties.Strings = (
           'Height'
           'Width')
       end
       item
-        Component = Panel3
-        Properties.Strings = (
-          'Height'
-          'Width')
-      end
-      item
-        Component = Panel4
+        Component = pnl_Navigator1
         Properties.Strings = (
           'Height')
       end

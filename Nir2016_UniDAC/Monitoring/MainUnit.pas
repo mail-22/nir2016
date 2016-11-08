@@ -8,7 +8,7 @@ uses
   JvAppIniStorage, JvComponentBase, JvFormPlacement, ImgList, StdActns,
   ActnList, XPStyleActnCtrls, ActnMan, JvAppHotKey, ToolWin, ActnCtrls,
   ActnMenus, JvExControls, JvStaticText, dxGDIPlusClasses, ExtCtrls,
-  JvExExtCtrls, JvImage , UBusyRtl ;
+  JvExExtCtrls, JvImage , UBusyRtl, cxPropertiesStore ;
 
 type
   TFormMain = class(TBaseForm)
@@ -35,6 +35,7 @@ type
     jvstctxt4: TJvStaticText;
     jvstctxt5: TJvStaticText;
     actAbout: TAction;
+    cxprprtstr1: TcxPropertiesStore;
     procedure AboutExecuteExecute(Sender: TObject);
     procedure act1Execute(Sender: TObject);
     procedure act2Execute(Sender: TObject);
@@ -45,12 +46,14 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnBildingClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     function FormHelp(Command: Word; Data: Integer; var CallHelp: Boolean): Boolean;
     procedure hlpcntnts3Execute(Sender: TObject);
     procedure hlpnhlp1Execute(Sender: TObject);
     procedure hlptpcsrch1Execute(Sender: TObject);
     procedure jvplctnhtky1HotKey(Sender: TObject);
   private
+
   public
     procedure ExportForm_Show;
     procedure ExportXLSForm_Show;
@@ -61,7 +64,8 @@ type
     procedure FormTuning_Show;
     procedure FormGrAll_Show;
     procedure OLAPForm_Show;
-
+    procedure ImportXLSUnit_Show;
+    procedure AddBildForm_Show;
   end;
 
       procedure Help2;
@@ -76,7 +80,7 @@ implementation
 uses
   FormListOfBildingUnit, Vypoln_Unit,
   Trebov_Unit, ExportFormUnit, FormGrUnit, FormTuningUnit, FormGrAllUnit, CommonUnit,
-  ExportXLSFormUnit, ABOUT,utility, WordUnit;
+  ExportXLSFormUnit, ABOUT,utility, WordUnit, ImportXLSUnit, AddBildUnit;
 
 {$R *.dfm}
 
@@ -143,6 +147,16 @@ begin
     Enabled:=true;
   end;
 }
+
+    cxprprtstr1.StorageName:=ExtractFilePath(Application.ExeName) +
+    Self.Name + '.cxprprtstr1.ini';
+    if not FileExists(cxprprtstr1.StorageName) then begin
+       cxprprtstr1.StoreTo(True);
+    end
+    else begin
+      cxprprtstr1.RestoreFrom;
+    end;
+
 end;
 
 procedure TFormMain.FormShow(Sender: TObject);
@@ -228,6 +242,17 @@ begin
   FormGrAll.WindowState := wsMaximized;
 end;
 
+
+procedure TFormMain.AddBildForm_Show;
+begin
+  if (AddBildForm = nil) then
+    Application.CreateForm(TAddBildForm, AddBildForm);
+  AddBildForm.ShowModal;
+  //AddBildForm.WindowState := wsMaximized;
+end;
+
+
+
 procedure TFormMain.OLAPForm_Show;
 begin
   if (OLAPForm = nil) then
@@ -285,7 +310,21 @@ procedure Help2;
    begin
     strTmp:=ExtractFilePath(Application.ExeName) + 'help.doc';
   RunFile(strTmp, '');
-   end;
+end;
+
+procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  cxprprtstr1.StoreTo(True);
+end;
+
+procedure TFormMain.ImportXLSUnit_Show;
+begin
+  if (ImportXLSUnitForm = nil) then
+    Application.CreateForm(TImportXLSUnitForm, ImportXLSUnitForm);
+  ImportXLSUnitForm.Show;
+  
+end;
 
 ///////////////////////////////////////////////////////////////////////////////
 
